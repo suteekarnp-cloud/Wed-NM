@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" width="880" height="500" font-family="Leelawadee UI, Tahoma, Noto Sans Thai, Loma, sans-serif">
+  <rect x="0" y="0" width="880" height="500" fill="#ffffff"/>
+  <g stroke="#eef2f7" stroke-width="1">
+    <path d="M0 40H880M0 80H880M0 120H880M0 160H880M0 200H880M0 240H880M0 280H880M0 320H880M0 360H880M0 400H880M0 440H880M0 480H880"/>
+    <path d="M40 0V500M80 0V500M120 0V500M160 0V500M200 0V500M240 0V500M280 0V500M320 0V500M360 0V500M400 0V500M440 0V500M480 0V500M520 0V500M560 0V500M600 0V500M640 0V500M680 0V500M720 0V500M760 0V500M800 0V500M840 0V500"/>
+  </g>
+  <text x="32" y="38" font-size="20" font-weight="700" fill="#1f2328">วงจรขับมอเตอร์ DC ด้วยโมดูล L298N</text>
+  <text x="32" y="62" font-size="13" fill="#6f6f6f">Arduino UNO ส่งสัญญาณทิศทาง (IN1, IN2) และเปิด-ปิด (ENA) · แหล่งจ่ายมอเตอร์แยกจากบอร์ด · ต่อกราวด์ร่วมกัน</text>
+
+  <rect x="40" y="110" width="220" height="250" rx="14" fill="#0e7c86" stroke="#0a5d65" stroke-width="2"/>
+  <text x="150" y="140" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Arduino UNO</text>
+  <rect x="62" y="160" width="58" height="40" rx="4" fill="#d9d9d9"/>
+  <text x="91" y="185" font-size="10" fill="#333" text-anchor="middle">USB</text>
+  <rect x="140" y="230" width="90" height="34" rx="3" fill="#1f2328"/>
+  <text x="185" y="252" font-size="10" fill="#ffffff" text-anchor="middle">ATmega328P</text>
+  <g font-size="12" fill="#ffffff">
+    <text x="236" y="176" text-anchor="end">D5</text>
+    <text x="236" y="200" text-anchor="end">D6</text>
+    <text x="236" y="290" text-anchor="end">D8</text>
+    <text x="236" y="314" text-anchor="end">D9</text>
+    <text x="236" y="338" text-anchor="end">D10</text>
+    <text x="64" y="340">GND</text>
+  </g>
+  <g fill="#ffd34d"><circle cx="252" cy="172" r="5"/><circle cx="252" cy="196" r="5"/><circle cx="252" cy="286" r="5"/><circle cx="252" cy="310" r="5"/><circle cx="252" cy="334" r="5"/><circle cx="52" cy="336" r="5"/></g>
+
+  <rect x="400" y="190" width="200" height="190" rx="12" fill="#c62828" stroke="#8e1b1b" stroke-width="2"/>
+  <text x="500" y="222" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">L298N</text>
+  <text x="500" y="242" font-size="11" fill="#ffd8d8" text-anchor="middle">Dual H-Bridge Driver</text>
+  <rect x="440" y="256" width="120" height="44" rx="4" fill="#1f2328"/>
+  <rect x="452" y="248" width="96" height="10" fill="#9aa4ad"/>
+  <g font-size="11" fill="#ffffff">
+    <text x="414" y="324">ENA</text><text x="414" y="344">IN1</text><text x="414" y="364">IN2</text>
+    <text x="586" y="214" text-anchor="end">OUT1</text><text x="586" y="232" text-anchor="end">OUT2</text>
+    <text x="440" y="374" font-size="10">+12V</text><text x="482" y="374" font-size="10">GND</text><text x="520" y="374" font-size="10">+5V</text>
+  </g>
+  <g fill="#ffd34d"><circle cx="400" cy="320" r="5"/><circle cx="400" cy="340" r="5"/><circle cx="400" cy="360" r="5"/><circle cx="600" cy="210" r="5"/><circle cx="600" cy="228" r="5"/><circle cx="452" cy="380" r="5"/><circle cx="494" cy="380" r="5"/></g>
+
+  <g fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M257 286H330V340H395" stroke="#2f80ed"/>
+    <path d="M257 310H316V360H395" stroke="#10a66f"/>
+    <path d="M257 334H300V320H395" stroke="#e08a1e"/>
+    <path d="M52 336V420H494V385" stroke="#1f2328"/>
+    <path d="M605 210H680V190" stroke="#6040ee"/>
+    <path d="M605 228H700V250" stroke="#6040ee"/>
+  </g>
+
+  <circle cx="720" cy="220" r="46" fill="#f3f4f6" stroke="#6b7280" stroke-width="3"/>
+  <rect x="756" y="212" width="40" height="16" rx="3" fill="#9aa4ad"/>
+  <text x="720" y="215" font-size="18" font-weight="700" fill="#1f2328" text-anchor="middle">M</text>
+  <text x="720" y="236" font-size="11" fill="#6f6f6f" text-anchor="middle">DC Motor</text>
+
+  <rect x="400" y="430" width="140" height="44" rx="8" fill="#1f2328"/>
+  <text x="470" y="458" font-size="13" fill="#ffffff" text-anchor="middle">แบตเตอรี่ 7.4–12 V</text>
+  <path d="M452 385V430" stroke="#d32f2f" stroke-width="3" fill="none"/>
+  <text x="560" y="458" font-size="12" fill="#6f6f6f">ขั้วลบต่อ GND ร่วมกับ Arduino</text>
+
+  <g>
+    <rect x="290" y="150" width="70" height="30" rx="6" fill="#ffffff" stroke="#1f2328" stroke-width="2"/>
+    <text x="325" y="170" font-size="12" fill="#1f2328" text-anchor="middle">SW1</text>
+    <rect x="290" y="194" width="70" height="30" rx="6" fill="#ffffff" stroke="#1f2328" stroke-width="2"/>
+    <text x="325" y="214" font-size="12" fill="#1f2328" text-anchor="middle">SW2</text>
+    <path d="M257 172H290M257 196H275V209H290" stroke="#1f2328" stroke-width="2" fill="none"/>
+    <text x="370" y="168" font-size="11" fill="#6f6f6f">กด = หมุนขวา</text>
+    <text x="370" y="212" font-size="11" fill="#6f6f6f">กด = หมุนซ้าย</text>
+  </g>
+
+  <rect x="640" y="300" width="210" height="110" rx="10" fill="#f7f9fc" stroke="#e5e5e5"/>
+  <text x="656" y="324" font-size="12" font-weight="700" fill="#1f2328">ตารางการทำงาน</text>
+  <g font-size="11" fill="#1f2328" font-family="Consolas, monospace">
+    <text x="656" y="346">IN1 IN2 ENA  ผล</text>
+    <text x="656" y="364">LOW HIGH HIGH  ซ้าย</text>
+    <text x="656" y="382">HIGH LOW HIGH  ขวา</text>
+    <text x="656" y="400">LOW LOW  LOW   หยุด</text>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" font-family="Leelawadee UI, Tahoma, Noto Sans Thai, Loma, sans-serif">
+  <rect width="880" height="420" fill="#ffffff"/>
+  <text x="32" y="38" font-size="20" font-weight="700" fill="#1f2328">ระบบควบคุมหุ่นยนต์ผ่าน Bluetooth</text>
+  <text x="32" y="62" font-size="13" fill="#6f6f6f">แอปบนมือถือส่งตัวอักษรคำสั่ง → โมดูล HC-05 → Arduino อ่านผ่าน Serial 9600 bps → สั่ง L298N ขับล้อซ้าย-ขวา</text>
+
+  <rect x="36" y="110" width="110" height="190" rx="18" fill="#1f2328"/>
+  <rect x="46" y="128" width="90" height="140" rx="6" fill="#e8f0fe"/>
+  <g fill="#2f80ed"><rect x="76" y="140" width="30" height="24" rx="5"/><rect x="56" y="172" width="30" height="24" rx="5"/><rect x="96" y="172" width="30" height="24" rx="5"/><rect x="76" y="204" width="30" height="24" rx="5"/></g>
+  <rect x="76" y="236" width="30" height="20" rx="5" fill="#d32f2f"/>
+  <g font-size="11" fill="#ffffff" text-anchor="middle" font-weight="700"><text x="91" y="157">F</text><text x="71" y="189">L</text><text x="111" y="189">R</text><text x="91" y="221">B</text><text x="91" y="250">S</text></g>
+  <text x="91" y="324" font-size="12" fill="#1f2328" text-anchor="middle">แอป (MIT App Inventor)</text>
+
+  <path d="M156 200C190 170 214 230 248 200" stroke="#2f80ed" stroke-width="3" fill="none" stroke-dasharray="6 6"/>
+  <text x="202" y="176" font-size="11" fill="#2f80ed" text-anchor="middle">Bluetooth</text>
+
+  <rect x="256" y="160" width="120" height="80" rx="10" fill="#0b5ed7"/>
+  <text x="316" y="196" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">HC-05</text>
+  <text x="316" y="216" font-size="11" fill="#dbe7ff" text-anchor="middle">TX → RX (D0)</text>
+
+  <path d="M376 200H436" stroke="#1f2328" stroke-width="3" fill="none"/>
+  <path d="M428 194L438 200L428 206" stroke="#1f2328" stroke-width="3" fill="none"/>
+
+  <rect x="440" y="140" width="150" height="120" rx="12" fill="#0e7c86"/>
+  <text x="515" y="180" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Arduino UNO</text>
+  <text x="515" y="202" font-size="11" fill="#d7f3f5" text-anchor="middle">Serial.read()</text>
+  <text x="515" y="222" font-size="11" fill="#d7f3f5" text-anchor="middle">D13 D12 D11 D10</text>
+
+  <path d="M590 200H650" stroke="#1f2328" stroke-width="3" fill="none"/>
+  <path d="M642 194L652 200L642 206" stroke="#1f2328" stroke-width="3" fill="none"/>
+  <text x="620" y="190" font-size="10" fill="#6f6f6f" text-anchor="middle">IN1–IN4</text>
+
+  <rect x="654" y="150" width="110" height="100" rx="12" fill="#c62828"/>
+  <text x="709" y="198" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">L298N</text>
+  <text x="709" y="218" font-size="11" fill="#ffd8d8" text-anchor="middle">2 ช่อง</text>
+  <circle cx="820" cy="150" r="30" fill="#f3f4f6" stroke="#6b7280" stroke-width="3"/>
+  <circle cx="820" cy="250" r="30" fill="#f3f4f6" stroke="#6b7280" stroke-width="3"/>
+  <text x="820" y="155" font-size="12" font-weight="700" fill="#1f2328" text-anchor="middle">ล้อซ้าย</text>
+  <text x="820" y="255" font-size="12" font-weight="700" fill="#1f2328" text-anchor="middle">ล้อขวา</text>
+  <path d="M764 180L792 160M764 220L792 240" stroke="#6040ee" stroke-width="3" fill="none"/>
+
+  <rect x="256" y="300" width="508" height="92" rx="10" fill="#f7f9fc" stroke="#e5e5e5"/>
+  <g font-size="13" fill="#1f2328">
+    <text x="276" y="328" font-weight="700">คำสั่งจากแอป</text>
+    <text x="276" y="352">F = เดินหน้า   B = ถอยหลัง   L = เลี้ยวซ้าย   R = เลี้ยวขวา   S = หยุด</text>
+    <text x="276" y="376" fill="#6f6f6f" font-size="12">ถอดสาย RX ของ HC-05 ออกก่อนอัปโหลดโค้ด เพราะใช้ขา Serial ชุดเดียวกับ USB</text>
+  </g>
+</svg>

@@ -1,0 +1,1398 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>ครูมนณัชญ์ กุลวรรณ</title><meta name="description" content="แผนกวิชาช่างอิเล็กทรอนิกส์ · วิทยาลัยเทคนิคประจวบคีรีขันธ์ · ภาคเรียน 2/2569"><meta property="og:title" content="ครูมนณัชญ์ กุลวรรณ"><meta property="og:description" content="แผนกวิชาช่างอิเล็กทรอนิกส์ · วิทยาลัยเทคนิคประจวบคีรีขันธ์ · ภาคเรียน 2/2569"><meta property="og:type" content="website"><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%233d72b6%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2216%22%20r%3D%227%22%20fill%3D%22%2374d61b%22%2F%3E%3Cpath%20d%3D%22M16%2046V20l16%2016%2016-16v26%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%226%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E"><style id="reset">:root{color-scheme:light dark}*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0}img,svg,video{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style id="app-style">
+/* Layout: sky-blue cinematic hero with overlaid nav -> one dark "classroom app" window -> tight bento grid of colour-block cards (blue, near-black UI, one lime action card) -> footer with a giant dotted wordmark */
+:root{
+  --page:#edf2f5; --card:#ffffff; --fg:#0b1730; --muted:#55657d; --line:#d8e1ea; --soft:#f4f7fa;
+  --sky:#3d72b6; --sky-2:#4f86c8; --sky-3:#9cc0e6; --navy:#071b43; --on-blue:#ffffff; --on-blue-2:rgba(255,255,255,.8); --glass:rgba(255,255,255,.14); --glass-line:rgba(255,255,255,.28);
+  --lime:#74d61b; --on-lime:#0b1406; --warn:#c0362c; --amber:#b98a00;
+  --ui:#101112; --ui-2:#18191c; --ui-3:#212327; --ui-line:#2b2e33; --ui-fg:#e8ebef; --ui-muted:#8d949d;
+  --tk:#c4a7ff; --ts:#a6e36f; --tn:#ffb86b; --tc:#6f7782; --tp:#82b4ff;
+  --note:#e8f1fb; --note-line:#bcd3ee;
+  --scrim:rgba(7,27,67,.55); --shadow:0 24px 60px -30px rgba(7,27,67,.45);
+  --f-sans:"Anuphan","IBM Plex Sans Thai","Noto Sans Thai","Leelawadee UI",Tahoma,system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --page:#06112a; --card:#0d1b38; --fg:#e9f0f8; --muted:#9fb0c8; --line:#1f3157; --soft:#11234a;
+  --sky:#2f62a6; --sky-2:#3d72b6; --sky-3:#5b8fcd; --navy:#030b1f; --glass:rgba(255,255,255,.1); --glass-line:rgba(255,255,255,.22);
+  --note:#10284f; --note-line:#244a80; --warn:#ff7b6e; --amber:#e6c34a;
+  --scrim:rgba(0,0,0,.66); --shadow:0 24px 60px -30px rgba(0,0,0,.8); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --page:#06112a; --card:#0d1b38; --fg:#e9f0f8; --muted:#9fb0c8; --line:#1f3157; --soft:#11234a;
+  --sky:#2f62a6; --sky-2:#3d72b6; --sky-3:#5b8fcd; --navy:#030b1f; --glass:rgba(255,255,255,.1); --glass-line:rgba(255,255,255,.22);
+  --note:#10284f; --note-line:#244a80; --warn:#ff7b6e; --amber:#e6c34a;
+  --scrim:rgba(0,0,0,.66); --shadow:0 24px 60px -30px rgba(0,0,0,.8); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--page);color:var(--fg);font-family:var(--f-sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--sky)}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:8px}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+p{margin:0}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin-inline:auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--sky)}
+.mono,.code{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.ic{flex:none;display:block}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* pills */
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:11px 22px;font-weight:600;font-size:14px;line-height:1.2;border:1px solid transparent;text-decoration:none;white-space:nowrap;transition:background .15s,color .15s,border-color .15s,transform .15s,filter .15s}
+.pill:hover{transform:translateY(-1px)}
+.pill-lg{padding:14px 28px;font-size:15px}
+.pill-sm{padding:7px 15px;font-size:13px}
+.pill-white{background:#ffffff;color:var(--navy)}
+.pill-glass{background:var(--glass);color:#fff;border-color:var(--glass-line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.pill-glass:hover{background:rgba(255,255,255,.22)}
+.pill-black{background:#0b0c0d;color:#fff}
+.pill-lime{background:var(--lime);color:var(--on-lime)}
+.pill-dark,.pill-blue{background:var(--sky);color:#fff}
+.pill-ghost{background:var(--card);color:var(--fg);border-color:var(--line)}
+.pill-ghost:hover{border-color:var(--sky)}
+.pill[disabled]{opacity:.5;cursor:default;transform:none}
+
+/* sky backdrop (hero + page headers) */
+.sky{position:relative;overflow:hidden;color:#fff;background:linear-gradient(180deg,#2c62a8 0%,#4f86c8 48%,#8db6e3 100%)}
+.sky::before{content:"";position:absolute;inset:-20% -10% auto;height:120%;pointer-events:none;opacity:.55;
+  background:radial-gradient(38% 28% at 18% 72%,rgba(255,255,255,.55),transparent 70%),radial-gradient(30% 22% at 70% 80%,rgba(255,255,255,.45),transparent 70%),radial-gradient(26% 18% at 88% 30%,rgba(255,255,255,.28),transparent 70%),radial-gradient(22% 16% at 40% 18%,rgba(255,255,255,.18),transparent 70%)}
+.sky::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;
+  background-image:linear-gradient(rgba(255,255,255,.7) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.7) 1px,transparent 1px);background-size:56px 56px;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,transparent 75%)}
+.sky>*{position:relative;z-index:1}
+
+/* nav (overlaid on the sky) */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;color:#fff;background:#2c62a8;background:color-mix(in srgb,#2c62a8 88%,transparent);backdrop-filter:saturate(1.3) blur(12px);-webkit-backdrop-filter:saturate(1.3) blur(12px);border-bottom:1px solid rgba(255,255,255,.12)}
+.nav-in{display:flex;align-items:center;gap:18px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:none;max-width:40%}
+.mark{width:32px;height:32px;border-radius:9px;background:#fff;color:var(--navy);display:grid;place-items:center;font-weight:700;font-size:12px;flex:none}
+.brand-t{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-links{flex:1;display:flex;justify-content:flex-end;align-items:center;gap:2px;min-width:0}
+.nl{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:999px;font-size:14px;color:rgba(255,255,255,.82);text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}
+.nl:hover{color:#fff;background:rgba(255,255,255,.12)}
+.nl.is-on{color:#fff;background:rgba(255,255,255,.18)}
+.nav-r{display:flex;align-items:center;gap:8px;flex:none}
+.burger{display:none;width:40px;height:40px;border-radius:999px;border:1px solid rgba(255,255,255,.3);align-items:center;justify-content:center;color:#fff}
+.dd{position:relative}
+.dd-panel{position:absolute;top:calc(100% + 10px);right:0;width:min(460px,88vw);background:var(--ui);color:var(--ui-fg);border:1px solid var(--ui-line);border-radius:16px;padding:8px;box-shadow:var(--shadow);display:grid}
+.dd-i{display:grid;grid-template-columns:6.4rem 1fr;gap:12px;align-items:baseline;padding:10px 12px;border-radius:10px;text-decoration:none;font-size:14px;line-height:1.45}
+.dd-i .code{font-size:12px;color:var(--lime)}
+.dd-i:hover,.dd-i.is-on{background:var(--ui-3)}
+.dd-add{margin-top:4px;padding:10px 12px;border-radius:10px;border:1px dashed var(--ui-line);color:var(--ui-muted);font-size:14px;text-align:left}
+.mnav{border-top:1px solid rgba(255,255,255,.15);max-height:calc(100vh - 60px);overflow:auto}
+.mnav-in{display:grid;gap:2px;padding-block:10px 18px}
+.mnav .nl{justify-content:flex-start;font-size:16px;padding:10px 12px;border-radius:10px}
+.mnav .eyebrow{padding:14px 12px 4px;color:rgba(255,255,255,.7)}
+.mnav .dd-i .code{color:#d9f7b8}
+.mnav .dd-i:hover,.mnav .dd-i.is-on{background:rgba(255,255,255,.12)}
+@media (max-width:1000px){.nav-links{display:none}.burger{display:inline-flex}.brand{max-width:60%}.nav-r{margin-left:auto}}
+
+/* edit strip */
+.estrip{background:#e9f9d9;color:#1d3a05;font-size:14px;line-height:1.55;border-bottom:1px solid #c9eda4}
+.estrip-in{display:flex;gap:10px;align-items:flex-start;padding-block:10px}
+.estrip .dot{width:8px;height:8px;border-radius:50%;background:#4a9a0b;margin-top:7px;flex:none;animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.conflict{border-bottom:1px solid var(--line);background:var(--card)}
+.conflict-in{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding-block:12px;font-size:14px}
+.conflict-in p{flex:1 1 280px}
+
+/* hero */
+.hero-in{text-align:center;padding-block:clamp(56px,9vw,120px) clamp(120px,14vw,190px);display:grid;justify-items:center;gap:22px}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--glass-line);background:var(--glass);border-radius:999px;padding:5px 14px 5px 6px;font-size:13px;color:#fff;max-width:100%;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.badge b{background:var(--lime);color:var(--on-lime);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;white-space:nowrap}
+.badge span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.display{font-size:clamp(2.6rem,7.6vw,6.2rem);line-height:1.1;font-weight:700;letter-spacing:-.015em;max-width:15ch;text-shadow:0 2px 30px rgba(7,27,67,.18)}
+.display .l2{display:block;font-weight:500;color:rgba(255,255,255,.88)}
+.tag-in{display:inline-flex;align-items:center;gap:.25em;vertical-align:.18em;font-size:.36em;font-weight:600;line-height:1;padding:.45em .8em;border-radius:999px;background:#fff;color:var(--navy);letter-spacing:0;margin-inline:.12em;box-shadow:0 6px 20px -10px rgba(7,27,67,.5)}
+.tag-in i{width:.55em;height:.55em;border-radius:50%;display:inline-block}
+.lede{max-width:40rem;color:var(--on-blue-2);font-size:clamp(1rem,1.6vw,1.12rem)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.edit-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+
+/* classroom app window */
+.showcase{margin-top:calc(-1 * clamp(90px,11vw,150px));position:relative;z-index:2}
+.app{background:var(--ui);color:var(--ui-fg);border-radius:22px;border:1px solid var(--ui-line);box-shadow:0 40px 80px -40px rgba(7,27,67,.7);overflow:hidden}
+.app-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--ui-line);background:var(--ui-2)}
+.dots{display:flex;gap:6px}.dots i{width:11px;height:11px;border-radius:50%;background:#3a3d42}
+.dots i:nth-child(1){background:#ff6058}.dots i:nth-child(2){background:#ffbd2e}.dots i:nth-child(3){background:#28c941}
+.app-title{font-size:13px;color:var(--ui-muted);flex:1;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-bar .st{font-family:var(--f-mono);font-size:11px;color:var(--lime);display:flex;align-items:center;gap:6px}
+.app-bar .st::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime)}
+.app-body{display:grid;grid-template-columns:230px minmax(0,1fr) 270px;min-height:420px}
+.app-side{border-right:1px solid var(--ui-line);padding:14px 10px;display:grid;align-content:start;gap:2px}
+.app-h{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ui-muted);padding:6px 10px 8px;font-weight:600}
+.app-side a{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;padding:9px 10px;border-radius:10px;text-decoration:none;font-size:13px;line-height:1.35}
+.app-side a:hover{background:var(--ui-3)}
+.app-side .av{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font-family:var(--f-mono);font-size:10px;font-weight:600;color:#0b1406}
+.app-side small{display:block;color:var(--ui-muted);font-family:var(--f-mono);font-size:10.5px}
+.app-main{padding:16px;display:grid;align-content:start;gap:12px;min-width:0}
+.sbox{border:1px solid var(--ui-line);border-radius:14px;background:var(--ui-2);transition:border-color .15s,box-shadow .15s}
+.sbox:focus-within{border-color:var(--sky-2);box-shadow:0 0 0 3px rgba(79,134,200,.3)}
+.sbox input{width:100%;border:0;background:transparent;padding:14px 16px 8px;font-size:16px;outline:none;color:var(--ui-fg)}
+.sbox input::placeholder{color:var(--ui-muted)}
+.sbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:4px 8px 8px 12px}
+.sbar select{border:1px solid var(--ui-line);background:var(--ui-3);color:var(--ui-fg);border-radius:8px;padding:5px 9px;font-size:12px;max-width:70%}
+.sgo{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--ui-3);color:var(--ui-muted);border:1px solid var(--ui-line);transition:background .15s,color .15s}
+.sgo.is-on{background:var(--lime);color:var(--on-lime);border-color:var(--lime)}
+.shint{font-size:11.5px;color:var(--ui-muted)}
+.shint kbd{font-family:var(--f-mono);font-size:10.5px;border:1px solid var(--ui-line);border-bottom-width:2px;border-radius:5px;padding:0 5px;background:var(--ui-2)}
+.feed{display:grid;gap:2px}
+.feed a{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;padding:10px 12px;text-decoration:none;border-radius:10px}
+.feed a:hover,.feed a:focus-visible{background:var(--ui-3)}
+.feed .code{grid-row:span 2;font-size:11px;color:var(--lime);padding-top:3px;min-width:5.6rem}
+.feed b{font-weight:600;font-size:14px;line-height:1.45}
+.feed small{color:var(--ui-muted);font-size:12.5px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.feed .none{padding:12px;color:var(--ui-muted);font-size:14px}
+.app-aside{border-left:1px solid var(--ui-line);padding:14px;display:grid;align-content:start;gap:10px}
+.today{display:grid;gap:8px}
+.tslot{border:1px solid var(--ui-line);border-radius:12px;padding:10px 12px;background:var(--ui-2);display:grid;gap:2px;text-decoration:none}
+.tslot:hover{border-color:var(--sky-2)}
+.tslot .mono{font-size:11.5px;color:var(--tp)}
+.tslot b{font-size:13.5px;font-weight:600;line-height:1.4}
+.tslot small{font-size:12px;color:var(--ui-muted)}
+.term{grid-column:1/-1;border-top:1px solid var(--ui-line);background:#0b0c0d;font-family:var(--f-mono);font-size:12px;line-height:1.7;padding:10px 16px;color:var(--ui-muted);overflow-x:auto;white-space:nowrap}
+.term .ok{color:var(--lime)}.term .hl{color:var(--ui-fg)}
+@media (max-width:980px){.app-body{grid-template-columns:minmax(0,1fr)}.app-side{display:none}.app-aside{border-left:0;border-top:1px solid var(--ui-line)}}
+
+/* bento */
+.bento-wrap{padding-block:clamp(18px,3vw,28px) clamp(56px,7vw,96px)}
+.bento-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 24px;margin:clamp(40px,6vw,72px) 0 18px}
+.bento-head h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.bento-head p{color:var(--muted);max-width:30rem}
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.bc{border-radius:20px;padding:22px;min-width:0;display:grid;gap:14px;align-content:start;position:relative;overflow:hidden;transition:transform .2s,filter .2s;text-decoration:none}
+a.bc:hover{transform:translateY(-3px);filter:brightness(1.05)}
+.b-blue{background:var(--sky);color:#fff}
+.b-blue::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.2px);background-size:14px 14px;-webkit-mask-image:linear-gradient(200deg,#000,transparent 55%);mask-image:linear-gradient(200deg,#000,transparent 55%)}
+.b-blue>*{position:relative;z-index:1}
+.b-dark{background:var(--ui);color:var(--ui-fg)}
+.b-lime{background:var(--lime);color:var(--on-lime)}
+.s2{grid-column:span 2}.s3{grid-column:span 3}.s4{grid-column:span 4}.s6{grid-column:span 6}
+@media (max-width:980px){.s2,.s3{grid-column:span 3}.s4{grid-column:span 6}}
+@media (max-width:640px){.s2,.s3,.s4,.s6{grid-column:span 6}}
+.bc-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.bc-code{font-family:var(--f-mono);font-size:12px;padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25)}
+.b-dark .bc-code{background:var(--ui-3);border-color:var(--ui-line);color:var(--lime)}
+.bc-meta{font-size:12px;opacity:.85}
+.bc h3{font-size:clamp(1.25rem,2.2vw,1.55rem);font-weight:600;line-height:1.3}
+.bc p{font-size:14px;opacity:.88;line-height:1.6}
+.big{font-size:clamp(3.4rem,7vw,5.2rem);font-weight:700;line-height:.95;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.big small{font-size:.24em;font-weight:500;letter-spacing:0;opacity:.85;margin-left:.3em}
+.mini{background:var(--ui);color:var(--ui-fg);border-radius:12px;border:1px solid rgba(255,255,255,.12);overflow:hidden;font-family:var(--f-mono);font-size:11.5px;line-height:1.65}
+.mini-bar{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid var(--ui-line);color:var(--ui-muted);font-size:10.5px}
+.mini-bar .dots i{width:8px;height:8px}
+.mini pre{margin:0;padding:10px 12px;overflow:hidden;white-space:pre;max-height:11.5em}
+.mini ol{margin:0;padding:10px 12px 10px 2.4em;display:grid;gap:2px;font-family:var(--f-sans);font-size:12.5px}
+.mini ol li::marker{color:var(--ui-muted);font-family:var(--f-mono);font-size:11px}
+.bc-foot{display:flex;flex-wrap:wrap;gap:6px;font-size:12px}
+.bc-foot span{padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.14)}
+.b-dark .bc-foot span{background:var(--ui-3);color:var(--ui-muted)}
+.arrow{position:absolute;right:18px;top:18px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.18);transition:transform .2s;z-index:2}
+a.bc:hover .arrow{transform:translateX(3px)}
+.bc-add{border:2px dashed var(--line);background:transparent;color:var(--muted);display:grid;place-items:center;min-height:160px;font-size:15px}
+/* teacher card */
+.teach{grid-template-columns:auto minmax(0,1fr);align-items:center}
+.teach-ph{width:112px;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12)}
+.teach-ph img{width:100%;height:100%;object-fit:cover}
+.teach ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:13px;opacity:.92;grid-column:1/-1}
+.teach li{display:flex;gap:8px;align-items:baseline}
+.teach li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime);flex:none;transform:translateY(-2px)}
+/* lime card */
+.b-lime h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;letter-spacing:-.01em}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:14.5px;font-weight:500}
+.checks li{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start}
+.checks svg{margin-top:3px}
+/* carousel */
+.car{position:relative;border-radius:14px;overflow:hidden;background:rgba(0,0,0,.18);aspect-ratio:16/9}
+.car-track{display:flex;height:100%;transition:transform .5s ease}
+.car-slide{flex:0 0 100%;height:100%;position:relative}
+.car-slide img{width:100%;height:100%;object-fit:cover}
+.car-slide figcaption{position:absolute;left:10px;bottom:10px;right:10px;font-size:12.5px;background:rgba(7,27,67,.72);color:#fff;border-radius:10px;padding:6px 10px;backdrop-filter:blur(4px)}
+.car-dots{display:flex;gap:6px;justify-content:center}
+.car-dots button{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.4);transition:width .2s,background .2s}
+.car-dots button.is-on{width:22px;background:#fff}
+/* timetable inside dark card */
+.tt-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:end}
+.tt-head h3{font-size:clamp(1.25rem,2.2vw,1.55rem);font-weight:600}
+.tt-note{color:var(--ui-muted);font-size:12.5px}
+.tt-scroll{overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+.tt-grid{display:grid;grid-template-columns:4.4rem repeat(var(--units),minmax(1.45rem,1fr));row-gap:6px;min-width:46rem}
+.tt-h{grid-row:1;font-family:var(--f-mono);font-size:10.5px;color:var(--ui-muted);padding:0 0 4px 2px}
+.tt-d{grid-column:1;align-self:center;font-weight:600;font-size:13px}
+.tt-row{grid-column:2/-1;height:66px;border:1px solid var(--ui-line);border-radius:10px;background-image:linear-gradient(to right,var(--ui-line) 1px,transparent 1px);background-size:calc(100% / var(--hours)) 100%;background-position:-1px 0}
+.tt-lunch{z-index:1;margin:0 1px;border-radius:9px;background-color:var(--ui);background-image:repeating-linear-gradient(135deg,var(--ui-line) 0 1px,transparent 1px 7px);display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;font-size:11px;color:var(--ui-muted)}
+.tt-b{z-index:2;margin:5px 3px;border-radius:8px;background:var(--sky-2);color:#fff;padding:6px 9px;display:flex;flex-direction:column;justify-content:center;gap:0;min-width:0;text-decoration:none;font-size:11.5px;line-height:1.35;overflow:hidden;transition:transform .15s,filter .15s}
+.tt-b:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.tt-b b{font-family:var(--f-mono);font-weight:500;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tt-b span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.85}
+.tt-b.k1{background:#4f86c8}.tt-b.k2{background:#7a5af8}.tt-b.k3{background:#e08a1e}.tt-b.k4{background:#14a37f}.tt-b.k0{background:#74d61b;color:#0b1406}
+
+/* inner page header */
+.ph{padding-block:clamp(36px,6vw,72px) clamp(36px,5vw,60px)}
+.ph-in{display:grid;gap:14px;justify-items:start}
+.ph-split{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end;width:100%}
+.ph-photo{width:140px;aspect-ratio:3/4;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.35)}
+.ph-photo img{width:100%;height:100%;object-fit:cover}
+@media (max-width:600px){.ph-split{grid-template-columns:minmax(0,1fr)}.ph-photo{width:110px}}
+.crumbs{font-size:13px;color:var(--on-blue-2);display:flex;gap:8px;flex-wrap:wrap}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{color:#fff;text-decoration:underline}
+.code-chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--glass-line);border-radius:999px;padding:4px 12px;font-family:var(--f-mono);font-size:13px;background:var(--glass)}
+.h-page{font-size:clamp(2.1rem,5.6vw,4.4rem);line-height:1.1;font-weight:700;letter-spacing:-.015em;max-width:22ch}
+.h-page em{display:block;font-style:normal;font-weight:500;font-size:.38em;line-height:1.5;margin-top:.5em;color:var(--on-blue-2);letter-spacing:0}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.slot{display:inline-flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;border:1px solid var(--glass-line);border-radius:12px;padding:7px 12px;font-size:13px;background:var(--glass);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.slot b{font-weight:600}
+.slot .mono{font-size:12px}
+.slot i{font-style:normal;opacity:.82}
+
+/* tabs (segmented pills on the page background) */
+.tabbar{position:sticky;top:calc(60px + env(safe-area-inset-top,0px));z-index:20;background:var(--page);background:color-mix(in srgb,var(--page) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:12px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--muted);background:var(--card);border:1px solid var(--line);white-space:nowrap;transition:background .15s,color .15s}
+.tab:hover{color:var(--fg)}
+.tab.is-on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tab .cnt{font-family:var(--f-mono);font-size:11px;background:var(--soft);border-radius:999px;padding:0 7px;color:var(--muted)}
+.tab.is-on .cnt{background:var(--lime);color:var(--on-lime)}
+.tab-add{color:var(--sky);font-size:14px;padding:9px 12px;white-space:nowrap;font-weight:600}
+.tabpanel{padding-block:8px clamp(48px,6vw,80px)}
+.panel-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px;padding:10px 12px;border:1px dashed var(--line);border-radius:14px;background:var(--card)}
+.panel-tools span{font-size:13px;color:var(--muted);margin-right:auto}
+
+/* accordion */
+.acc-list{display:grid;gap:10px}
+.acc{border-radius:18px;background:var(--card);border:1px solid transparent;transition:border-color .15s,box-shadow .15s;scroll-margin-top:130px}
+.acc.is-open{border-color:var(--line);box-shadow:var(--shadow)}
+.acc-btn{width:100%;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;padding:18px 20px;text-align:left;border-radius:18px}
+.acc-btn:hover .acc-title{color:var(--sky)}
+.acc-idx{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-family:var(--f-mono);font-size:13px;font-weight:500;background:var(--soft);color:var(--muted)}
+.acc.is-open .acc-idx{background:var(--sky);color:#fff}
+.ws.acc.is-open .acc-idx{background:var(--lime);color:var(--on-lime)}
+.acc-tt{display:grid;gap:2px;min-width:0}
+.acc-title{font-weight:600;font-size:1.08rem;line-height:1.45;transition:color .15s}
+.acc-desc{color:var(--muted);font-size:14px;line-height:1.55}
+.acc-chev{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--muted);background:var(--soft);transition:transform .2s}
+.acc.is-open .acc-chev{transform:rotate(180deg);color:var(--sky)}
+.acc-body{padding:4px 20px 22px calc(20px + 40px + 16px);display:grid;gap:18px;min-width:0}
+@media (max-width:640px){.acc-btn{gap:12px;padding:16px}.acc-idx{width:34px;height:34px}.acc-body{padding:4px 16px 18px}}
+
+/* markdown */
+.md{display:grid;gap:12px;min-width:0;max-width:52rem;line-height:1.75}
+.md h4{font-size:1.06rem;font-weight:700;margin-top:10px}
+.md ul,.md ol{margin:0;padding-left:1.3rem;display:grid;gap:4px}
+.md li::marker{color:var(--sky)}
+.md code{font-family:var(--f-mono);font-size:.86em;background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:1px 5px}
+.md a{color:var(--sky);text-underline-offset:3px}
+.md strong{font-weight:600}
+.note{border:1px solid var(--note-line);background:var(--note);border-radius:12px;padding:12px 14px;font-size:15px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;max-width:100%;background:var(--card)}
+.tbl table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{background:var(--soft);font-weight:600;font-size:13px}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+
+/* figures & gallery */
+.figs{display:grid;gap:14px}
+.fig{margin:0;display:grid;gap:8px}
+.fig-btn{display:block;width:100%;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;cursor:zoom-in}
+.fig-btn img{width:100%;height:auto}
+.fig figcaption{font-size:13px;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.gal .fig-btn{aspect-ratio:4/3;background:var(--soft);border:0;border-radius:18px}
+.gal .fig-btn img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.gal .fig-btn:hover img{transform:scale(1.03)}
+@media (max-width:820px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.gal{grid-template-columns:minmax(0,1fr)}}
+
+/* code editor (dark, technical) */
+.codebox{border:1px solid var(--ui-line);border-radius:14px;overflow:hidden;background:var(--ui);color:var(--ui-fg);min-width:0}
+.cb-head{display:flex;align-items:center;gap:6px;background:var(--ui-2);border-bottom:1px solid var(--ui-line);padding:0 8px 0 12px;min-height:42px;flex-wrap:wrap}
+.cb-head .dots{margin-right:6px}.cb-head .dots i{width:9px;height:9px}
+.cb-tab{font-family:var(--f-mono);font-size:12px;padding:10px 10px 9px;color:var(--ui-muted);border-bottom:2px solid transparent;margin-bottom:-1px}
+.cb-tab.is-on{color:var(--ui-fg);border-bottom-color:var(--lime);background:var(--ui)}
+.cb-sp{flex:1}
+.cb-lang{font-size:11px;font-weight:600;color:var(--on-lime);background:var(--lime);border-radius:999px;padding:2px 9px}
+.cb-copy{font-size:12px;border:1px solid var(--ui-line);border-radius:999px;padding:4px 12px;background:var(--ui-3);color:var(--ui-fg)}
+.cb-copy:hover{border-color:var(--lime)}
+.cb-pre{margin:0;padding:14px 16px;overflow:auto;max-height:520px;font-family:var(--f-mono);font-size:13px;line-height:1.65;tab-size:4}
+.tk{color:var(--tk)}.ts{color:var(--ts)}.tn{color:var(--tn)}.tc{color:var(--tc);font-style:italic}.tp{color:var(--tp)}
+.attach{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+
+/* generic sections (profile pages) */
+.page-body{padding-block:clamp(20px,3vw,32px) clamp(48px,6vw,80px);display:grid;gap:12px}
+.sec{padding:22px;border-radius:20px;background:var(--card);display:grid;gap:14px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
+.sec-t{font-size:clamp(1.2rem,2.2vw,1.45rem);font-weight:700;line-height:1.35}
+.sec-note{color:var(--muted);max-width:44rem}
+.ex{display:inline-block;vertical-align:middle;margin-left:8px;font-size:11px;line-height:1.6;font-weight:600;padding:0 8px;border-radius:999px;background:#fff3c4;color:#6b5100;white-space:nowrap}
+.nofile{font-size:12px;color:var(--muted);white-space:nowrap}
+.open{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;border-radius:999px;padding:7px 14px;text-decoration:none;white-space:nowrap;background:var(--navy);color:#fff;transition:filter .15s;max-width:100%}
+.open span{overflow:hidden;text-overflow:ellipsis}
+.open:hover{filter:brightness(1.25)}
+.cards2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.lcard{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:18px;border:1px solid var(--line);border-radius:14px;min-width:0}
+.lc-main{display:grid;gap:6px;min-width:0}
+.lc-t{font-weight:600;line-height:1.45}
+.lc-d{color:var(--muted);font-size:14px;line-height:1.6}
+@media (max-width:640px){.cards2{grid-template-columns:minmax(0,1fr)}}
+.rows{list-style:none;margin:0;padding:0}
+.row{display:flex;align-items:center;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.rows .row:first-child{border-top:0;padding-top:4px}
+.row-main{flex:1;min-width:0;display:grid;gap:3px}
+.row-t{font-weight:600;line-height:1.5}
+.row-d{color:var(--muted);font-size:14px;line-height:1.6}
+.row-act{flex:none;max-width:45%}
+.num{flex:none;width:2.6rem;font-family:var(--f-mono);font-size:1rem;color:var(--muted);line-height:1.6}
+@media (max-width:560px){.row{flex-wrap:wrap}.row-act{max-width:100%}}
+.info{margin:0}
+.info-r{display:grid;grid-template-columns:12rem minmax(0,1fr);gap:6px 24px;padding:13px 0;border-top:1px solid var(--line)}
+.info-r:first-child{border-top:0;padding-top:4px}
+.info-r dt{color:var(--muted);font-size:14px;line-height:1.7}
+.info-r dd{margin:0;font-weight:500;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;min-width:0;overflow-wrap:anywhere}
+@media (max-width:600px){.info-r{grid-template-columns:minmax(0,1fr)}}
+.prose{display:grid;gap:18px;max-width:44rem}
+.prose h3{font-size:1.08rem;font-weight:600;margin-bottom:6px}
+.prose p{line-height:1.85}
+.panel{background:var(--ui);color:var(--ui-fg);border-radius:20px;padding:clamp(22px,4vw,40px)}
+.cta{display:grid;gap:14px}
+.cta-t{font-size:clamp(1.5rem,3.2vw,2.2rem);font-weight:700;line-height:1.25}
+.cta-note{color:var(--ui-muted)}
+.cta-items{display:grid;gap:14px}
+.cta-item{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.cta-d{color:var(--ui-muted);font-size:14px;flex-basis:100%}
+.pill-inv{background:var(--lime);color:var(--on-lime)}
+.pill-inv-ghost{background:transparent;color:var(--ui-fg);border-color:var(--ui-line)}
+.empty{color:var(--muted);font-size:14px}
+.refs{margin-top:22px;padding:20px 22px;border-radius:18px;background:var(--card);display:grid;gap:10px}
+.refs h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sky);font-weight:600}
+.refs ol{margin:0;padding-left:1.3rem;display:grid;gap:6px;font-size:14px;color:var(--muted);line-height:1.6}
+.refs a{color:var(--fg);overflow-wrap:anywhere;text-underline-offset:3px}
+
+/* edit controls */
+.tools{display:inline-flex;flex-wrap:wrap;gap:4px;position:relative;z-index:3}
+.tbtn{font-size:12px;line-height:1.3;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--fg);white-space:nowrap}
+.tbtn:hover{border-color:var(--sky)}
+.tbtn.is-armed{border-color:var(--warn);color:var(--warn)}
+.tbtn:disabled{opacity:.35;cursor:default}
+.sky .tbtn,.b-blue .tbtn{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.35);color:#fff}
+.panel .tbtn,.b-dark .tbtn{background:transparent;border-color:var(--ui-line);color:var(--ui-fg)}
+.add{display:block;width:100%;text-align:left;padding:13px 16px;border-radius:14px;border:1px dashed var(--line);color:var(--muted);font-size:14px;background:transparent;transition:color .15s,border-color .15s}
+.add:hover{color:var(--sky);border-color:var(--sky)}
+.add-sec{margin-top:4px;text-align:center;padding:16px}
+.add-sm{width:auto;display:inline-block;padding:8px 14px;margin-top:6px}
+
+/* prev/next */
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-bottom:clamp(48px,7vw,88px)}
+.pn-a{display:grid;gap:4px;padding:20px 22px;border-radius:18px;text-decoration:none;min-width:0;background:var(--sky);color:#fff;transition:transform .2s,filter .2s}
+.pn-a:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.pn-a .eyebrow{color:rgba(255,255,255,.8)}
+.pn-a b{font-weight:600;line-height:1.45}
+.pn-a.next{text-align:right}
+@media (max-width:560px){.pn{grid-template-columns:minmax(0,1fr)}.pn-a.next{text-align:left}}
+
+/* footer with giant wordmark */
+.foot{padding-top:28px;overflow:hidden;background:var(--page)}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 18px}
+.foot-links a{text-decoration:none}
+.foot-links a:hover{color:var(--fg)}
+.wordmark{font-weight:700;line-height:.82;letter-spacing:-.04em;font-size:clamp(4.2rem,17vw,15rem);white-space:nowrap;text-align:center;margin:clamp(24px,4vw,40px) 0 calc(-1 * clamp(10px,2vw,26px));
+  background-image:radial-gradient(circle,var(--sky-2) 42%,transparent 46%);background-size:9px 9px;-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none}
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){.wordmark{color:var(--sky-3)}}
+
+/* save bar */
+.savebar{position:fixed;left:0;right:0;bottom:0;z-index:35;padding:0 max(12px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));pointer-events:none}
+.savebar-in{pointer-events:auto;max-width:780px;margin-inline:auto;background:var(--ui);color:var(--ui-fg);border:1px solid var(--ui-line);border-radius:999px;padding:8px 8px 8px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;box-shadow:var(--shadow)}
+.savebar-in p{flex:1 1 220px;font-size:14px}
+.has-savebar .foot{padding-bottom:100px}
+
+/* modal + lightbox */
+.modal-bg{position:fixed;inset:0;z-index:50;background:var(--scrim);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.modal{width:min(720px,100%);max-height:100%;overflow:auto;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:22px;display:grid;box-shadow:var(--shadow)}
+.m-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px 0}
+.m-head h3{font-size:1.2rem;font-weight:700}
+.icon-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:20px;line-height:1;background:var(--card)}
+.m-body{padding:16px 22px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.field{grid-column:1/-1;display:grid;gap:6px;min-width:0}
+.field.third{grid-column:span 2}
+.field.half{grid-column:span 3}
+.field>label,.field>.lbl{font-size:13px;font-weight:600}
+.field b{color:var(--warn);font-weight:600}
+.field input[type=text],.field input[type=url],.field input[type=number],.field input[type=time],.field select,.field textarea,.rowed input,.rowed select,.rowed textarea{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:var(--page);color:var(--fg);font-size:15px;line-height:1.5;min-width:0}
+.field textarea,.rowed textarea{resize:vertical;font-size:14px}
+.rowed textarea{font-family:var(--f-mono);font-size:13px}
+.field input:focus,.field select:focus,.field textarea:focus,.rowed :focus{outline:2px solid var(--sky);outline-offset:0;border-color:var(--sky)}
+.hint{font-size:12px;color:var(--muted);line-height:1.6}
+.upl{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.upl-msg{font-size:13px;color:var(--muted)}
+.rows-ed{display:grid;gap:10px}
+.rowed{display:grid;gap:6px;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+.rowed-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:6px;align-items:center}
+.slot-row{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1fr auto;gap:6px;align-items:center}
+.slot-row select,.slot-row input{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--page);color:var(--fg);font-size:14px;min-width:0}
+@media (max-width:560px){.slot-row{grid-template-columns:1fr 1fr 1fr}.field.half,.field.third{grid-column:1/-1}.rowed-top{grid-template-columns:minmax(0,1fr)}}
+.m-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px 22px 18px;border-top:1px solid var(--line)}
+.m-msg{flex:1 1 160px;font-size:13px;color:var(--warn)}
+.m-foot .left{margin-right:auto}
+.lb{position:fixed;inset:0;z-index:55;background:rgba(3,11,31,.9);display:grid;place-items:center;padding:max(20px,env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));cursor:zoom-out}
+.lb figure{margin:0;display:grid;gap:10px;max-width:min(1100px,100%);max-height:100%}
+.lb img{max-height:calc(100vh - 120px);width:auto;max-width:100%;border-radius:12px;background:#fff;margin-inline:auto}
+.lb figcaption{color:#e6edf6;text-align:center;font-size:14px}
+.lb .icon-btn{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));background:#0d1b38;color:#fff;border-color:#244a80}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(90px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--ui);color:var(--ui-fg);padding:10px 18px;border-radius:999px;font-size:14px;max-width:min(92vw,560px);text-align:center;box-shadow:var(--shadow)}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+/* mobile overflow fixes */
+.hero-in,.app-main,.app-aside,.today,.feed{grid-template-columns:minmax(0,1fr)}
+.hero-in>*{max-width:100%}
+.badge{flex-wrap:wrap;justify-content:center;row-gap:4px}
+.badge>span{min-width:0;white-space:normal}
+.sbox input,.sbox select{width:100%;min-width:0;max-width:100%}
+.sbar{min-width:0}
+@media (max-width:520px){.display{font-size:clamp(2.1rem,10.5vw,2.8rem)}.badge{font-size:12px;border-radius:16px}}</style></head>
+<body><div id="app"></div><div id="overlay-root"></div>
+<script type="application/json" id="site-data">{"v":3,"sv":"static1","site":{"name":"ครูมนณัชญ์ กุลวรรณ","fullName":"นายมนณัชญ์ กุลวรรณ","mark":"มก","position":"ครูผู้ช่วย","dept":"แผนกวิชาช่างอิเล็กทรอนิกส์","college":"วิทยาลัยเทคนิคประจวบคีรีขันธ์","term":"2/2569","degree":"ครุศาสตรอุตสาหกรรมบัณฑิต","school":"สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง","intro":"รวมเนื้อหา โค้ดตัวอย่าง ใบงาน และภาพกิจกรรมของทุกรายวิชาที่สอนในภาคเรียนนี้ เปิดดูได้ทั้งในห้องเรียนและนอกห้องเรียน","duties":["เจ้าหน้าที่งานทะเบียน","เจ้าหน้าที่งานศูนย์ดิจิทัลและสื่อสารองค์กร","ครูที่ปรึกษา ระดับชั้น ปวช. 1"],"photo":"img/portrait.jpg","cover":"img/college.jpg","tags":["หุ่นยนต์","AI","ภาษาซี","กฎหมาย"],"wordmark":"มนณัชญ์"},"pages":[{"id":"work","title":"ประวัติการทำงาน","sub":"นายมนณัชญ์ กุลวรรณ","sections":[{"id":"w1","type":"info","title":"ข้อมูลการปฏิบัติงาน","note":"","items":[{"id":"w1a","title":"ตำแหน่ง","desc":"ครูผู้ช่วย","url":""},{"id":"w1b","title":"สังกัด","desc":"แผนกวิชาช่างอิเล็กทรอนิกส์ วิทยาลัยเทคนิคประจวบคีรีขันธ์ สำนักงานคณะกรรมการการอาชีวศึกษา","url":""},{"id":"w1c","title":"หน้าที่พิเศษ","desc":"เจ้าหน้าที่งานทะเบียน","url":""},{"id":"w1d","title":"หน้าที่พิเศษ","desc":"เจ้าหน้าที่งานศูนย์ดิจิทัลและสื่อสารองค์กร","url":""},{"id":"w1e","title":"ครูที่ปรึกษา","desc":"ระดับชั้น ปวช. 1","url":""}]},{"id":"w2","type":"list","title":"ประสบการณ์การทำงาน","note":"","items":[{"id":"w2a","title":"ครูผู้ช่วย แผนกวิชาช่างอิเล็กทรอนิกส์","desc":"วิทยาลัยเทคนิคประจวบคีรีขันธ์ · ปัจจุบัน","url":""},{"id":"w2b","title":"ฝึกงาน บริษัท พีแอนด์พี อิเล็กทรอนิกส์ เทคโนโลยี จำกัด","desc":"ฝึกประสบการณ์วิชาชีพด้านอิเล็กทรอนิกส์","url":""}]},{"id":"w3","type":"gallery","title":"ภาพการปฏิบัติงาน","note":"","items":[{"id":"w3a","title":"การทำงานเป็นทีมร่วมกับเพื่อนครู","desc":"","url":"img/team-1.jpg"},{"id":"w3b","title":"ร่วมกิจกรรมกับคณะครูและผู้บริหาร","desc":"","url":"img/team-3.jpg"}]}]},{"id":"edu","title":"ประวัติการศึกษา","sub":"นายมนณัชญ์ กุลวรรณ","sections":[{"id":"e1","type":"list","title":"ประวัติการศึกษา","note":"","items":[{"id":"e1a","title":"ปริญญาตรี ครุศาสตรอุตสาหกรรมบัณฑิต","desc":"สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง","url":""},{"id":"e1b","title":"มัธยมศึกษาปีที่ 1–6","desc":"โรงเรียนวิทยาศาสตร์ภูมิภาคจุฬาภรณราชวิทยาลัย เชียงราย","url":""},{"id":"e1c","title":"ประถมศึกษา","desc":"โรงเรียนเด็กดีพิทยาคม","url":""}]}]},{"id":"personal","title":"ประวัติส่วนตัว","sub":"นายมนณัชญ์ กุลวรรณ","sections":[{"id":"p1","type":"info","title":"ข้อมูลส่วนตัว","note":"","items":[{"id":"p1a","title":"ชื่อ-สกุล","desc":"นายมนณัชญ์ กุลวรรณ","url":""},{"id":"p1b","title":"ตำแหน่ง","desc":"ครูผู้ช่วย","url":""},{"id":"p1c","title":"แผนกวิชา","desc":"ช่างอิเล็กทรอนิกส์","url":""},{"id":"p1d","title":"สถานศึกษา","desc":"วิทยาลัยเทคนิคประจวบคีรีขันธ์","url":""}]},{"id":"p2","type":"text","title":"แนะนำตัว","note":"","items":[{"id":"p2a","title":"","desc":"พื้นที่สำหรับเขียนแนะนำตัว ความสนใจ และแนวทางการจัดการเรียนการสอน","url":"","ex":true}]}]}],"subjects":[{"id":"c20105-2007","code":"20105-2007","name":"การเขียนโปรแกรมคอมพิวเตอร์","t":1,"p":4,"n":3,"h":5,"slots":[{"d":5,"s":"08:00","e":"12:00","room":"8407","group":"ชอ.3/1"},{"d":5,"s":"13:00","e":"14:00","room":"8407","group":"ชอ.3/1"}],"sections":[{"id":"bs1","type":"lessons","title":"เนื้อหา","note":"","items":[{"id":"pl1","title":"หน่วยที่ 1 หลักการเขียนโปรแกรม อัลกอริทึม และผังงาน","desc":"ขั้นตอนการพัฒนาโปรแกรม การแก้ปัญหาด้วยอัลกอริทึม และสัญลักษณ์ผังงานมาตรฐาน","body":"### ขั้นตอนการพัฒนาโปรแกรม\n1. **วิเคราะห์ปัญหา** หาว่าข้อมูลเข้า (Input) คืออะไร ต้องการผลลัพธ์ (Output) อะไร และต้องประมวลผลอย่างไร\n2. **ออกแบบอัลกอริทึม** เขียนลำดับขั้นการแก้ปัญหาเป็นผังงาน (Flowchart) หรือรหัสเทียม (Pseudocode)\n3. **เขียนโปรแกรม** แปลงอัลกอริทึมเป็นภาษาคอมพิวเตอร์ ในรายวิชานี้ใช้ภาษาซี\n4. **ทดสอบและแก้ไข** ป้อนข้อมูลหลายกรณี รวมถึงกรณีผิดปกติ แล้วแก้ข้อผิดพลาด (Debug)\n5. **จัดทำเอกสาร** เขียนคำอธิบายในโค้ด (Comment) และคู่มือการใช้งาน\n\n### อัลกอริทึม\nอัลกอริทึม (Algorithm) คือลำดับขั้นตอนที่ชัดเจน มีจุดเริ่มต้นและจุดสิ้นสุด และให้ผลลัพธ์เดิมทุกครั้งเมื่อข้อมูลเข้าเหมือนเดิม ตัวอย่างรหัสเทียมของการคำนวณกระแสไฟฟ้า\n\n1. เริ่มต้น\n2. รับค่าแรงดัน V และความต้านทาน R\n3. ถ้า R เท่ากับ 0 ให้แจ้งเตือนแล้วจบการทำงาน\n4. คำนวณ I = V / R\n5. แสดงค่า I\n6. จบการทำงาน\n\n### โครงสร้างควบคุม 3 แบบ\n- **แบบลำดับ (Sequence)** ทำงานเรียงทีละคำสั่ง\n- **แบบเลือกทำ (Selection)** ตรวจเงื่อนไขแล้วเลือกเส้นทาง\n- **แบบทำซ้ำ (Repetition)** ทำคำสั่งเดิมซ้ำจนกว่าเงื่อนไขจะเป็นเท็จ\n\n> ฝึกเขียนผังงานด้วยโปรแกรม Flowgorithm ได้ฟรี โปรแกรมจะรันผังงานให้ดูผลจริง ช่วยฝึกแนวคิดเชิงคำนวณก่อนเขียนโค้ด","code":[],"images":[{"url":"svg/prog-flowchart.svg","cap":"ภาพที่ 1 สัญลักษณ์ผังงาน และผังงานคำนวณกระแสไฟฟ้า (วาดใหม่)"}],"url":""},{"id":"pl2","title":"หน่วยที่ 2 โครงสร้างโปรแกรมภาษาซี ตัวแปร และชนิดข้อมูล","desc":"ส่วนประกอบของโปรแกรม การประกาศตัวแปร ชนิดข้อมูลพื้นฐาน และคำสั่งรับ-แสดงผล","body":"### ส่วนประกอบของโปรแกรมภาษาซี\n- **ส่วนหัว (Preprocessor)** เช่น `#include \u003cstdio.h>` เรียกใช้คลังคำสั่งมาตรฐาน\n- **ฟังก์ชัน main** จุดเริ่มต้นของโปรแกรม ทุกโปรแกรมต้องมี 1 ฟังก์ชัน\n- **คำสั่ง (Statement)** ทุกคำสั่งจบด้วยเครื่องหมาย `;`\n- **หมายเหตุ (Comment)** เขียนใน `/* ... */` หรือ `// ...` คอมไพเลอร์จะไม่นำไปประมวลผล\n\n### ชนิดข้อมูลพื้นฐาน\n| ชนิด | ใช้เก็บ | รหัสรูปแบบใน printf/scanf |\n|---|---|---|\n| int | จำนวนเต็ม | %d |\n| float | ทศนิยม (ความละเอียดประมาณ 6–7 หลัก) | %f |\n| double | ทศนิยมความละเอียดสูง | %lf (scanf) / %f (printf) |\n| char | ตัวอักษร 1 ตัว | %c |\n| char[] | ข้อความ (สตริง) | %s |\n\n> ขนาดของ int ขึ้นกับเครื่อง บนคอมพิวเตอร์ทั่วไปมีขนาด 4 ไบต์ แต่บน Arduino UNO มีขนาด 2 ไบต์ (เก็บได้ −32,768 ถึง 32,767) จึงต้องระวังเมื่อนำความรู้ไปเขียนโปรแกรมไมโครคอนโทรลเลอร์\n\n### กฎการตั้งชื่อตัวแปร\n- ขึ้นต้นด้วยตัวอักษรหรือ _ ตามด้วยตัวอักษร ตัวเลข หรือ _\n- ห้ามมีช่องว่าง และห้ามซ้ำกับคำสงวน เช่น int, if, for\n- ตัวพิมพ์ใหญ่และเล็กถือว่าต่างกัน และควรตั้งชื่อให้สื่อความหมาย เช่น `voltage` แทน `x`\n\n### การรับและแสดงผล\n`printf` แสดงผลทางหน้าจอ ส่วน `scanf` รับค่าจากแป้นพิมพ์ โดยต้องใส่ `&` หน้าชื่อตัวแปรเพื่อบอกตำแหน่งที่จะเก็บค่า และ `%.2f` คือแสดงทศนิยม 2 ตำแหน่ง","code":[{"name":"hello.c","lang":"c","src":"/* hello.c : โครงสร้างพื้นฐานของโปรแกรมภาษาซี */\n#include \u003cstdio.h>          /* เรียกใช้ฟังก์ชัน printf และ scanf */\n\nint main(void)              /* โปรแกรมเริ่มทำงานที่ฟังก์ชัน main */\n{\n    printf(\"Hello, Electronics!\\n\");\n    return 0;               /* คืนค่า 0 = จบโปรแกรมปกติ */\n}"},{"name":"ohm.c","lang":"c","src":"/* ohm.c : รับค่าแรงดันและความต้านทาน แล้วคำนวณกระแสตามกฎของโอห์ม */\n#include \u003cstdio.h>\n\nint main(void)\n{\n    float voltage, resistance, current;\n\n    printf(\"Voltage (V): \");\n    scanf(\"%f\", &voltage);\n    printf(\"Resistance (ohm): \");\n    scanf(\"%f\", &resistance);\n\n    current = voltage / resistance;               /* I = V / R */\n    printf(\"Current = %.4f A (%.2f mA)\\n\", current, current * 1000);\n    return 0;\n}"}],"images":[],"url":""},{"id":"pl3","title":"หน่วยที่ 3 ตัวดำเนินการและนิพจน์","desc":"ตัวดำเนินการทางคณิตศาสตร์ การเปรียบเทียบ ตรรกะ และข้อผิดพลาดจากการหารจำนวนเต็ม","body":"### ตัวดำเนินการที่ใช้บ่อย\n| กลุ่ม | ตัวดำเนินการ | ตัวอย่าง |\n|---|---|---|\n| คณิตศาสตร์ | + − * / % | `r = (vs - vf) / i;` |\n| เปรียบเทียบ | == != > \u003c >= \u003c= | `if (v >= 3.3)` |\n| ตรรกะ | `&&` (และ) `||` (หรือ) `!` (ไม่) | `if (v > 0 && r > 0)` |\n| กำหนดค่า | = += −= *= /= | `sum += x;` |\n| เพิ่ม-ลดค่า | ++ −− | `n++;` |\n\n### ลำดับความสำคัญ\nคอมพิวเตอร์คำนวณ วงเล็บ ก่อน แล้วจึงเป็น * / % ต่อด้วย + − เช่น `(vs - vf) / i` จะลบก่อนแล้วจึงหาร ถ้าไม่ใส่วงเล็บ `vs - vf / i` จะหาร vf ด้วย i ก่อน ได้ผลผิด\n\n### ข้อควรระวังเรื่องการหาร\n- จำนวนเต็มหารจำนวนเต็มจะได้จำนวนเต็ม เช่น `7 / 2` ได้ `3`\n- ต้องการทศนิยมให้แปลงชนิดก่อน เช่น `(float)7 / 2` ได้ `3.5`\n- `%` ใช้หาเศษจากการหาร ใช้ได้กับจำนวนเต็มเท่านั้น\n\n### ตัวอย่างงานอิเล็กทรอนิกส์\nคำนวณตัวต้านทานจำกัดกระแส LED จากสูตร R = (Vs − Vf) / I เมื่อแหล่งจ่าย 5 V, LED สีแดง Vf ≈ 2 V และกระแส 20 mA จะได้ R = 150 Ω แล้วเลือกใช้ค่ามาตรฐานที่ใกล้เคียงและสูงกว่า","code":[{"name":"led_resistor.c","lang":"c","src":"/* led_resistor.c : คำนวณค่าตัวต้านทานจำกัดกระแส LED และกำลังไฟฟ้า */\n#include \u003cstdio.h>\n\nint main(void)\n{\n    float vs = 5.0;      /* แรงดันแหล่งจ่าย (V) */\n    float vf = 2.0;      /* แรงดันตกคร่อม LED สีแดง (V) */\n    float i  = 0.020;    /* กระแส LED 20 mA */\n\n    float r = (vs - vf) / i;          /* R = (Vs - Vf) / I */\n    float p = (vs - vf) * i;          /* P = V x I ของตัวต้านทาน */\n\n    printf(\"R = %.1f ohm\\n\", r);\n    printf(\"P = %.3f W\\n\", p);\n\n    int a = 7, b = 2;\n    printf(\"7 / 2 = %d (int division)\\n\", a / b);   /* ได้ 3 ไม่ใช่ 3.5 */\n    printf(\"7 %% 2 = %d (remainder)\\n\", a % b);\n    printf(\"7.0 / 2 = %.1f\\n\", (float)a / b);\n    return 0;\n}"}],"images":[],"url":""},{"id":"pl4","title":"หน่วยที่ 4 คำสั่งเลือกทำ if และ switch-case","desc":"เขียนโปรแกรมตัดสินใจหลายทางด้วย if-else if และเมนูด้วย switch-case","body":"### รูปแบบคำสั่ง if\n- `if` ทำเมื่อเงื่อนไขเป็นจริง\n- `if ... else` เลือกทำอย่างใดอย่างหนึ่ง\n- `if ... else if ... else` เลือกได้หลายทาง โปรแกรมจะตรวจจากบนลงล่างและทำ **ทางแรก** ที่เป็นจริงเพียงทางเดียว\n\n### switch-case\nใช้เมื่อเลือกจากค่าที่เป็นจำนวนเต็มหรือตัวอักษร เช่น เมนู 1, 2, 3 ทุก case ต้องจบด้วย `break;` ไม่เช่นนั้นโปรแกรมจะทำ case ถัดไปต่อ ส่วน `default` ทำงานเมื่อไม่ตรงกับ case ใดเลย\n\n> ข้อผิดพลาดที่พบบ่อย คือเขียน `if (x = 5)` ซึ่งเป็นการกำหนดค่า ไม่ใช่การเปรียบเทียบ ที่ถูกต้องคือ `if (x == 5)`\n\n### ตัวอย่างงานอาชีพ\nโปรแกรมตรวจสถานะแบตเตอรี่ลิเธียม 1 เซลล์ แบ่งเป็น 4 ระดับตามแรงดัน ใช้แนวคิดเดียวกับวงจรแสดงระดับแบตเตอรี่ในอุปกรณ์จริง","code":[{"name":"battery.c","lang":"c","src":"/* battery.c : ตรวจสถานะแบตเตอรี่ลิเธียม 1 เซลล์จากแรงดันที่วัดได้ (เกณฑ์ตัวอย่างสำหรับฝึกเขียนโปรแกรม) */\n#include \u003cstdio.h>\n\nint main(void)\n{\n    float v;\n    printf(\"Battery voltage (V): \");\n    scanf(\"%f\", &v);\n\n    if (v >= 4.0) {\n        printf(\"Full\\n\");\n    } else if (v >= 3.6) {\n        printf(\"Normal\\n\");\n    } else if (v >= 3.3) {\n        printf(\"Low - please charge\\n\");\n    } else {\n        printf(\"Critical - stop using\\n\");\n    }\n    return 0;\n}"},{"name":"menu.c","lang":"c","src":"/* menu.c : เมนูคำนวณด้วย switch-case */\n#include \u003cstdio.h>\n\nint main(void)\n{\n    int choice;\n    float v, i, r;\n\n    printf(\"1) V = I x R\\n2) I = V / R\\n3) R = V / I\\nSelect: \");\n    scanf(\"%d\", &choice);\n\n    switch (choice) {\n        case 1:\n            printf(\"I R: \");  scanf(\"%f %f\", &i, &r);\n            printf(\"V = %.2f V\\n\", i * r);\n            break;\n        case 2:\n            printf(\"V R: \");  scanf(\"%f %f\", &v, &r);\n            printf(\"I = %.4f A\\n\", v / r);\n            break;\n        case 3:\n            printf(\"V I: \");  scanf(\"%f %f\", &v, &i);\n            printf(\"R = %.2f ohm\\n\", v / i);\n            break;\n        default:\n            printf(\"Invalid choice\\n\");\n    }\n    return 0;\n}"}],"images":[],"url":""},{"id":"pl5","title":"หน่วยที่ 5 คำสั่งทำซ้ำ for, while และ do-while","desc":"เลือกใช้คำสั่งวนซ้ำให้เหมาะกับงาน การนับรอบ และการหยุดวนด้วยค่าพิเศษ","body":"### เลือกใช้คำสั่งวนซ้ำ\n| คำสั่ง | เหมาะกับ | ตรวจเงื่อนไข |\n|---|---|---|\n| for | รู้จำนวนรอบแน่นอน | ก่อนทำ |\n| while | ไม่รู้จำนวนรอบ ทำจนกว่าเงื่อนไขเป็นเท็จ | ก่อนทำ |\n| do-while | ต้องทำอย่างน้อย 1 รอบ เช่น เมนู | หลังทำ |\n\n### ส่วนประกอบของ for\n`for (ค่าเริ่มต้น; เงื่อนไข; การเปลี่ยนค่า)` เช่น `for (v = 0; v \u003c= 12; v++)` วนตั้งแต่ 0 ถึง 12 รวม 13 รอบ\n\n### คำสั่งควบคุมรอบ\n- `break` ออกจากการวนซ้ำทันที\n- `continue` ข้ามคำสั่งที่เหลือในรอบนั้นแล้วไปรอบถัดไป\n\n> ระวังการวนไม่รู้จบ (Infinite loop) เช่น ลืมเปลี่ยนค่าตัวแปรใน while ให้ตรวจว่าเงื่อนไขมีโอกาสเป็นเท็จเสมอ ยกเว้นงานไมโครคอนโทรลเลอร์ที่ตั้งใจให้ loop() ทำงานตลอดเวลา","code":[{"name":"table.c","lang":"c","src":"/* table.c : ตารางกระแสไฟฟ้าเมื่อแรงดันเพิ่มขึ้นทีละ 1 V (R = 220 ohm) */\n#include \u003cstdio.h>\n\nint main(void)\n{\n    const float R = 220.0;\n    int v;\n\n    printf(\"V(V)\\tI(mA)\\n\");\n    for (v = 0; v \u003c= 12; v++) {\n        printf(\"%d\\t%.2f\\n\", v, v / R * 1000);\n    }\n\n    /* while: รับค่าจนกว่าจะกรอก 0 แล้วหาผลรวม */\n    float x, sum = 0;\n    int n = 0;\n    printf(\"Enter readings (0 = stop): \");\n    scanf(\"%f\", &x);\n    while (x != 0) {\n        sum += x;\n        n++;\n        scanf(\"%f\", &x);\n    }\n    if (n > 0) printf(\"Average = %.2f\\n\", sum / n);\n    return 0;\n}"}],"images":[],"url":""},{"id":"pl6","title":"หน่วยที่ 6 อาร์เรย์และสตริง","desc":"เก็บข้อมูลชุดเดียวกันหลายค่าในตัวแปรเดียว และจัดการข้อความ","body":"### อาร์เรย์ (Array)\nอาร์เรย์คือตัวแปรชุดที่เก็บข้อมูลชนิดเดียวกันหลายค่า อ้างถึงแต่ละช่องด้วยลำดับ (Index) ที่เริ่มจาก **0** เช่น `float reading[5];` มีช่อง reading[0] ถึง reading[4]\n\n- ประกาศพร้อมกำหนดค่า: `int seg[10] = {0x3F, 0x06, 0x5B, ...};`\n- ใช้ for วนอ่านหรือเขียนทุกช่อง\n- ห้ามอ้างช่องเกินขนาดอาร์เรย์ เพราะคอมไพเลอร์ภาษาซีไม่ตรวจให้ และอาจทำให้โปรแกรมทำงานผิดพลาด\n\n### สตริง (String)\nภาษาซีเก็บข้อความเป็นอาร์เรย์ของ char ที่ปิดท้ายด้วยอักขระ `\\0` ฟังก์ชันที่ใช้บ่อยอยู่ใน `\u003cstring.h>` เช่น `strlen` (หาความยาว) `strcpy` (คัดลอก) `strcmp` (เปรียบเทียบ)\n\n### ตัวอย่างงานอิเล็กทรอนิกส์\n- ตารางรหัสแถบสีตัวต้านทาน 10 สี เก็บในอาร์เรย์ของสตริง\n- ตารางรหัสแสดงผล 7-Segment เลข 0–9 เก็บในอาร์เรย์จำนวนเต็ม (ใช้จริงในงาน Arduino)\n- เก็บค่าที่อ่านจากเซนเซอร์หลายครั้งแล้วหาค่าเฉลี่ยเพื่อลดสัญญาณรบกวน","code":[{"name":"colorcode.c","lang":"c","src":"/* colorcode.c : แปลงแถบสีตัวต้านทาน 3 แถบเป็นค่าความต้านทาน */\n#include \u003cstdio.h>\n\nint main(void)\n{\n    const char *color[10] = {\"black\", \"brown\", \"red\", \"orange\", \"yellow\",\n                             \"green\", \"blue\", \"violet\", \"grey\", \"white\"};\n    int b1, b2, mul;\n    double value;            /* ใช้ double เพราะค่าอาจเกินขอบเขตของ long บน Windows */\n    int k;\n\n    for (k = 0; k \u003c 10; k++) {\n        printf(\"%d = %s\\n\", k, color[k]);\n    }\n    printf(\"Band 1, Band 2, Multiplier (0-9): \");\n    scanf(\"%d %d %d\", &b1, &b2, &mul);\n\n    value = b1 * 10 + b2;\n    for (k = 0; k \u003c mul; k++) {\n        value *= 10;\n    }\n    printf(\"%s-%s-%s = %.0f ohm\\n\", color[b1], color[b2], color[mul], value);\n    return 0;\n}"}],"images":[],"url":""},{"id":"pl7","title":"หน่วยที่ 7 ฟังก์ชัน","desc":"แบ่งโปรแกรมเป็นส่วนย่อย ส่งค่าพารามิเตอร์ คืนค่า และขอบเขตของตัวแปร","body":"### ทำไมต้องใช้ฟังก์ชัน\nฟังก์ชันช่วยแบ่งโปรแกรมใหญ่เป็นส่วนย่อยที่ทำงานเรื่องเดียว อ่านง่าย ทดสอบง่าย และเรียกใช้ซ้ำได้ เช่น ฟังก์ชันคำนวณความต้านทานรวมเรียกใช้ได้ทุกครั้งที่ต้องการ\n\n### รูปแบบ\n`ชนิดข้อมูลที่คืนค่า ชื่อฟังก์ชัน(พารามิเตอร์) { คำสั่ง; return ค่า; }`\n- ถ้าไม่คืนค่าใช้ `void`\n- ต้องประกาศหรือเขียนฟังก์ชันไว้ก่อน main หรือประกาศต้นแบบ (Prototype) ไว้ด้านบน\n\n### ขอบเขตของตัวแปร\n- **ตัวแปรเฉพาะที่ (Local)** ประกาศในฟังก์ชัน ใช้ได้เฉพาะในฟังก์ชันนั้น\n- **ตัวแปรส่วนกลาง (Global)** ประกาศนอกฟังก์ชัน ทุกฟังก์ชันใช้ได้ ควรใช้เท่าที่จำเป็น\n\n### การส่งค่า\nการส่งค่าแบบปกติเป็นการส่งสำเนา (Pass by value) การแก้ค่าพารามิเตอร์ในฟังก์ชันจะไม่กระทบตัวแปรต้นทาง\n\n> ฟังก์ชัน setup() และ loop() ของ Arduino ก็คือฟังก์ชันภาษาซี/ซีพลัสพลัส ความรู้หน่วยนี้จึงใช้ต่อได้ในวิชาหุ่นยนต์และไมโครคอนโทรลเลอร์","code":[{"name":"functions.c","lang":"c","src":"/* functions.c : แยกงานคำนวณเป็นฟังก์ชัน */\n#include \u003cstdio.h>\n\nfloat series(float r1, float r2)            /* ความต้านทานรวมแบบอนุกรม */\n{\n    return r1 + r2;\n}\n\nfloat parallel(float r1, float r2)          /* ความต้านทานรวมแบบขนาน */\n{\n    return (r1 * r2) / (r1 + r2);\n}\n\nvoid show(const char *label, float value)   /* ฟังก์ชันที่ไม่คืนค่า */\n{\n    printf(\"%-10s = %.2f ohm\\n\", label, value);\n}\n\nint main(void)\n{\n    float r1 = 1000, r2 = 2200;\n    show(\"Series\", series(r1, r2));\n    show(\"Parallel\", parallel(r1, r2));\n    return 0;\n}"}],"images":[],"url":""}]},{"id":"bs2","type":"worksheets","title":"ใบงาน","note":"","items":[{"id":"pw1","title":"ใบงานที่ 1 เขียนผังงานแก้ปัญหา","desc":"วิเคราะห์ปัญหาและเขียนผังงานด้วย Flowgorithm 3 ปัญหา","body":"**จุดประสงค์เชิงพฤติกรรม**\n- วิเคราะห์ข้อมูลเข้า การประมวลผล และผลลัพธ์ของปัญหาได้\n- เขียนผังงานแบบลำดับ เลือกทำ และทำซ้ำได้ถูกต้อง\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์ที่ติดตั้ง Flowgorithm\n- กระดาษสำหรับร่างผังงาน\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. เขียนผังงานคำนวณกำลังไฟฟ้า P = V × I\n2. เขียนผังงานตรวจว่าแรงดันที่วัดได้อยู่ในช่วง 4.75–5.25 V หรือไม่\n3. เขียนผังงานแสดงตัวเลข 1 ถึง 10\n4. ทดสอบรันผังงานใน Flowgorithm ด้วยข้อมูลอย่างน้อย 3 ชุดต่อปัญหา\n\n**บันทึกผลการปฏิบัติงาน**\n| ปัญหา | ข้อมูลเข้า | ผลลัพธ์ที่คาด | ผลลัพธ์จริง |\n|---|---|---|---|\n| P = V × I | | | |\n| ตรวจช่วงแรงดัน | | | |\n| แสดง 1–10 | | | |\n\n**คำถามท้ายใบงาน**\n1. ผังงานแต่ละข้อใช้โครงสร้างควบคุมแบบใด\n2. ถ้าเปลี่ยนให้แสดงเฉพาะเลขคู่ 2–20 ต้องแก้ผังงานส่วนใด","code":[],"images":[],"url":""},{"id":"pw2","title":"ใบงานที่ 2 โปรแกรมรับและแสดงผลข้อมูล","desc":"เขียนโปรแกรมภาษาซีรับข้อมูลและคำนวณตามกฎของโอห์ม","body":"**จุดประสงค์เชิงพฤติกรรม**\n- เขียนโปรแกรมภาษาซีที่มีโครงสร้างถูกต้องได้\n- ประกาศตัวแปรและเลือกชนิดข้อมูลได้เหมาะสม\n- ใช้ printf และ scanf ได้ถูกต้อง\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์ที่ติดตั้ง Dev-C++ หรือ VS Code พร้อมคอมไพเลอร์ GCC\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. พิมพ์และรันโปรแกรม hello.c\n2. พิมพ์โปรแกรม ohm.c แล้วทดสอบด้วยค่าในตาราง\n3. ดัดแปลงโปรแกรมให้รับชื่อผู้ใช้ (สตริง) แล้วแสดงผลพร้อมชื่อ\n4. ดัดแปลงให้แสดงกำลังไฟฟ้า P = V × I เพิ่ม\n\n**บันทึกผลการปฏิบัติงาน**\n| V (V) | R (Ω) | I ที่คำนวณด้วยมือ | I จากโปรแกรม |\n|---|---|---|---|\n| 5 | 220 | | |\n| 12 | 1000 | | |\n| 9 | 470 | | |\n\n**คำถามท้ายใบงาน**\n1. ถ้าลืมใส่ & หน้าตัวแปรใน scanf จะเกิดอะไรขึ้น\n2. ทำไมจึงใช้ float แทน int ในโปรแกรมนี้","code":[],"images":[],"url":""},{"id":"pw3","title":"ใบงานที่ 3 ตัวดำเนินการและสูตรงานอิเล็กทรอนิกส์","desc":"เขียนโปรแกรมคำนวณตัวต้านทานจำกัดกระแส LED และความต้านทานรวม","body":"**จุดประสงค์เชิงพฤติกรรม**\n- เขียนนิพจน์ทางคณิตศาสตร์ตามลำดับความสำคัญได้ถูกต้อง\n- อธิบายผลของการหารจำนวนเต็มได้\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์พร้อมคอมไพเลอร์ภาษาซี\n- ตารางค่าแรงดัน Vf ของ LED สีต่าง ๆ\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. รันโปรแกรม led_resistor.c และตรวจผลกับการคำนวณด้วยมือ\n2. แก้ให้รับค่า Vs, Vf และกระแส (mA) จากแป้นพิมพ์\n3. เพิ่มการคำนวณความต้านทานรวมแบบอนุกรม 3 ตัว\n4. ทดลองลบวงเล็บใน (vs - vf) / i แล้วบันทึกผลที่ผิดไป\n\n**บันทึกผลการปฏิบัติงาน**\n| สี LED | Vf (V) | Vs (V) | I (mA) | R ที่ได้ (Ω) |\n|---|---|---|---|---|\n| แดง | 2.0 | 5 | 20 | |\n| เขียว | 2.2 | 5 | 20 | |\n| น้ำเงิน | 3.0 | 5 | 20 | |\n\n**คำถามท้ายใบงาน**\n1. 7 / 2 และ 7.0 / 2 ได้ผลต่างกันอย่างไร เพราะเหตุใด\n2. ถ้าคำนวณได้ R = 150 Ω ควรเลือกใช้ตัวต้านทานค่ามาตรฐานใด","code":[],"images":[],"url":""},{"id":"pw4","title":"ใบงานที่ 4 โปรแกรมตัดสินใจด้วย if และ switch-case","desc":"เขียนโปรแกรมตรวจสถานะแบตเตอรี่และเมนูคำนวณกฎของโอห์ม","body":"**จุดประสงค์เชิงพฤติกรรม**\n- เขียนเงื่อนไขหลายทางด้วย if-else if ได้\n- เขียนเมนูด้วย switch-case และใช้ break ได้ถูกต้อง\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์พร้อมคอมไพเลอร์ภาษาซี\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. รัน battery.c ด้วยค่า 4.1, 3.7, 3.4 และ 3.0 V\n2. เพิ่มกรณีแรงดันเกิน 4.25 V ให้แจ้ง Overcharge\n3. รัน menu.c ทดสอบทุกเมนู\n4. เพิ่มเมนูที่ 4 คำนวณกำลังไฟฟ้า P = V × I\n5. เพิ่มการตรวจไม่ให้หารด้วยศูนย์\n\n**บันทึกผลการปฏิบัติงาน**\n| ข้อมูลเข้า | ผลที่คาด | ผลจริง |\n|---|---|---|\n| 4.30 V | Overcharge | |\n| 3.70 V | Normal | |\n| เมนู 2, R = 0 | แจ้งเตือน | |\n\n**คำถามท้ายใบงาน**\n1. ถ้าเรียงเงื่อนไข v >= 3.3 ไว้ก่อน v >= 4.0 จะเกิดอะไรขึ้น\n2. ถ้าลืม break ใน case 1 ผลการทำงานจะเป็นอย่างไร","code":[],"images":[],"url":""},{"id":"pw5","title":"ใบงานที่ 5 โปรแกรมวนซ้ำ","desc":"สร้างตารางค่ากระแสไฟฟ้าและหาค่าเฉลี่ยของค่าที่วัดได้","body":"**จุดประสงค์เชิงพฤติกรรม**\n- เลือกใช้ for และ while ได้เหมาะสมกับงาน\n- หยุดการวนซ้ำด้วยค่าพิเศษ (Sentinel) ได้\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์พร้อมคอมไพเลอร์ภาษาซี\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. รันโปรแกรม table.c แล้วตรวจค่าที่ 5 V และ 12 V\n2. แก้ให้รับค่า R จากผู้ใช้และกำหนดขั้นแรงดันทีละ 0.5 V\n3. ป้อนค่าที่วัดได้ 5 ค่า แล้วตรวจค่าเฉลี่ยด้วยการคำนวณมือ\n4. เขียนเมนูด้วย do-while ให้ผู้ใช้เลือกคำนวณซ้ำได้จนกว่าจะเลือกออก\n\n**บันทึกผลการปฏิบัติงาน**\n| V (V) | I (mA) จากโปรแกรม | I (mA) คำนวณมือ |\n|---|---|---|\n| 5 | | |\n| 12 | | |\n\n**คำถามท้ายใบงาน**\n1. for (v = 0; v \u003c= 12; v++) วนกี่รอบ\n2. ยกตัวอย่างงานที่ควรใช้ do-while มากกว่า while","code":[],"images":[],"url":""},{"id":"pw6","title":"ใบงานที่ 6 อาร์เรย์และสตริง","desc":"เขียนโปรแกรมแปลงแถบสีตัวต้านทานและหาค่าเฉลี่ยจากอาร์เรย์","body":"**จุดประสงค์เชิงพฤติกรรม**\n- ประกาศและใช้งานอาร์เรย์ร่วมกับคำสั่งวนซ้ำได้\n- ใช้อาร์เรย์ของสตริงเก็บข้อมูลแบบตารางได้\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์พร้อมคอมไพเลอร์ภาษาซี\n- ตัวต้านทานจริง 3 ตัวสำหรับอ่านแถบสี\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. รัน colorcode.c แล้วป้อนรหัสสีของตัวต้านทานจริง 3 ตัว\n2. วัดค่าจริงด้วยมัลติมิเตอร์แล้วเปรียบเทียบ\n3. เขียนโปรแกรมเก็บค่าที่อ่านได้ 10 ค่าในอาร์เรย์ หาค่าสูงสุด ต่ำสุด และค่าเฉลี่ย\n4. เพิ่มการตรวจไม่ให้ป้อนรหัสนอกช่วง 0–9\n\n**บันทึกผลการปฏิบัติงาน**\n| แถบสี | ค่าจากโปรแกรม (Ω) | ค่าที่วัดได้ (Ω) | คลาดเคลื่อน (%) |\n|---|---|---|---|\n| | | | |\n| | | | |\n| | | | |\n\n**คำถามท้ายใบงาน**\n1. index ของอาร์เรย์ขนาด 10 ช่องมีค่าตั้งแต่เท่าใดถึงเท่าใด\n2. ถ้าป้อนรหัสสี 12 โปรแกรมเดิมจะเกิดปัญหาอะไร","code":[],"images":[],"url":""},{"id":"pw7","title":"ใบงานที่ 7 โปรแกรมคำนวณวงจรด้วยฟังก์ชัน","desc":"แยกสูตรคำนวณเป็นฟังก์ชันและรวมเป็นโปรแกรมเครื่องคิดเลขงานไฟฟ้า","body":"**จุดประสงค์เชิงพฤติกรรม**\n- เขียนฟังก์ชันที่รับพารามิเตอร์และคืนค่าได้\n- เรียกใช้ฟังก์ชันซ้ำในโปรแกรมได้\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์พร้อมคอมไพเลอร์ภาษาซี\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. รัน functions.c และตรวจผลความต้านทานอนุกรมและขนาน\n2. เพิ่มฟังก์ชัน power(v, i) และ led_resistor(vs, vf, i_mA)\n3. สร้างเมนู do-while เรียกใช้ทุกฟังก์ชัน\n4. ทดสอบด้วยข้อมูลอย่างน้อย 3 ชุดต่อฟังก์ชันและบันทึกผล\n\n**บันทึกผลการปฏิบัติงาน**\n| ฟังก์ชัน | ข้อมูลเข้า | ผลที่คาด | ผลจริง |\n|---|---|---|---|\n| series | 1000, 2200 | 3200 | |\n| parallel | 1000, 2200 | 687.5 | |\n| power | | | |\n\n**คำถามท้ายใบงาน**\n1. ตัวแปร r1 ในฟังก์ชัน series กับตัวแปร r1 ใน main เป็นตัวเดียวกันหรือไม่\n2. ข้อดีของการแยกสูตรเป็นฟังก์ชันคืออะไร","code":[],"images":[],"url":""}]},{"id":"bs3","type":"gallery","title":"รูปเพิ่มเติม","note":"","items":[{"id":"pg1","title":"ฝึกปฏิบัติงานในห้องปฏิบัติการอิเล็กทรอนิกส์","desc":"","url":"img/electronics-lab.jpg"},{"id":"pg2","title":"บรรยากาศการเรียนในห้องเรียน","desc":"","url":"img/class-1.jpg"}]}],"refs":[{"title":"รายวิชา 04621101 Computer Programming (ภาษาซี, Flowgorithm) – มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี","url":"https://www.compro.rmutt.ac.th/wp-content/uploads/2023/07/CH0_Intro.pdf"},{"title":"240-101 Introduction to Computer Programming (ภาษาซี) – ภาควิชาวิศวกรรมคอมพิวเตอร์ ม.สงขลานครินทร์ วิทยาเขตภูเก็ต","url":"https://x.coe.phuket.psu.ac.th/warodom/240-101/introcom-syllabus-1-61.pdf"},{"title":"CS50x Week 1: C – Harvard University","url":"https://cs50.harvard.edu/x/2022/weeks/1"}]},{"id":"c20105-2010","code":"20105-2010","name":"หุ่นยนต์เบื้องต้น","t":1,"p":3,"n":2,"h":8,"slots":[{"d":1,"s":"08:00","e":"12:00","room":"11202","group":"พท.2/2"},{"d":2,"s":"08:00","e":"12:00","room":"8407","group":"ชอ.3/1"}],"sections":[{"id":"cs1","type":"lessons","title":"เนื้อหา","note":"","items":[{"id":"rl1","title":"การขับมอเตอร์ DC ด้วยวงจร H-Bridge และโมดูล L298N","desc":"หลักการกลับทิศทางมอเตอร์ การต่อวงจร L298N กับ Arduino UNO และการปรับความเร็วด้วย PWM","body":"### หลักการของวงจร H-Bridge\nมอเตอร์ไฟฟ้ากระแสตรง (DC Motor) จะหมุนกลับทิศทางได้เมื่อกลับขั้วแรงดันที่ป้อนให้ วงจร H-Bridge ใช้สวิตช์อิเล็กทรอนิกส์ 4 ตัว (ทรานซิสเตอร์หรือ MOSFET) จัดวางเป็นรูปตัว H โดยมีมอเตอร์อยู่ตรงกลาง เมื่อเปิดสวิตช์คู่ทแยงคู่หนึ่ง กระแสจะไหลผ่านมอเตอร์ทิศทางหนึ่ง เมื่อสลับไปเปิดอีกคู่หนึ่ง กระแสจะไหลกลับทิศ มอเตอร์จึงหมุนกลับด้าน\n\n> ห้ามเปิดสวิตช์ด้านบนและด้านล่างของขาเดียวกันพร้อมกัน เพราะจะเกิดการลัดวงจรแหล่งจ่าย (shoot-through) ทำให้อุปกรณ์เสียหาย\n\n### โมดูล L298N\n- มี H-Bridge 2 ชุดในตัว จึงขับมอเตอร์ได้ 2 ตัว (ช่อง A และช่อง B)\n- ขา **IN1, IN2** กำหนดทิศทางของมอเตอร์ช่อง A ส่วนขา **ENA** ใช้เปิด-ปิด หรือรับสัญญาณ PWM เพื่อปรับความเร็ว\n- ใช้แหล่งจ่ายสำหรับมอเตอร์แยกจากบอร์ด เช่น แบตเตอรี่ 7.4–12 V และต้อง **ต่อ GND ร่วมกับ Arduino** เสมอ\n- ไอซี L298 ใช้ทรานซิสเตอร์ไบโพลาร์ จึงมีแรงดันตกคร่อมภายในประมาณ 2–3 V (ขึ้นกับกระแส) มอเตอร์จะได้แรงดันต่ำกว่าแบตเตอรี่\n\n### ตารางการทำงาน\n| IN1 | IN2 | ENA | ผลที่ได้ |\n|---|---|---|---|\n| HIGH | LOW | HIGH | หมุนขวา |\n| LOW | HIGH | HIGH | หมุนซ้าย |\n| LOW | LOW | LOW | หยุด |\n\n### การปรับความเร็วด้วย PWM\nคำสั่ง `analogWrite(ENA, ค่า)` ส่งสัญญาณ PWM ค่า 0–255 ค่ายิ่งมาก มอเตอร์ยิ่งได้รับพลังงานเฉลี่ยมากและหมุนเร็วขึ้น ขาที่ใช้ต้องเป็นขา PWM (บน UNO คือขา 3, 5, 6, 9, 10, 11)","code":[{"name":"L298N_Switch.ino","lang":"cpp","src":"// ขับมอเตอร์ DC ด้วย L298N\n// กด SW1 = หมุนขวา, กด SW2 = หมุนซ้าย, ไม่กด = หยุด\n#define SW1 5\n#define SW2 6\n#define IN1 8\n#define IN2 9\n#define ENA 10\n\nvoid setup() {\n  pinMode(IN1, OUTPUT);\n  pinMode(IN2, OUTPUT);\n  pinMode(ENA, OUTPUT);\n  pinMode(SW1, INPUT_PULLUP);   // ใช้ตัวต้านทานพูลอัปในชิป: กดสวิตช์ = LOW\n  pinMode(SW2, INPUT_PULLUP);\n}\n\nvoid loop() {\n  bool s1 = (digitalRead(SW1) == LOW);\n  bool s2 = (digitalRead(SW2) == LOW);\n\n  if (s1 && !s2) {            // หมุนขวา\n    digitalWrite(IN1, HIGH);\n    digitalWrite(IN2, LOW);\n    digitalWrite(ENA, HIGH);\n  } else if (s2 && !s1) {     // หมุนซ้าย\n    digitalWrite(IN1, LOW);\n    digitalWrite(IN2, HIGH);\n    digitalWrite(ENA, HIGH);\n  } else {                    // หยุด\n    digitalWrite(IN1, LOW);\n    digitalWrite(IN2, LOW);\n    digitalWrite(ENA, LOW);\n  }\n  delay(50);\n}"},{"name":"L298N_Speed.ino","lang":"cpp","src":"// ปรับความเร็วมอเตอร์ด้วย PWM ที่ขา ENA (D10 เป็นขา PWM ของ UNO)\n#define IN1 8\n#define IN2 9\n#define ENA 10\n\nvoid setup() {\n  pinMode(IN1, OUTPUT);\n  pinMode(IN2, OUTPUT);\n  pinMode(ENA, OUTPUT);\n  digitalWrite(IN1, HIGH);    // กำหนดทิศทางหมุนขวา\n  digitalWrite(IN2, LOW);\n}\n\nvoid loop() {\n  for (int speed = 80; speed \u003c= 255; speed += 25) {   // ค่อย ๆ เร่ง\n    analogWrite(ENA, speed);\n    delay(400);\n  }\n  analogWrite(ENA, 0);        // หยุดพัก 1 วินาที\n  delay(1000);\n}"}],"images":[{"url":"svg/robot-l298n.svg","cap":"ภาพที่ 1 การต่อวงจรขับมอเตอร์ DC ด้วย L298N (วาดใหม่สำหรับเว็บไซต์นี้)"}],"url":""},{"id":"rl2","title":"การควบคุมเซอร์โวมอเตอร์ด้วยสัญญาณ PWM","desc":"โครงสร้างเซอร์โว ความสัมพันธ์ระหว่างความกว้างพัลส์กับมุม และการเขียนโปรแกรม 2 แบบ","body":"### เซอร์โวมอเตอร์คืออะไร\nเซอร์โวมอเตอร์ (Servo Motor) เป็นมอเตอร์ที่หมุนไปยังมุมที่สั่งแล้วหยุดค้างไว้ ภายในประกอบด้วยมอเตอร์ DC ชุดเฟืองทด ตัวต้านทานปรับค่าได้สำหรับวัดมุม และวงจรควบคุมแบบป้อนกลับ จึงนิยมใช้เป็นข้อต่อแขนกล มือจับ หรือกลไกเลี้ยวของหุ่นยนต์\n\n### สัญญาณควบคุม\n- ส่งพัลส์ซ้ำทุก ๆ ประมาณ **20 ms** (50 Hz)\n- ความกว้างพัลส์เป็นตัวกำหนดมุม เช่น ประมาณ 0.5 ms = 0°, 1.5 ms = 90° (กึ่งกลาง), 2.5 ms = 180°\n- ค่าจริงต่างกันไปตามรุ่น บางรุ่นใช้ช่วง 1.0–2.0 ms ควรทดสอบทีละน้อยเพื่อไม่ให้เฟืองหมุนชนจนค้าง\n\n### การต่อสาย (รุ่น SG90)\n- สายน้ำตาล = GND, สายแดง = +5 V, สายส้ม = สัญญาณ (ต่อขา D9)\n- ถ้าใช้เซอร์โวหลายตัว ให้ใช้แหล่งจ่าย 5 V แยก แล้วต่อ GND ร่วมกับบอร์ด เพื่อไม่ให้บอร์ดรีเซ็ตเพราะกระแสไม่พอ\n\n### เขียนโปรแกรมได้ 2 วิธี\n1. สร้างพัลส์เองด้วย `digitalWrite` และ `delayMicroseconds` ช่วยให้เห็นหลักการของสัญญาณชัดเจน\n2. ใช้ไลบรารี `Servo.h` สั่งเป็นองศาด้วย `write(มุม)` โค้ดสั้นและแม่นยำกว่า เหมาะกับงานจริง\n\n> บนบอร์ด UNO เมื่อใช้ไลบรารี Servo จะใช้ `analogWrite()` ที่ขา 9 และ 10 ไม่ได้ ถ้าหุ่นยนต์ใช้ทั้งเซอร์โวและ L298N ให้ย้ายขา ENA ไปขา PWM อื่น เช่น ขา 5 หรือ 6","code":[{"name":"Servo_Switch.ino","lang":"cpp","src":"// สร้างพัลส์ควบคุมเซอร์โวเอง: กด SW1 = 0°, SW2 = 90°, SW3 = 180°\n#define SERVO 9\n#define SW1 7\n#define SW2 6\n#define SW3 5\nint pulse = 1500;             // ความกว้างพัลส์ หน่วยไมโครวินาที\n\nvoid setup() {\n  pinMode(SERVO, OUTPUT);\n  pinMode(SW1, INPUT_PULLUP);\n  pinMode(SW2, INPUT_PULLUP);\n  pinMode(SW3, INPUT_PULLUP);\n}\n\nvoid loop() {\n  if (digitalRead(SW1) == LOW)      pulse = 500;\n  else if (digitalRead(SW2) == LOW) pulse = 1500;\n  else if (digitalRead(SW3) == LOW) pulse = 2500;\n\n  digitalWrite(SERVO, HIGH);   // ส่งพัลส์ซ้ำทุก ๆ ประมาณ 20 ms\n  delayMicroseconds(pulse);\n  digitalWrite(SERVO, LOW);\n  delay(20);\n}"},{"name":"Servo_Sweep.ino","lang":"cpp","src":"// ใช้ไลบรารี Servo ที่มากับ Arduino IDE\n#include \u003cServo.h>\n\nServo arm;\n\nvoid setup() {\n  arm.attach(9, 500, 2500);   // ขา, พัลส์ต่ำสุด, พัลส์สูงสุด (ไมโครวินาที)\n}\n\nvoid loop() {\n  for (int angle = 0; angle \u003c= 180; angle += 10) {\n    arm.write(angle);\n    delay(150);\n  }\n  for (int angle = 180; angle >= 0; angle -= 10) {\n    arm.write(angle);\n    delay(150);\n  }\n}"}],"images":[{"url":"svg/robot-servo.svg","cap":"ภาพที่ 2 สัญญาณ PWM กับมุมของเซอร์โว และการต่อสาย SG90 (วาดใหม่)"}],"url":""},{"id":"rl3","title":"หุ่นยนต์ควบคุมผ่าน Bluetooth ด้วยแอปบนโทรศัพท์","desc":"ระบบสื่อสารระหว่างแอป โมดูล HC-05 และ Arduino เพื่อบังคับหุ่นยนต์ 2 ล้อ","body":"### ภาพรวมของระบบ\nแอปบนโทรศัพท์ส่ง **ตัวอักษรคำสั่ง** ผ่าน Bluetooth ไปยังโมดูล HC-05 โมดูลจะส่งต่อข้อมูลเข้าขา RX ของ Arduino ผ่านการสื่อสารแบบอนุกรม (Serial) จากนั้นโปรแกรมอ่านคำสั่งแล้วสั่งโมดูล L298N ให้ขับล้อซ้ายและล้อขวา\n\n| คำสั่ง | การทำงาน |\n|---|---|\n| F | เดินหน้า |\n| B | ถอยหลัง |\n| L | เลี้ยวซ้าย |\n| R | เลี้ยวขวา |\n| S | หยุด |\n\n### การต่อโมดูล HC-05\n- VCC → 5 V, GND → GND\n- TX ของ HC-05 → RX (D0) ของ Arduino\n- RX ของ HC-05 รับระดับสัญญาณ 3.3 V จึงควรต่อผ่านวงจรแบ่งแรงดัน (เช่น ตัวต้านทาน 1 kΩ และ 2 kΩ) จากขา TX (D1)\n- ความเร็วสื่อสารเริ่มต้นในโหมดรับส่งข้อมูลคือ 9600 bps และรหัสจับคู่เริ่มต้นมักเป็น 1234 หรือ 0000\n\n> ขา D0/D1 ใช้ร่วมกับพอร์ต USB ต้องถอดสายจาก HC-05 ออกก่อนอัปโหลดโค้ดทุกครั้ง หรือย้ายไปใช้ไลบรารี SoftwareSerial กับขาอื่น\n\n### การสร้างแอปด้วย MIT App Inventor\n1. ใช้ ListPicker แสดงรายชื่ออุปกรณ์ Bluetooth ที่จับคู่ไว้ แล้วเชื่อมต่อด้วย BluetoothClient\n2. สร้างปุ่ม 5 ปุ่ม แต่ละปุ่มเรียก `BluetoothClient.SendText` ส่งตัวอักษร F, B, L, R, S\n3. ทดสอบส่งคำสั่งทีละปุ่มขณะยกล้อหุ่นยนต์ขึ้นจากพื้น ถ้าล้อหมุนผิดทิศหรือเลี้ยวสลับด้าน ให้สลับสายมอเตอร์ที่ขา OUT ของ L298N","code":[{"name":"Robot_Bluetooth.ino","lang":"cpp","src":"// หุ่นยนต์ 2 ล้อ ควบคุมด้วยแอปผ่านโมดูล HC-05 (Serial 9600)\n#define IN1 13\n#define IN2 12\n#define IN3 11\n#define IN4 10\nchar state = 'S';\n\nvoid drive(int a, int b, int c, int d) {\n  digitalWrite(IN1, a);  digitalWrite(IN2, b);\n  digitalWrite(IN3, c);  digitalWrite(IN4, d);\n}\n\nvoid setup() {\n  pinMode(IN1, OUTPUT);  pinMode(IN2, OUTPUT);\n  pinMode(IN3, OUTPUT);  pinMode(IN4, OUTPUT);\n  Serial.begin(9600);          // ความเร็วเริ่มต้นของ HC-05\n}\n\nvoid loop() {\n  if (Serial.available() > 0) {\n    state = Serial.read();     // อ่านตัวอักษรคำสั่งจากแอป\n  }\n  switch (state) {\n    case 'F': drive(LOW, HIGH, HIGH, LOW); break;   // เดินหน้า\n    case 'B': drive(HIGH, LOW, LOW, HIGH); break;   // ถอยหลัง\n    case 'L': drive(LOW, LOW, HIGH, LOW);  break;   // เลี้ยวซ้าย\n    case 'R': drive(LOW, HIGH, LOW, LOW);  break;   // เลี้ยวขวา\n    default:  drive(LOW, LOW, LOW, LOW);   break;   // S หรือคำสั่งอื่น = หยุด\n  }\n  delay(20);\n}"}],"images":[{"url":"svg/robot-bluetooth.svg","cap":"ภาพที่ 3 แผนผังระบบหุ่นยนต์ควบคุมผ่าน Bluetooth (วาดใหม่)"}],"url":""}]},{"id":"cs2","type":"worksheets","title":"ใบงาน","note":"","items":[{"id":"rw1","title":"ใบงานที่ 1 ขับมอเตอร์ DC กลับทิศทางด้วย L298N","desc":"ต่อวงจรและเขียนโปรแกรมให้มอเตอร์หมุนซ้าย หมุนขวา และหยุดตามสวิตช์","body":"**จุดประสงค์เชิงพฤติกรรม**\n- ต่อวงจรขับมอเตอร์ DC ด้วยโมดูล L298N ได้ถูกต้อง\n- เขียนโปรแกรมควบคุมทิศทางการหมุนของมอเตอร์ได้\n- ปรับความเร็วมอเตอร์ด้วยสัญญาณ PWM ได้\n\n**เครื่องมือและอุปกรณ์**\n- บอร์ด Arduino UNO และสาย USB\n- โมดูล L298N 1 ตัว\n- มอเตอร์ DC 3–6 V พร้อมล้อ 1 ชุด\n- สวิตช์กดติดปล่อยดับ 2 ตัว\n- แบตเตอรี่ 7.4 V พร้อมกะบะ\n- สายจัมเปอร์ และมัลติมิเตอร์\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. ศึกษาภาพที่ 1 แล้วต่อวงจรโดยยังไม่ต่อแบตเตอรี่\n2. ตรวจสอบการต่อ GND ร่วมระหว่างบอร์ดกับ L298N\n3. อัปโหลดโปรแกรม L298N_Switch.ino\n4. ต่อแบตเตอรี่ แล้วกด SW1 และ SW2 สังเกตทิศทางการหมุน\n5. วัดแรงดันที่ขา OUT1–OUT2 ขณะมอเตอร์หมุน แล้วบันทึกผล\n6. อัปโหลด L298N_Speed.ino แล้วสังเกตความเร็วที่เปลี่ยนไป\n\n**บันทึกผลการปฏิบัติงาน**\n| สวิตช์ที่กด | IN1 | IN2 | ENA | ทิศทางที่สังเกตได้ | แรงดัน OUT (V) |\n|---|---|---|---|---|---|\n| SW1 | | | | | |\n| SW2 | | | | | |\n| ไม่กด | | | | | |\n\n**คำถามท้ายใบงาน**\n1. เหตุใดต้องต่อ GND ของแบตเตอรี่ร่วมกับ GND ของ Arduino\n2. แรงดันที่วัดได้ที่ OUT ต่ำกว่าแรงดันแบตเตอรี่เท่าใด เพราะอะไร\n3. ถ้าต้องการให้มอเตอร์หมุนช้าลงครึ่งหนึ่ง ควรส่งค่า analogWrite เท่าใดโดยประมาณ","code":[],"images":[],"url":""},{"id":"rw2","title":"ใบงานที่ 2 ควบคุมมุมเซอร์โวมอเตอร์ด้วยสวิตช์","desc":"สร้างพัลส์ควบคุมเอง และใช้ไลบรารี Servo สั่งมุม 0°–180°","body":"**จุดประสงค์เชิงพฤติกรรม**\n- อธิบายความสัมพันธ์ระหว่างความกว้างพัลส์กับมุมของเซอร์โวได้\n- เขียนโปรแกรมสั่งเซอร์โวไปยังมุมที่กำหนดได้ 2 วิธี\n\n**เครื่องมือและอุปกรณ์**\n- บอร์ด Arduino UNO\n- เซอร์โวมอเตอร์ SG90\n- สวิตช์กดติดปล่อยดับ 3 ตัว\n- ไม้โปรแทรกเตอร์ (ไม้วัดมุม)\n- สายจัมเปอร์\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. ต่อสายเซอร์โวตามภาพที่ 2 และต่อสวิตช์เข้าขา D7, D6, D5\n2. อัปโหลด Servo_Switch.ino แล้วกดสวิตช์ทีละตัว\n3. วัดมุมจริงด้วยไม้โปรแทรกเตอร์และบันทึกผล\n4. ปรับค่า pulse ทีละ 100 µs เพื่อหาค่าที่ได้มุม 0° และ 180° พอดี\n5. อัปโหลด Servo_Sweep.ino แล้วสังเกตการกวาดมุม\n\n**บันทึกผลการปฏิบัติงาน**\n| ความกว้างพัลส์ (µs) | มุมที่ต้องการ | มุมที่วัดได้ | คลาดเคลื่อน (องศา) |\n|---|---|---|---|\n| 500 | 0° | | |\n| 1500 | 90° | | |\n| 2500 | 180° | | |\n\n**คำถามท้ายใบงาน**\n1. ถ้าส่งพัลส์ห่างกันนานเกินไป เช่น ทุก 200 ms จะเกิดอะไรขึ้นกับเซอร์โว\n2. ข้อดีของการใช้ไลบรารี Servo เมื่อเทียบกับการสร้างพัลส์เองคืออะไร\n3. เมื่อใช้เซอร์โว 4 ตัวพร้อมกัน ควรจัดแหล่งจ่ายไฟอย่างไร","code":[],"images":[],"url":""},{"id":"rw3","title":"ใบงานที่ 3 สร้างหุ่นยนต์ควบคุมผ่าน Bluetooth","desc":"ประกอบหุ่นยนต์ 2 ล้อ สร้างแอป และบังคับหุ่นยนต์ให้เคลื่อนที่ตามเส้นทางที่กำหนด","body":"**จุดประสงค์เชิงพฤติกรรม**\n- ต่อโมดูล HC-05 กับ Arduino ได้ถูกต้องและปลอดภัย\n- สร้างแอปควบคุมด้วย MIT App Inventor ได้\n- บังคับหุ่นยนต์เคลื่อนที่ตามเส้นทางทดสอบได้\n\n**เครื่องมือและอุปกรณ์**\n- โครงรถหุ่นยนต์ 2 ล้อพร้อมมอเตอร์\n- Arduino UNO และโมดูล L298N\n- โมดูล Bluetooth HC-05\n- ตัวต้านทาน 1 kΩ และ 2 kΩ อย่างละ 1 ตัว\n- โทรศัพท์ Android และบัญชี MIT App Inventor\n- แบตเตอรี่ 7.4 V\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. ประกอบโครงรถและต่อวงจรตามภาพที่ 3\n2. ถอดสาย HC-05 ออกจาก D0 แล้วอัปโหลด Robot_Bluetooth.ino\n3. ต่อสาย HC-05 กลับ จับคู่โทรศัพท์กับโมดูล\n4. สร้างแอปที่มีปุ่ม F, B, L, R, S แล้วติดตั้งลงโทรศัพท์\n5. ยกล้อขึ้นจากพื้นแล้วทดสอบทีละคำสั่ง\n6. บังคับหุ่นยนต์ผ่านเส้นทางรูปตัว S แล้วจับเวลา\n\n**บันทึกผลการปฏิบัติงาน**\n| คำสั่ง | ล้อซ้าย | ล้อขวา | ผลที่ได้ถูกต้องหรือไม่ |\n|---|---|---|---|\n| F | | | |\n| B | | | |\n| L | | | |\n| R | | | |\n| S | | | |\n\n**คำถามท้ายใบงาน**\n1. เหตุใดต้องต่อวงจรแบ่งแรงดันที่ขา RX ของ HC-05\n2. ถ้าต้องการเพิ่มคำสั่งเปิดไฟหน้า ต้องแก้ทั้งแอปและโค้ดอย่างไร\n3. เสนอวิธีป้องกันไม่ให้หุ่นยนต์วิ่งต่อเมื่อสัญญาณ Bluetooth หลุด","code":[],"images":[],"url":""}]},{"id":"cs3","type":"gallery","title":"รูปเพิ่มเติม","note":"","items":[{"id":"rg1","title":"นักเรียนทดสอบรถหุ่นยนต์ที่ประกอบและเขียนโปรแกรมเอง","desc":"","url":"img/robot-cars.jpg"},{"id":"rg2","title":"กิจกรรมแสดงผลงานรถหุ่นยนต์ของนักเรียน","desc":"","url":"img/robot-lab.jpg"},{"id":"rg3","title":"จำลองวงจร Arduino ด้วยโปรแกรม Proteus ก่อนต่อวงจรจริง","desc":"","url":"img/proteus-sim.jpg"}]}],"refs":[{"title":"Arduino Language Reference (analogWrite, Servo)","url":"https://docs.arduino.cc/language-reference/"}]},{"id":"c21906-2011","code":"21906-2011","name":"การประยุกต์ใช้เทคโนโลยีปัญญาประดิษฐ์ในงานอาชีพ","t":1,"p":2,"n":2,"h":9,"slots":[{"d":2,"s":"14:00","e":"17:00","room":"Com1","group":"ชก.3/2"},{"d":4,"s":"10:00","e":"12:00","room":"8407","group":"ชฟ.3/2"},{"d":4,"s":"13:00","e":"14:00","room":"8407","group":"ชฟ.3/2"},{"d":5,"s":"14:00","e":"17:00","room":"ห้องปฏิบัติคอม 2","group":"ชอ.2/1"}],"sections":[{"id":"ds1","type":"lessons","title":"เนื้อหา","note":"","items":[{"id":"al1","title":"เตรียมเครื่องมือ: Python, Virtual Environment และ YOLO","desc":"รู้จักโมเดลตรวจจับวัตถุ YOLO ติดตั้งเครื่องมือบน Windows และทดสอบโมเดลกับภาพนิ่ง","body":"### YOLO คืออะไร\nYOLO (You Only Look Once) เป็นโมเดลการเรียนรู้เชิงลึกสำหรับ **ตรวจจับวัตถุ (Object Detection)** ที่มองภาพเพียงครั้งเดียวแล้วบอกผลพร้อมกัน 3 อย่าง คือ ตำแหน่งกรอบของวัตถุ (Bounding Box) ชื่อคลาส และค่าความมั่นใจ (Confidence) จึงทำงานได้เร็วพอสำหรับวิดีโอสด ในรายวิชานี้ใช้ไลบรารี **Ultralytics** ซึ่งมีโมเดลที่ฝึกมาแล้วกับชุดข้อมูล COCO จำนวน 80 คลาส\n\n| ขนาดโมเดล | ลักษณะ |\n|---|---|\n| n (nano) | เล็กและเร็วที่สุด เหมาะกับคอมพิวเตอร์ทั่วไปและงานเรียลไทม์ |\n| s, m | สมดุลระหว่างความเร็วและความแม่นยำ |\n| l, x | แม่นยำที่สุด แต่ต้องใช้การ์ดจอ |\n\n### ขั้นตอนเตรียมเครื่องมือ\n1. ติดตั้ง Python 3.10 และเลือก Add python.exe to PATH\n2. สร้างโฟลเดอร์งาน แล้วสร้าง **Virtual Environment** เพื่อแยกไลบรารีของแต่ละงานไม่ให้ปนกัน\n3. ติดตั้ง `ultralytics` (OpenCV จะติดตั้งมาพร้อมกัน) และ `pyserial` สำหรับสื่อสารกับบอร์ด\n4. ใช้ VS Code หรือ Thonny เปิดโฟลเดอร์ แล้วรัน `detect.py` เพื่อทดสอบ\n\n> เมื่อเปิดใช้ Virtual Environment สำเร็จ จะเห็นคำว่า (venv) นำหน้าบรรทัดคำสั่ง ถ้าไม่เห็นแปลว่ายังติดตั้งไลบรารีลงในเครื่องหลักอยู่\n\n### ฝึกโมเดลด้วยข้อมูลของตนเอง\nถ้าต้องการให้โมเดลรู้จักวัตถุใหม่ เช่น ชิ้นงานอิเล็กทรอนิกส์ ให้ถ่ายภาพตัวอย่าง ติดฉลากข้อมูล (Data Labeling) บนเว็บไซต์ Roboflow แล้วส่งออกเป็นรูปแบบ YOLO จะได้ไฟล์ `data.yaml` พร้อมโฟลเดอร์ภาพ จากนั้นรัน `train.py`","code":[{"name":"setup.bat","lang":"bat","src":":: 1) สร้างโฟลเดอร์งาน แล้วเข้าไปในโฟลเดอร์\nd:\nmkdir YOLOV8\ncd YOLOV8\n\n:: 2) สร้างและเปิดใช้ Virtual Environment\npython -m venv venv\nvenv\\scripts\\activate.bat\n\n:: 3) ติดตั้งไลบรารี (OpenCV ติดตั้งมาพร้อม ultralytics)\npip install ultralytics\npip install pyserial\n\n:: ออกจาก Virtual Environment เมื่อเลิกใช้งาน\ndeactivate"},{"name":"detect.py","lang":"python","src":"# detect.py : ทดสอบว่า YOLO ติดตั้งสำเร็จ\nfrom ultralytics import YOLO\n\nmodel = YOLO(\"yolov8n.pt\")       # ครั้งแรกจะดาวน์โหลดไฟล์โมเดลให้อัตโนมัติ\nresults = model(\"bird.jpg\")      # เปลี่ยนเป็นชื่อไฟล์ภาพของตนเอง\nresults[0].show()                # แสดงภาพพร้อมกรอบวัตถุที่ตรวจพบ"},{"name":"train.py","lang":"python","src":"# train.py : ฝึกโมเดลด้วยชุดข้อมูลของตนเอง (ไฟล์ data.yaml ได้จาก Roboflow)\nfrom ultralytics import YOLO\n\nmodel = YOLO(\"yolov8n.pt\")\nresults = model.train(\n    data=\"data.yaml\",\n    epochs=50,\n    imgsz=800,\n    device=\"cpu\",     # ถ้ามีการ์ดจอ NVIDIA ใช้ device=0\n    workers=0\n)\nmetrics = model.val()  # ประเมินความแม่นยำกับชุดข้อมูลตรวจสอบ"}],"images":[{"url":"svg/ai-yolo-flow.svg","cap":"ภาพที่ 1 ขั้นตอนเตรียมเครื่องมือ YOLO บน Windows (วาดใหม่)"}],"url":""},{"id":"al2","title":"ตรวจจับวัตถุแบบเรียลไทม์ด้วยกล้องเว็บแคม","desc":"อ่านภาพจากกล้องทีละเฟรม ส่งให้ YOLO ประมวลผล และแสดงกรอบวัตถุบนหน้าจอ","body":"### ลำดับการทำงานของโปรแกรม\n1. เปิดกล้องด้วย `cv2.VideoCapture(0)`\n2. อ่านภาพทีละเฟรมด้วย `cap.read()`\n3. ส่งเฟรมให้โมเดล `model(frame, conf=0.5)` โดยกำหนดค่าความมั่นใจขั้นต่ำ 0.5\n4. วาดผลลัพธ์ด้วย `results[0].plot()` แล้วแสดงด้วย `cv2.imshow`\n5. วนซ้ำจนกว่าจะกดปุ่ม q แล้วคืนกล้องด้วย `cap.release()`\n\n### ค่าความมั่นใจ (Confidence)\nค่า `conf` อยู่ระหว่าง 0–1 ถ้าตั้งต่ำ จะตรวจพบวัตถุมากขึ้นแต่ผิดพลาดบ่อย ถ้าตั้งสูง ผลแม่นยำขึ้นแต่อาจพลาดวัตถุที่เห็นไม่ชัด งานควบคุมอุปกรณ์จริงควรเริ่มที่ 0.5 แล้วปรับตามการทดลอง\n\n### คลาสที่โมเดลรู้จัก\nโมเดล `yolo11n.pt` รู้จัก 80 คลาส ดูรายชื่อได้จาก `model.names` ตัวอย่างคลาสที่ใช้บ่อยในงานอาชีพ\n\n| ID | ชื่อคลาส | ความหมาย |\n|---|---|---|\n| 0 | person | คน |\n| 39 | bottle | ขวด |\n| 63 | laptop | แล็ปท็อป |\n| 67 | cell phone | โทรศัพท์มือถือ |\n| 76 | scissors | กรรไกร |","code":[{"name":"main.py","lang":"python","src":"# main.py : ตรวจจับวัตถุแบบเรียลไทม์จากเว็บแคม\nimport cv2\nfrom ultralytics import YOLO\n\nmodel = YOLO(\"yolo11n.pt\")       # รุ่น nano เร็วพอสำหรับวิดีโอสด\ncap = cv2.VideoCapture(0)        # 0 = กล้องหลักของเครื่อง\n\nif not cap.isOpened():\n    print(\"เปิดกล้องไม่ได้\")\n    exit()\n\nprint(\"กด q เพื่อออกจากโปรแกรม\")\nwhile True:\n    ret, frame = cap.read()\n    if not ret:\n        break\n\n    results = model(frame, conf=0.5, verbose=False)   # รับเฉพาะผลที่มั่นใจ ≥ 50%\n    annotated = results[0].plot()                     # วาดกรอบ ชื่อคลาส และค่าความมั่นใจ\n    cv2.imshow(\"YOLO Real-Time Detection\", annotated)\n\n    if cv2.waitKey(1) & 0xFF == ord('q'):\n        break\n\ncap.release()\ncv2.destroyAllWindows()"},{"name":"classes.py","lang":"python","src":"# classes.py : ดูรายชื่อคลาสที่โมเดลรู้จัก\nfrom ultralytics import YOLO\n\nmodel = YOLO(\"yolo11n.pt\")\nnames = model.names              # dict เช่น {0: 'person', 1: 'bicycle', ...}\n\nprint(\"จำนวนคลาสทั้งหมด:\", len(names))\nfor class_id, class_name in names.items():\n    print(f\"ID {class_id}: {class_name}\")"}],"images":[],"url":""},{"id":"al3","title":"นำผลการตรวจจับไปสั่งงานบอร์ด ESP32 ผ่าน Serial Port","desc":"เชื่อม AI บนคอมพิวเตอร์เข้ากับอุปกรณ์อิเล็กทรอนิกส์ เปิด-ปิดไฟอัตโนมัติเมื่อพบคน","body":"### แนวคิดของระบบ\nคอมพิวเตอร์ทำหน้าที่ประมวลผลภาพด้วย YOLO เพราะต้องใช้กำลังประมวลผลสูง ส่วนบอร์ด ESP32 รับคำสั่งสั้น ๆ เป็นข้อความผ่านสาย USB (Serial Port) แล้วนำไปเปิด-ปิดอุปกรณ์ที่ขา GPIO เช่น LED รีเลย์ หรือออดเตือน ระบบลักษณะนี้นำไปใช้ต่อได้กับงานตรวจจับคนเข้าพื้นที่อันตราย หรือนับชิ้นงานบนสายพาน\n\n### การสื่อสารแบบอนุกรม\n- ฝั่ง Python ใช้ไลบรารี `pyserial` เปิดพอร์ต เช่น `COM7` ที่ความเร็ว 115200 bps\n- ฝั่ง ESP32 อ่านข้อความทีละบรรทัดด้วย `Serial.readStringUntil('\\n')`\n- ทั้งสองฝั่งต้องตั้งความเร็ว (Baud rate) ให้ตรงกัน\n- หาหมายเลขพอร์ตได้จาก Device Manager > Ports (COM & LPT)\n\n> ส่งคำสั่งเฉพาะตอนที่สถานะเปลี่ยน (ใช้ตัวแปร last_state) เพราะถ้าส่งทุกเฟรม พอร์ตจะทำงานหนักและบอร์ดตอบสนองช้า\n\n### ข้อควรระวัง\n- ปิดหน้าต่าง Serial Monitor ของ Arduino IDE ก่อนรันโปรแกรม Python เพราะพอร์ตเปิดได้ทีละโปรแกรม\n- บนบอร์ด ESP32-CAM ขา GPIO4 ต่อกับไฟแฟลช LED ซึ่งสว่างมาก อย่าเปิดค้างไว้นาน","code":[{"name":"esp32_serial_led.ino","lang":"cpp","src":"// esp32_serial_led.ino : รับคำสั่ง ON / OFF ทางพอร์ตอนุกรม\nconst int ledPin = 4;   // ESP32-CAM: GPIO4 คือไฟแฟลชบนบอร์ด\n\nvoid setup() {\n  pinMode(ledPin, OUTPUT);\n  digitalWrite(ledPin, LOW);\n  Serial.begin(115200);\n}\n\nvoid loop() {\n  if (Serial.available() > 0) {\n    String command = Serial.readStringUntil('\\n');\n    command.trim();                 // ตัดช่องว่างและขึ้นบรรทัดใหม่ทิ้ง\n\n    if (command == \"ON\") {\n      digitalWrite(ledPin, HIGH);\n      Serial.println(\"LED turned ON\");\n    } else if (command == \"OFF\") {\n      digitalWrite(ledPin, LOW);\n      Serial.println(\"LED turned OFF\");\n    }\n  }\n}"},{"name":"main.py","lang":"python","src":"# main.py : พบ \"person\" แล้วสั่ง ESP32 เปิดไฟผ่านพอร์ต COM\nimport cv2\nimport serial\nimport time\nfrom ultralytics import YOLO\n\nSERIAL_PORT = \"COM7\"      # ดูหมายเลขพอร์ตได้ใน Device Manager\nBAUD_RATE = 115200\nTARGET_CLASS = \"person\"\n\ntry:\n    esp32 = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)\n    time.sleep(2)          # รอให้บอร์ดรีเซ็ตตัวเองหลังเปิดพอร์ต\n    print(\"เชื่อมต่อ ESP32 สำเร็จ\")\nexcept Exception as e:\n    print(\"เชื่อมต่อพอร์ตไม่สำเร็จ:\", e)\n    esp32 = None\n\ndef send(cmd):\n    if esp32 and esp32.is_open:\n        esp32.write((cmd + \"\\n\").encode())\n\nmodel = YOLO(\"yolo11n.pt\")\ncap = cv2.VideoCapture(0)\nlast_state = None\n\nwhile cap.isOpened():\n    ok, frame = cap.read()\n    if not ok:\n        break\n\n    results = model(frame, conf=0.5, verbose=False)\n    found = any(model.names[int(b.cls[0])] == TARGET_CLASS for b in results[0].boxes)\n\n    # ส่งคำสั่งเฉพาะตอนสถานะเปลี่ยน ไม่ส่งซ้ำทุกเฟรม\n    if found and last_state != \"ON\":\n        send(\"ON\");  last_state = \"ON\";  print(\"พบเป้าหมาย: LED ON\")\n    elif not found and last_state != \"OFF\":\n        send(\"OFF\"); last_state = \"OFF\"; print(\"ไม่พบเป้าหมาย: LED OFF\")\n\n    cv2.imshow(\"YOLO11 + ESP32\", results[0].plot())\n    if cv2.waitKey(1) & 0xFF == ord('q'):\n        break\n\nsend(\"OFF\")\ncap.release()\ncv2.destroyAllWindows()\nif esp32:\n    esp32.close()"}],"images":[{"url":"svg/ai-pipeline.svg","cap":"ภาพที่ 2 การนำผลการตรวจจับของ AI ไปสั่งงานบอร์ด ESP32 (วาดใหม่)"}],"url":""}]},{"id":"ds2","type":"worksheets","title":"ใบงาน","note":"","items":[{"id":"aw1","title":"ใบงานที่ 1 ติดตั้งเครื่องมือและทดสอบ YOLO กับภาพนิ่ง","desc":"สร้าง Virtual Environment ติดตั้ง Ultralytics และตรวจจับวัตถุจากภาพถ่ายของตนเอง","body":"**จุดประสงค์เชิงพฤติกรรม**\n- สร้างและใช้งาน Virtual Environment ของ Python ได้\n- ติดตั้งไลบรารี ultralytics และทดสอบโมเดลได้\n- อ่านผลการตรวจจับ (คลาส ค่าความมั่นใจ) ได้ถูกต้อง\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์ที่ติดตั้ง Python 3.10\n- โปรแกรม VS Code หรือ Thonny\n- ภาพถ่ายที่มีวัตถุอย่างน้อย 3 ชนิด\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. สร้างโฟลเดอร์งานและ Virtual Environment ตามไฟล์ setup.bat\n2. ติดตั้ง ultralytics แล้วตรวจสอบด้วยคำสั่ง pip list\n3. คัดลอกภาพถ่ายของตนเองไว้ในโฟลเดอร์ แล้วแก้ชื่อไฟล์ใน detect.py\n4. รัน detect.py และบันทึกผลวัตถุที่ตรวจพบ\n5. ทดลองเปลี่ยนโมเดลเป็น yolov8s.pt แล้วเปรียบเทียบผล\n\n**บันทึกผลการปฏิบัติงาน**\n| ภาพที่ | วัตถุที่ตรวจพบ | ค่าความมั่นใจ | ถูกต้องหรือไม่ |\n|---|---|---|---|\n| 1 | | | |\n| 2 | | | |\n| 3 | | | |\n\n**คำถามท้ายใบงาน**\n1. Virtual Environment ช่วยแก้ปัญหาอะไรในการทำงานหลายโปรเจกต์\n2. โมเดล n กับ s ให้ผลต่างกันอย่างไร และใช้เวลาประมวลผลต่างกันเท่าใด\n3. วัตถุใดในภาพที่โมเดลตรวจไม่พบ เพราะเหตุใด","code":[],"images":[],"url":""},{"id":"aw2","title":"ใบงานที่ 2 ตรวจจับและนับจำนวนวัตถุแบบเรียลไทม์","desc":"ดัดแปลงโปรแกรม main.py ให้นับจำนวนคนในภาพและแสดงผลบนหน้าจอ","body":"**จุดประสงค์เชิงพฤติกรรม**\n- เขียนโปรแกรมอ่านภาพจากกล้องและตรวจจับวัตถุแบบเรียลไทม์ได้\n- ดึงข้อมูลคลาสจากผลการตรวจจับมาประมวลผลต่อได้\n- อธิบายผลของการปรับค่า conf ได้\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์พร้อมเว็บแคม\n- Virtual Environment จากใบงานที่ 1\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. รัน main.py และทดลองถือวัตถุต่าง ๆ หน้ากล้อง\n2. รัน classes.py แล้วเลือกคลาสที่ต้องการนับ 1 คลาส\n3. เพิ่มโค้ดนับจำนวนกรอบที่เป็นคลาสนั้นในแต่ละเฟรม\n4. ใช้ cv2.putText แสดงจำนวนที่นับได้มุมบนซ้ายของภาพ\n5. ทดลองค่า conf = 0.3, 0.5, 0.8 แล้วบันทึกผล\n\n**บันทึกผลการปฏิบัติงาน**\n| ค่า conf | จำนวนที่นับได้ | จำนวนจริง | ตรวจผิด (ครั้ง) |\n|---|---|---|---|\n| 0.3 | | | |\n| 0.5 | | | |\n| 0.8 | | | |\n\n**คำถามท้ายใบงาน**\n1. ค่า conf ใดให้ผลเหมาะสมที่สุดกับงานนับจำนวน เพราะอะไร\n2. แสงสว่างในห้องมีผลต่อการตรวจจับอย่างไร\n3. ยกตัวอย่างงานอาชีพในสาขาของตนเองที่นำระบบนับวัตถุไปใช้ได้","code":[],"images":[],"url":""},{"id":"aw3","title":"ใบงานที่ 3 ระบบเปิดไฟอัตโนมัติเมื่อตรวจพบคน","desc":"เชื่อมโปรแกรม YOLO กับบอร์ด ESP32 ผ่าน Serial Port เพื่อเปิด-ปิด LED","body":"**จุดประสงค์เชิงพฤติกรรม**\n- เขียนโปรแกรม ESP32 รับคำสั่งผ่านพอร์ตอนุกรมได้\n- ส่งคำสั่งจาก Python ไปยังบอร์ดด้วย pyserial ได้\n- ออกแบบเงื่อนไขส่งคำสั่งเฉพาะเมื่อสถานะเปลี่ยนได้\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์พร้อมเว็บแคม\n- บอร์ด ESP32 พร้อมสาย USB (ถ้าใช้ ESP32-CAM ต้องมีบอร์ดอัปโหลด ESP32-CAM-MB หรือตัวแปลง USB-TTL เพราะบอร์ดไม่มีพอร์ต USB)\n- LED และตัวต้านทาน 220 Ω (ถ้าไม่ใช้ไฟแฟลชบนบอร์ด)\n- Arduino IDE ที่ติดตั้งบอร์ด ESP32 แล้ว\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. อัปโหลด esp32_serial_led.ino ลงบอร์ด\n2. เปิด Serial Monitor (115200) พิมพ์ ON และ OFF เพื่อทดสอบ แล้วปิดหน้าต่าง\n3. ตรวจหมายเลขพอร์ตใน Device Manager และแก้ค่า SERIAL_PORT ใน main.py\n4. รัน main.py แล้วเดินเข้า-ออกหน้ากล้อง\n5. เปลี่ยน TARGET_CLASS เป็นวัตถุอื่น เช่น bottle แล้วทดสอบอีกครั้ง\n\n**บันทึกผลการปฏิบัติงาน**\n| สถานการณ์ | ข้อความในหน้าต่าง Python | สถานะ LED |\n|---|---|---|\n| มีคนหน้ากล้อง | | |\n| ไม่มีคน | | |\n| ถือขวด (TARGET = bottle) | | |\n\n**คำถามท้ายใบงาน**\n1. ถ้าไม่ใช้ตัวแปร last_state จะเกิดปัญหาอะไร\n2. เพราะเหตุใดต้องรอ 2 วินาทีหลังเปิดพอร์ต\n3. ออกแบบระบบความปลอดภัยในโรงงานที่ใช้หลักการเดียวกันนี้ 1 ระบบ","code":[],"images":[],"url":""}]},{"id":"ds3","type":"gallery","title":"รูปเพิ่มเติม","note":"","items":[{"id":"ag1","title":"นักเรียนฝึกปฏิบัติงานกับคอมพิวเตอร์และชุดทดลอง","desc":"","url":"img/computer-lab.jpg"}]}],"refs":[{"title":"Ultralytics YOLO Documentation","url":"https://docs.ultralytics.com/"},{"title":"Roboflow (ติดฉลากและจัดการชุดข้อมูลภาพ)","url":"https://roboflow.com/"}]},{"id":"c30100-1003","code":"30100-1003","name":"กฎหมายในงานอาชีพอุตสาหกรรมพลังงาน ไฟฟ้า และอิเล็กทรอนิกส์","t":1,"p":0,"n":1,"h":1,"slots":[{"d":4,"s":"16:00","e":"17:00","room":"8306","group":"สทอ.2/1"}],"sections":[{"id":"fs1","type":"lessons","title":"เนื้อหา","note":"","items":[{"id":"ll1","title":"หน่วยที่ 1 ความรู้เบื้องต้นเกี่ยวกับกฎหมายและข้อกำหนดในงานอาชีพ","desc":"ความหมายของกฎหมาย ลำดับศักดิ์ ความต่างระหว่างกฎหมายกับมาตรฐาน และการสืบค้นจากแหล่งทางการ","body":"### ขอบเขตของรายวิชา\nรายวิชานี้ศึกษาข้อกำหนดและกฎหมายที่เกี่ยวข้องกับงานอาชีพการผลิตและการบริการในสาขาที่เรียน รวมถึงกฎหมายเกี่ยวกับความปลอดภัย สิ่งแวดล้อม และทรัพย์สินทางปัญญา เพื่อให้นำข้อกำหนดไปปฏิบัติในงานอาชีพได้อย่างถูกต้องและมีจรรยาบรรณ\n\n### ลำดับศักดิ์ของกฎหมาย\nกฎหมายที่ช่างไฟฟ้าและอิเล็กทรอนิกส์พบบ่อยมีหลายระดับ กฎหมายระดับต่ำกว่าต้องออกโดยอาศัยอำนาจของกฎหมายระดับสูงกว่า และขัดหรือแย้งกับกฎหมายที่สูงกว่าไม่ได้\n1. รัฐธรรมนูญ\n2. พระราชบัญญัติ (พ.ร.บ.) พระราชกำหนด และประมวลกฎหมาย\n3. พระราชกฤษฎีกา\n4. กฎกระทรวง\n5. ประกาศ ระเบียบ และข้อบังคับของหน่วยงาน\n\nตัวอย่าง: **พ.ร.บ.ความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงาน พ.ศ. 2554** ให้อำนาจรัฐมนตรีออก **กฎกระทรวงฯ เกี่ยวกับไฟฟ้า พ.ศ. 2558** ซึ่งกำหนดรายละเอียดที่นายจ้างและลูกจ้างต้องปฏิบัติ\n\n### กฎหมายกับมาตรฐาน\n| ประเภท | ลักษณะ | ตัวอย่าง |\n|---|---|---|\n| กฎหมาย | บังคับทุกคน มีบทลงโทษ | พ.ร.บ. กฎกระทรวง |\n| มาตรฐานบังคับ | กฎหมายกำหนดให้ต้องปฏิบัติตาม | ผลิตภัณฑ์ที่ต้องได้รับเครื่องหมาย มอก. บังคับ |\n| มาตรฐานทั่วไป | เป็นแนวปฏิบัติที่ดี แต่กฎหมายอาจอ้างถึง | มาตรฐานการติดตั้งทางไฟฟ้าสำหรับประเทศไทย (วสท.) |\n\n### การสืบค้นกฎหมายจากแหล่งทางการ\n- **ราชกิจจานุเบกษา** แหล่งประกาศกฎหมายฉบับจริง กฎหมายมีผลเมื่อประกาศแล้วตามวันที่กำหนด\n- **ระบบกลางทางกฎหมาย / สำนักงานคณะกรรมการกฤษฎีกา** ค้นตัวบทกฎหมายฉบับปัจจุบันที่รวมการแก้ไขแล้ว\n- เวลาอ่านกฎหมายให้ดู ชื่อ ปี พ.ศ. ฉบับที่แก้ไข และหน่วยงานที่รักษาการตามกฎหมาย","code":[],"images":[{"url":"svg/law-hierarchy.svg","cap":"ภาพที่ 1 ลำดับศักดิ์ของกฎหมาย และตัวอย่างในงานไฟฟ้า (วาดใหม่)"}],"url":""},{"id":"ll2","title":"หน่วยที่ 2 กฎหมายควบคุมการประกอบอาชีพช่างและวิศวกร","desc":"หนังสือรับรองความรู้ความสามารถของช่างไฟฟ้าภายในอาคาร และใบอนุญาตประกอบวิชาชีพวิศวกรรมควบคุม","body":"### พ.ร.บ.ส่งเสริมการพัฒนาฝีมือแรงงาน พ.ศ. 2545 (แก้ไขเพิ่มเติม พ.ศ. 2557)\nกฎหมายนี้กำหนดให้สาขาอาชีพที่อาจเป็นอันตรายต่อสาธารณะ ต้องให้ผู้ที่มี **หนังสือรับรองความรู้ความสามารถ** เป็นผู้ทำงานเท่านั้น กระทรวงแรงงานประกาศให้ **ช่างไฟฟ้าภายในอาคาร** เป็นหนึ่งในสาขาอาชีพดังกล่าว ผู้ทำงานโดยไม่มีหนังสือรับรองมีความผิดตามกฎหมาย ถูกปรับไม่เกิน 5,000 บาท ส่วนนายจ้างหรือสถานประกอบกิจการที่จ้างช่างที่ไม่มีหนังสือรับรอง ถูกปรับไม่เกิน 30,000 บาท\n- ยื่นขอประเมินได้ที่สถาบัน/สำนักงานพัฒนาฝีมือแรงงานในจังหวัด\n- การประเมินมีทั้งภาคความรู้และภาคปฏิบัติตามมาตรฐานฝีมือแรงงานแห่งชาติ\n- นักศึกษาสาขาไฟฟ้าและอิเล็กทรอนิกส์ควรวางแผนสอบตั้งแต่ระหว่างเรียน\n\n### พ.ร.บ.วิศวกร พ.ศ. 2542\nงานวิศวกรรมบางประเภทกำหนดเป็น **วิศวกรรมควบคุม** ผู้ทำงานต้องได้รับใบอนุญาตประกอบวิชาชีพจาก **สภาวิศวกร** (เรียกทั่วไปว่า ใบ กว.) สาขาวิศวกรรมไฟฟ้าแบ่งเป็นแขนงไฟฟ้ากำลังและไฟฟ้าสื่อสาร ผู้ขอใบอนุญาตต้องสำเร็จการศึกษาระดับปริญญาวิศวกรรมศาสตร์จากหลักสูตรที่สภาวิศวกรรับรอง และผ่านการทดสอบ\n\n### เส้นทางอาชีพของนักศึกษา ปวส.\n| ระดับ | สิ่งที่ต้องมี | ตัวอย่างงาน |\n|---|---|---|\n| ช่างไฟฟ้าภายในอาคาร | หนังสือรับรองความรู้ความสามารถ | เดินสายไฟ ติดตั้งแผงควบคุมในอาคาร |\n| ช่างเทคนิค | วุฒิ ปวส. และประสบการณ์ | บำรุงรักษาเครื่องจักร ติดตั้งระบบควบคุม |\n| วิศวกร | ปริญญาวิศวกรรมศาสตร์ + ใบอนุญาต กว. | ออกแบบ ตรวจสอบ และรับรองงานระบบไฟฟ้า |\n\n> งานบางอย่าง เช่น แผนผังวงจรไฟฟ้าตามกฎกระทรวง ปี 2558 ต้องได้รับการรับรองจากวิศวกรหรือการไฟฟ้า ช่างจึงต้องรู้ขอบเขตอำนาจหน้าที่ของตนเอง","code":[],"images":[],"url":""},{"id":"ll3","title":"หน่วยที่ 3 กฎหมายความปลอดภัยในการทำงานเกี่ยวกับไฟฟ้า","desc":"สาระสำคัญของกฎกระทรวงความปลอดภัยฯ เกี่ยวกับไฟฟ้า พ.ศ. 2558 และผลงานวิจัยด้านพฤติกรรมความปลอดภัย","body":"### กฎกระทรวงกำหนดมาตรฐานในการบริหาร จัดการ และดำเนินการด้านความปลอดภัยฯ เกี่ยวกับไฟฟ้า พ.ศ. 2558\nออกตาม พ.ร.บ.ความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงาน พ.ศ. 2554 สาระสำคัญที่ช่างต้องรู้\n\n| เรื่อง | สาระสำคัญ |\n|---|---|\n| แผนผังวงจรไฟฟ้า | นายจ้างต้องมีและเก็บแผนผังวงจรไฟฟ้าที่ได้รับการรับรองจากวิศวกรหรือการไฟฟ้า |\n| ป้ายเตือน (ข้อ 6) | ติดป้ายหรือสัญลักษณ์เตือนอันตรายจากไฟฟ้าในบริเวณที่อาจเกิดอันตราย |\n| ระยะห่าง (ข้อ 7–8) | ห้ามลูกจ้างเข้าใกล้สิ่งที่มีกระแสไฟฟ้าในระยะน้อยกว่ามาตรฐานของวิศวกรรมสถานแห่งประเทศไทย (วสท.) และห้ามผู้ไม่เกี่ยวข้องเข้าใกล้ |\n| อุปกรณ์ป้องกัน (ข้อ 10, 22) | อุปกรณ์ฉนวนและอุปกรณ์ป้องกันต้องเหมาะกับแรงดันสูงสุดในบริเวณปฏิบัติงาน |\n| ล็อกและติดป้าย (ข้อ 15) | ขณะทำงานต้องมีอุปกรณ์ล็อกหรือระบบป้องกันการสับสวิตช์ พร้อมป้ายห้ามสับ |\n| ที่กั้นและแผ่นฉนวน (ข้อ 17) | บริภัณฑ์ที่ใช้แรงดันเกิน 50 V ต้องมีที่ปิดกั้นหรือแผ่นฉนวนปูพื้นป้องกันการสัมผัส |\n| เครื่องกำเนิดไฟฟ้า (ข้อ 19) | ติดตั้งในที่กว้างพอ ระบายอากาศ ต่อท่อไอเสียออกนอกห้อง มีอุปกรณ์ป้องกันกระแสเกินและเครื่องดับเพลิง |\n| ฟ้าผ่า | ต้องมีระบบป้องกันฟ้าผ่าตามมาตรฐาน |\n\n> ตารางนี้เป็นการสรุปความเพื่อการเรียน ก่อนนำไปใช้ในงานจริงให้ตรวจกับตัวบทฉบับราชกิจจานุเบกษา\n\n### ขั้นตอนตัดไฟและล็อก (Lockout/Tagout) ที่ควรฝึกจนเป็นนิสัย\n1. แจ้งผู้เกี่ยวข้องว่าจะหยุดจ่ายไฟ\n2. ปลดเบรกเกอร์หรือสวิตช์ตัดตอนของวงจรที่จะทำงาน\n3. คล้องกุญแจและแขวนป้าย “ห้ามสับ กำลังปฏิบัติงาน” พร้อมชื่อผู้ปฏิบัติงาน\n4. ตรวจด้วยเครื่องวัดว่าไม่มีแรงดันจริง ก่อนสัมผัสวงจร\n5. เมื่อเสร็จงาน ผู้ที่ล็อกเท่านั้นเป็นผู้ปลดกุญแจ แล้วแจ้งก่อนจ่ายไฟคืน\n\n### ผลงานวิจัยที่เกี่ยวข้อง\n- **วริยา เคนทวาย (2564)** ศึกษาพนักงานระดับปฏิบัติการ การไฟฟ้าส่วนภูมิภาค จังหวัดปทุมธานี 50 คน พบว่าพฤติกรรมด้านการปฏิบัติตามกฎระเบียบความปลอดภัยมีค่าเฉลี่ยสูงที่สุด รองลงมาคือการใช้เครื่องมือและอุปกรณ์ป้องกัน และเสนอให้มีนโยบายความปลอดภัยที่ชัดเจนและใช้อุปกรณ์ป้องกันอย่างสม่ำเสมอ\n- **ภิญโญ สุโรจนานนท์ และคณะ** ศึกษาผู้ปฏิบัติงานก่อสร้างระบบจำหน่าย กฟภ.อำเภอโคกสำโรง พบว่าผู้ปฏิบัติงานบางส่วนทำงานตามความเคยชิน และเลือกทำงานเสี่ยงมากกว่าใช้อุปกรณ์ป้องกัน โดยสาเหตุสำคัญของปัญหาคือ **การบริหารจัดการความปลอดภัยที่เป็นรูปธรรม**\n- **อ.เตชทัต บูรณะอัศวกุล** (มหาวิทยาลัยราชภัฏธนบุรี) สรุปหน้าที่ตามกฎกระทรวงฯ ไว้สำหรับเจ้าหน้าที่ความปลอดภัย เช่น ต้องมีผังวงจรที่วิศวกรรับรอง มีระยะห่างตามมาตรฐาน วสท. และใช้ PPE ให้เหมาะกับลักษณะงานไฟฟ้า\n\n> ข้อสรุปจากงานวิจัย: กฎหมายอย่างเดียวไม่พอ ต้องมีการบริหารจัดการ การฝึกอบรม และวัฒนธรรมความปลอดภัยในที่ทำงาน","code":[],"images":[],"url":""},{"id":"ll4","title":"หน่วยที่ 4 กฎหมายมาตรฐานผลิตภัณฑ์ การติดตั้ง และพลังงาน","desc":"มาตรฐานผลิตภัณฑ์อุตสาหกรรม (มอก.) มาตรฐานการติดตั้งทางไฟฟ้า และกฎหมายด้านพลังงาน","body":"### พ.ร.บ.มาตรฐานผลิตภัณฑ์อุตสาหกรรม พ.ศ. 2511\n- กำหนดมาตรฐานผลิตภัณฑ์ (มอก.) โดยสำนักงานมาตรฐานผลิตภัณฑ์อุตสาหกรรม (สมอ.)\n- ผลิตภัณฑ์ที่มีพระราชกฤษฎีกากำหนดให้ต้องเป็นไปตามมาตรฐาน เรียกว่า **สินค้าควบคุม** ผู้ผลิตและผู้นำเข้าต้องได้รับใบอนุญาตก่อนจำหน่าย เครื่องใช้ไฟฟ้าและสายไฟฟ้าหลายชนิดอยู่ในกลุ่มนี้\n- ช่างควรเลือกใช้สายไฟ เบรกเกอร์ และอุปกรณ์ที่มีเครื่องหมาย มอก. ถูกต้องตามประเภทงาน\n\n### มาตรฐานการติดตั้งทางไฟฟ้าสำหรับประเทศไทย (วสท.)\nจัดทำโดยวิศวกรรมสถานแห่งประเทศไทย กำหนดวิธีเลือกขนาดสาย การป้องกันกระแสเกิน การต่อลงดิน และระยะห่างความปลอดภัย กฎกระทรวงความปลอดภัยเกี่ยวกับไฟฟ้า พ.ศ. 2558 อ้างอิงมาตรฐานนี้ในเรื่องระยะห่าง จึงมีผลในทางปฏิบัติเสมือนข้อบังคับ\n\n### กฎหมายด้านพลังงาน\n| กฎหมาย | สาระสำคัญสำหรับช่าง |\n|---|---|\n| พ.ร.บ.การส่งเสริมการอนุรักษ์พลังงาน พ.ศ. 2535 (แก้ไข 2550) | โรงงานและอาคารควบคุมต้องจัดการพลังงาน มีผู้รับผิดชอบด้านพลังงาน และรายงานผล |\n| พ.ร.บ.การประกอบกิจการพลังงาน พ.ศ. 2550 | จัดตั้งคณะกรรมการกำกับกิจการพลังงาน (กกพ.) การผลิตและจำหน่ายไฟฟ้าต้องได้รับอนุญาตตามหลักเกณฑ์ เช่น การติดตั้งโซลาร์เซลล์ขายไฟคืน |\n\n> ก่อนติดตั้งระบบผลิตไฟฟ้าหรือเชื่อมต่อกับระบบของการไฟฟ้า ต้องตรวจหลักเกณฑ์ล่าสุดของการไฟฟ้าส่วนภูมิภาค/นครหลวง และ กกพ. เพราะมีการปรับปรุงเป็นระยะ","code":[],"images":[],"url":""},{"id":"ll5","title":"หน่วยที่ 5 กฎหมายสิ่งแวดล้อม โรงงาน และขยะอิเล็กทรอนิกส์","desc":"พ.ร.บ.โรงงาน กฎหมายสิ่งแวดล้อม และสถานะการจัดการซากผลิตภัณฑ์เครื่องใช้ไฟฟ้าในประเทศไทย","body":"### พ.ร.บ.โรงงาน พ.ศ. 2535 และฉบับแก้ไข พ.ศ. 2562\n- ควบคุมการตั้งและประกอบกิจการโรงงาน รวมถึงโรงงานคัดแยกและรีไซเคิลซากอิเล็กทรอนิกส์\n- ฉบับแก้ไข พ.ศ. 2562 ปรับนิยามโรงงานจากเครื่องจักร 5 แรงม้าหรือคนงาน 7 คน เป็น **50 แรงม้าหรือคนงาน 50 คน** ยกเลิกการต่ออายุใบอนุญาต รง.4 ทุก 5 ปี และเพิ่มการตรวจสอบโดยบุคคลที่สาม\n\n### กฎหมายสิ่งแวดล้อมที่เกี่ยวข้อง\n- พ.ร.บ.ส่งเสริมและรักษาคุณภาพสิ่งแวดล้อมแห่งชาติ พ.ศ. 2535 กำหนดมาตรฐานคุณภาพสิ่งแวดล้อมและการควบคุมมลพิษ\n- กฎกระทรวงว่าด้วยการจัดการมูลฝอยที่เป็นพิษหรืออันตรายจากชุมชน พ.ศ. 2563 กำหนดให้แยกขยะอันตราย (รวมถึงซากเครื่องใช้ไฟฟ้า หลอดไฟ แบตเตอรี่) ออกจากขยะทั่วไป\n\n### สถานการณ์ขยะอิเล็กทรอนิกส์ (ข้อมูลกรมควบคุมมลพิษ)\n- ประเทศไทยมีซากผลิตภัณฑ์เครื่องใช้ไฟฟ้าและอิเล็กทรอนิกส์ประมาณ **400,000 ตันต่อปี**\n- ยังไม่มีกฎหมายเฉพาะด้านขยะอิเล็กทรอนิกส์ ปัจจุบันใช้กฎหมายหลายฉบับร่วมกัน\n- **(ร่าง) พ.ร.บ.การจัดการซากผลิตภัณฑ์เครื่องใช้ไฟฟ้าและอุปกรณ์อิเล็กทรอนิกส์** ใช้หลักความรับผิดชอบที่เพิ่มขึ้นของผู้ผลิต (EPR) ยังอยู่ระหว่างการพิจารณา\n- กระทรวงพาณิชย์ประกาศให้ขยะอิเล็กทรอนิกส์ **428 รายการ** เป็นสินค้าต้องห้ามนำเข้า (พ.ศ. 2563)\n\n> ซากแผงวงจรมีโลหะหนัก เช่น ตะกั่ว ปรอท และแคดเมียม การรื้อหรือเผาเองโดยไม่มีระบบป้องกันเป็นอันตรายต่อสุขภาพและสิ่งแวดล้อม ควรส่งให้จุดรับคืนหรือผู้ประกอบการที่ได้รับอนุญาต","code":[],"images":[],"url":""},{"id":"ll6","title":"หน่วยที่ 6 ทรัพย์สินทางปัญญาในงานอิเล็กทรอนิกส์และซอฟต์แวร์","desc":"ลิขสิทธิ์ สิทธิบัตร อนุสิทธิบัตร แบบผังภูมิวงจรรวม และการใช้ซอฟต์แวร์โอเพนซอร์สอย่างถูกต้อง","body":"### ประเภทของทรัพย์สินทางปัญญาที่ช่างควรรู้\n| ประเภท | คุ้มครองอะไร | อายุการคุ้มครอง |\n|---|---|---|\n| ลิขสิทธิ์ | งานสร้างสรรค์ รวมถึงโปรแกรมคอมพิวเตอร์ (ถือเป็นงานวรรณกรรม) | ตลอดอายุผู้สร้างสรรค์ + 50 ปี (นิติบุคคล 50 ปีนับแต่สร้างสรรค์) |\n| สิทธิบัตรการประดิษฐ์ | สิ่งประดิษฐ์ใหม่ มีขั้นการประดิษฐ์สูงขึ้น ประยุกต์ใช้ในอุตสาหกรรมได้ | 20 ปีนับแต่วันยื่นคำขอ |\n| สิทธิบัตรการออกแบบผลิตภัณฑ์ | รูปร่างหรือลวดลายของผลิตภัณฑ์ | 10 ปีนับแต่วันยื่นคำขอ |\n| อนุสิทธิบัตร | สิ่งประดิษฐ์ใหม่ที่ประยุกต์ใช้ในอุตสาหกรรมได้ (ไม่ต้องมีขั้นการประดิษฐ์สูง) | 6 ปี ต่ออายุได้ 2 ครั้ง ครั้งละ 2 ปี |\n| แบบผังภูมิของวงจรรวม | การจัดวางวงจรบนชิป ที่สร้างขึ้นเองและไม่เป็นที่รู้จักทั่วไป | 10 ปี (รวมแล้วไม่เกิน 15 ปีนับแต่สร้างเสร็จ) |\n| เครื่องหมายการค้า | ชื่อ ตราสัญลักษณ์ของสินค้าและบริการ | 10 ปี ต่ออายุได้ครั้งละ 10 ปี |\n\n### อนุสิทธิบัตรกับผลงานนักเรียน\nสิ่งประดิษฐ์ของนักเรียนอาชีวศึกษาจำนวนมากเป็นการปรับปรุงของเดิมให้ใช้งานได้ดีขึ้น หากเป็นของใหม่และใช้ในอุตสาหกรรมได้ ก็ยื่นขอ **อนุสิทธิบัตร** ได้ เพราะไม่ต้องพิสูจน์ขั้นการประดิษฐ์ที่สูงขึ้น ก่อนยื่นต้องสืบค้นว่ายังไม่มีผู้ใดยื่นไว้ และควรหลีกเลี่ยงการเผยแพร่ผลงานต่อสาธารณะก่อนยื่นคำขอ เพราะอาจทำให้ผลงานไม่ถือว่าเป็นของใหม่\n\n### การใช้โค้ดและไลบรารีของผู้อื่น\n- โค้ดตัวอย่างและไลบรารี Arduino ส่วนใหญ่เผยแพร่ภายใต้สัญญาอนุญาตโอเพนซอร์ส เช่น MIT หรือ GPL ซึ่งมีเงื่อนไขต่างกัน\n- ต้องอ่านสัญญาอนุญาต อ้างอิงแหล่งที่มา และไม่ลบข้อความลิขสิทธิ์ของเจ้าของเดิม\n- การคัดลอกโปรแกรมเชิงพาณิชย์หรือใช้ซอฟต์แวร์ละเมิดลิขสิทธิ์ในงาน มีความผิดตาม พ.ร.บ.ลิขสิทธิ์","code":[],"images":[],"url":""}]},{"id":"fs2","type":"worksheets","title":"ใบงาน","note":"","items":[{"id":"lw1","title":"ใบงานที่ 1 สืบค้นกฎหมายจากแหล่งทางการ","desc":"สืบค้นกฎหมาย 5 ฉบับที่เกี่ยวข้องกับงานไฟฟ้าและอิเล็กทรอนิกส์แล้วสรุปสาระสำคัญ","body":"**จุดประสงค์เชิงพฤติกรรม**\n- สืบค้นตัวบทกฎหมายจากแหล่งทางการได้\n- จำแนกประเภทและลำดับศักดิ์ของกฎหมายได้\n- สรุปสาระสำคัญที่เกี่ยวข้องกับงานอาชีพได้\n\n**เครื่องมือและอุปกรณ์**\n- คอมพิวเตอร์หรือโทรศัพท์ที่เชื่อมต่ออินเทอร์เน็ต\n- เว็บไซต์ราชกิจจานุเบกษา และระบบกลางทางกฎหมาย\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. แบ่งกลุ่ม กลุ่มละ 3–4 คน\n2. สืบค้นกฎหมายตามรายชื่อในตาราง\n3. ระบุประเภท ปี พ.ศ. และหน่วยงานที่รับผิดชอบ\n4. สรุปสาระสำคัญที่เกี่ยวกับงานช่างไม่เกิน 3 บรรทัดต่อฉบับ\n5. นำเสนอหน้าชั้นเรียนกลุ่มละ 5 นาที\n\n**บันทึกผลการปฏิบัติงาน**\n| ชื่อกฎหมาย | ประเภท | ปี พ.ศ. | หน่วยงานรับผิดชอบ | สาระสำคัญต่องานช่าง |\n|---|---|---|---|---|\n| ความปลอดภัยฯ เกี่ยวกับไฟฟ้า | | | | |\n| ส่งเสริมการพัฒนาฝีมือแรงงาน | | | | |\n| มาตรฐานผลิตภัณฑ์อุตสาหกรรม | | | | |\n| ลิขสิทธิ์ | | | | |\n| โรงงาน | | | | |\n\n**คำถามท้ายใบงาน**\n1. กฎกระทรวงความปลอดภัยฯ เกี่ยวกับไฟฟ้า ออกโดยอาศัยอำนาจตามกฎหมายฉบับใด\n2. มาตรฐาน วสท. เป็นกฎหมายหรือไม่ และมีผลบังคับในทางปฏิบัติอย่างไร","code":[],"images":[],"url":""},{"id":"lw2","title":"ใบงานที่ 2 วิเคราะห์กรณีศึกษาการประกอบอาชีพช่าง","desc":"วิเคราะห์สถานการณ์ว่างานใดต้องใช้หนังสือรับรองความรู้ความสามารถหรือใบอนุญาตวิศวกร","body":"**จุดประสงค์เชิงพฤติกรรม**\n- อธิบายข้อกำหนดของ พ.ร.บ.ส่งเสริมการพัฒนาฝีมือแรงงาน ที่เกี่ยวกับช่างไฟฟ้าภายในอาคารได้\n- จำแนกงานที่อยู่ในขอบเขตของช่างและวิศวกรได้\n\n**เครื่องมือและอุปกรณ์**\n- เนื้อหาหน่วยที่ 2\n- กรณีศึกษาในใบงาน\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. อ่านกรณีศึกษาต่อไปนี้ แล้ววิเคราะห์เป็นรายบุคคล\n2. กรณีที่ 1: นาย ก. จบ ปวช. รับจ้างเดินสายไฟในบ้านโดยไม่มีหนังสือรับรอง\n3. กรณีที่ 2: บริษัทให้ช่างเทคนิคลงนามรับรองแผนผังวงจรไฟฟ้าของโรงงาน\n4. กรณีที่ 3: นักศึกษาฝึกงานติดตั้งปลั๊กไฟภายใต้การควบคุมของช่างที่มีหนังสือรับรอง\n5. อภิปรายผลร่วมกันในชั้นเรียน\n\n**บันทึกผลการปฏิบัติงาน**\n| กรณี | ถูกต้องตามกฎหมายหรือไม่ | กฎหมายที่เกี่ยวข้อง | ข้อเสนอแนะ |\n|---|---|---|---|\n| 1 | | | |\n| 2 | | | |\n| 3 | | | |\n\n**คำถามท้ายใบงาน**\n1. การมีหนังสือรับรองความรู้ความสามารถเป็นประโยชน์ต่อผู้ว่าจ้างอย่างไร\n2. วางแผนเส้นทางอาชีพของตนเองหลังจบ ปวส. ว่าต้องมีคุณวุฒิหรือใบรับรองใดบ้าง","code":[],"images":[],"url":""},{"id":"lw3","title":"ใบงานที่ 3 ตรวจประเมินความปลอดภัยทางไฟฟ้าในห้องปฏิบัติการ","desc":"ใช้แบบตรวจตามกฎกระทรวง พ.ศ. 2558 สำรวจห้องปฏิบัติการของแผนกวิชา","body":"**จุดประสงค์เชิงพฤติกรรม**\n- ระบุข้อกำหนดของกฎกระทรวงความปลอดภัยฯ เกี่ยวกับไฟฟ้าได้\n- สำรวจและเสนอแนวทางแก้ไขความไม่ปลอดภัยได้\n\n**เครื่องมือและอุปกรณ์**\n- แบบตรวจในใบงาน\n- กล้องโทรศัพท์สำหรับบันทึกภาพ (ไม่เปิดตู้ไฟหรือแตะอุปกรณ์ขณะสำรวจ)\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. สำรวจห้องปฏิบัติการภายใต้การควบคุมของครูผู้สอน\n2. ตรวจตามรายการในตาราง บันทึกผลและถ่ายภาพหลักฐาน\n3. จัดลำดับความเสี่ยงที่พบ (สูง กลาง ต่ำ)\n4. เขียนข้อเสนอแนะการแก้ไขอย่างน้อย 3 ข้อ\n\n**บันทึกผลการปฏิบัติงาน**\n| รายการตรวจ | มี/ผ่าน | ไม่มี/ไม่ผ่าน | หมายเหตุ |\n|---|---|---|---|\n| แผนผังวงจรไฟฟ้าของห้อง | | | |\n| ป้ายเตือนอันตรายที่ตู้ไฟ | | | |\n| พื้นที่หน้าตู้ไฟโล่ง ไม่มีสิ่งกีดขวาง | | | |\n| กุญแจและป้ายห้ามสับสำหรับงานซ่อม | | | |\n| แผ่นฉนวนหรือที่กั้นบริเวณบริภัณฑ์ > 50 V | | | |\n| ถุงมือฉนวนและอุปกรณ์ป้องกันส่วนบุคคล | | | |\n| เครื่องดับเพลิงที่เหมาะกับไฟฟ้า | | | |\n\n**คำถามท้ายใบงาน**\n1. ความเสี่ยงที่สำคัญที่สุดที่พบคืออะไร ควรแก้ไขอย่างไร\n2. จากงานวิจัยในหน่วยที่ 3 เหตุใดการมีกฎระเบียบอย่างเดียวจึงไม่เพียงพอ","code":[],"images":[],"url":""},{"id":"lw4","title":"ใบงานที่ 4 อ่านเครื่องหมาย มอก. และฉลากผลิตภัณฑ์ไฟฟ้า","desc":"ตรวจเครื่องหมายมาตรฐานบนอุปกรณ์ไฟฟ้าจริง และเลือกใช้ผลิตภัณฑ์ให้ถูกต้อง","body":"**จุดประสงค์เชิงพฤติกรรม**\n- อธิบายความแตกต่างของมาตรฐานบังคับและมาตรฐานทั่วไปได้\n- ตรวจสอบเครื่องหมาย มอก. บนผลิตภัณฑ์ได้\n\n**เครื่องมือและอุปกรณ์**\n- อุปกรณ์ไฟฟ้าตัวอย่าง เช่น ปลั๊กพ่วง สายไฟ เบรกเกอร์ หลอด LED\n- โทรศัพท์สำหรับค้นข้อมูลจากเว็บไซต์ สมอ.\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. สำรวจอุปกรณ์ตัวอย่างอย่างน้อย 5 ชิ้น\n2. บันทึกเลข มอก. และข้อมูลบนฉลาก\n3. สืบค้นว่าผลิตภัณฑ์นั้นเป็นสินค้าควบคุมหรือไม่\n4. สรุปข้อควรระวังในการเลือกซื้อ\n\n**บันทึกผลการปฏิบัติงาน**\n| อุปกรณ์ | เลข มอก. | สินค้าควบคุมหรือไม่ | พิกัดแรงดัน/กระแส | ข้อสังเกต |\n|---|---|---|---|---|\n| | | | | |\n| | | | | |\n| | | | | |\n\n**คำถามท้ายใบงาน**\n1. ถ้าพบปลั๊กพ่วงที่ไม่มีเครื่องหมาย มอก. ควรทำอย่างไร\n2. เหตุใดช่างต้องเลือกใช้อุปกรณ์ที่ได้มาตรฐาน แม้ลูกค้าต้องการของราคาถูก","code":[],"images":[],"url":""},{"id":"lw5","title":"ใบงานที่ 5 จัดการซากอิเล็กทรอนิกส์อย่างถูกต้อง","desc":"ออกแบบแนวทางจัดการซากอุปกรณ์ในห้องปฏิบัติการของแผนกวิชา","body":"**จุดประสงค์เชิงพฤติกรรม**\n- อธิบายสถานการณ์และกฎหมายที่เกี่ยวข้องกับขยะอิเล็กทรอนิกส์ได้\n- ออกแบบแนวทางคัดแยกและส่งต่อซากอิเล็กทรอนิกส์ได้\n\n**เครื่องมือและอุปกรณ์**\n- เนื้อหาหน่วยที่ 5\n- ข้อมูลจุดรับคืนขยะอันตรายในจังหวัด\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. สำรวจซากอุปกรณ์ที่ไม่ใช้แล้วในแผนก จำแนกประเภท\n2. ระบุสารอันตรายที่อาจมีในแต่ละประเภท\n3. สืบค้นจุดรับคืนหรือผู้ประกอบการที่ได้รับอนุญาต\n4. จัดทำโปสเตอร์ 1 หน้า เรื่อง การทิ้งซากอิเล็กทรอนิกส์อย่างปลอดภัย\n\n**บันทึกผลการปฏิบัติงาน**\n| ซากอุปกรณ์ | จำนวน | สารอันตรายที่อาจมี | วิธีจัดการที่เสนอ |\n|---|---|---|---|\n| แบตเตอรี่ | | | |\n| แผงวงจร | | | |\n| หลอดไฟ | | | |\n\n**คำถามท้ายใบงาน**\n1. หลักความรับผิดชอบที่เพิ่มขึ้นของผู้ผลิต (EPR) หมายถึงอะไร\n2. นักศึกษาช่วยลดขยะอิเล็กทรอนิกส์ได้อย่างไรบ้าง","code":[],"images":[],"url":""},{"id":"lw6","title":"ใบงานที่ 6 ตรวจทรัพย์สินทางปัญญาในโครงงาน","desc":"ตรวจสอบโค้ดและผลงานในโครงงานของตนเอง และประเมินความเป็นไปได้ในการยื่นอนุสิทธิบัตร","body":"**จุดประสงค์เชิงพฤติกรรม**\n- จำแนกประเภททรัพย์สินทางปัญญาและอายุการคุ้มครองได้\n- อ้างอิงแหล่งที่มาของโค้ดและไลบรารีได้ถูกต้อง\n- ประเมินผลงานเบื้องต้นเพื่อยื่นขออนุสิทธิบัตรได้\n\n**เครื่องมือและอุปกรณ์**\n- โครงงานหรือชิ้นงานของนักศึกษา\n- ระบบสืบค้นสิทธิบัตรของกรมทรัพย์สินทางปัญญา\n\n**ลำดับขั้นการปฏิบัติงาน**\n1. ทำรายการไลบรารีและโค้ดที่นำมาใช้ พร้อมสัญญาอนุญาต\n2. สืบค้นสิทธิบัตรหรืออนุสิทธิบัตรที่คล้ายกับผลงาน\n3. ระบุจุดที่เป็นของใหม่ในผลงานของตนเอง\n4. สรุปว่าควรยื่นอนุสิทธิบัตรหรือไม่ พร้อมเหตุผล\n\n**บันทึกผลการปฏิบัติงาน**\n| สิ่งที่นำมาใช้ | แหล่งที่มา | สัญญาอนุญาต | ต้องอ้างอิงอย่างไร |\n|---|---|---|---|\n| | | | |\n| | | | |\n\n**คำถามท้ายใบงาน**\n1. เพราะเหตุใดจึงไม่ควรเผยแพร่ผลงานก่อนยื่นคำขอรับอนุสิทธิบัตร\n2. โปรแกรมที่นักศึกษาเขียนเองได้รับความคุ้มครองแบบใด และนานเท่าใด","code":[],"images":[],"url":""}]},{"id":"fs3","type":"gallery","title":"รูปเพิ่มเติม","note":"","items":[{"id":"lg1","title":"บรรยากาศการเรียนในห้องเรียน","desc":"","url":"img/class-2.jpg"}]}],"refs":[{"title":"คำอธิบายรายวิชา กฎหมายในงานอาชีพอุตสาหกรรมพลังงาน ไฟฟ้า และอิเล็กทรอนิกส์ (หลักสูตร ปวส.)","url":"https://www.sice.ac.th/cur/put_course_cur_owner.php?teacher_id=216&id_subject=2903&term=2&yearly=2567"},{"title":"เตชทัต บูรณะอัศวกุล (2565). ความปลอดภัยที่เกี่ยวกับระบบไฟฟ้าในอาคาร สำหรับ จป. วิชาชีพ อย่างมืออาชีพ. สถาบันส่งเสริมความปลอดภัยฯ (สสปท.)","url":"https://www.tosh.or.th/index.php/blog/item/1051-2022-03-02-02-48-00"},{"title":"วริยา เคนทวาย (2564). ปัจจัยการรับรู้เรื่องความปลอดภัยและพฤติกรรมความปลอดภัยในการปฏิบัติงานของพนักงานระดับปฏิบัติการ การไฟฟ้าส่วนภูมิภาค จังหวัดปทุมธานี. วารสารวิทยาศาสตร์สุขภาพ มหาวิทยาลัยปทุมธานี","url":"https://ph01.tci-thaijo.org/index.php/PTUJST/article/view/243424"},{"title":"ภิญโญ สุโรจนานนท์ และคณะ. ความปลอดภัยในการทำงานของผู้ปฏิบัติงานก่อสร้างระบบจำหน่าย กรณีศึกษา กฟภ.อำเภอโคกสำโรง. วารสารวิทยาศาสตร์และเทคโนโลยีนอร์ทเทิร์น","url":"https://he03.tci-thaijo.org/index.php/scintc/article/view/1155"},{"title":"สรุปข้อกำหนดกฎกระทรวงฯ เกี่ยวกับไฟฟ้า พ.ศ. 2558 (ข้อ 6–22) – Safety Station 101","url":"https://101.safety.ac.th/%E0%B8%AB%E0%B8%A1%E0%B8%A7%E0%B8%94/%E0%B9%84%E0%B8%9F%E0%B8%9F%E0%B9%89%E0%B8%B2/%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A2/electrical-work-area-legal/"},{"title":"เดลินิวส์: ช่างไฟฟ้าภายในอาคารต้องมีหนังสือรับรองความรู้ความสามารถ ตาม พ.ร.บ.ส่งเสริมการพัฒนาฝีมือแรงงาน","url":"https://www.dailynews.co.th/news/4861523/"},{"title":"กรมพัฒนาฝีมือแรงงาน (2568). ชวนช่างไฟฟ้าปฏิบัติตามกฎหมาย (บทลงโทษลูกจ้างและนายจ้าง)","url":"https://www.thaipr.net/?p=3603205"},{"title":"นิศาชล ศศานนท์, กรมทรัพย์สินทางปัญญา. ความรู้เบื้องต้นเกี่ยวกับสิทธิบัตรและการสืบค้นสิทธิบัตร","url":"https://ip.kku.ac.th/wp-content/uploads/2022/12/%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B9%80%E0%B8%9A%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B9%89%E0%B8%99IP.pdf"},{"title":"กรมทรัพย์สินทางปัญญา. การคุ้มครองแบบผังภูมิของวงจรรวม","url":"https://www.ipthailand.go.th/images/3534/2565/Acts/Description_Cycle.pdf"},{"title":"พ.ร.บ.ลิขสิทธิ์ พ.ศ. 2537 ส่วนที่ 4 อายุแห่งการคุ้มครองลิขสิทธิ์ (มาตรา 19–26)","url":"https://www.drthawip.com/book/export/html/1984"},{"title":"ประชาชาติธุรกิจ (2562). สาระสำคัญ พ.ร.บ.โรงงาน ฉบับแก้ไข","url":"https://www.prachachat.net/economic/news-323159"},{"title":"Chitcham, Lengvittaya & Suparp (2568). Legal Measures to Control Industrial Factory Operations. Legal State Journal, 3(4)","url":"https://so19.tci-thaijo.org/index.php/LSJ/article/view/2197"},{"title":"กรมควบคุมมลพิษ. E-Waste Management in Thailand (2568)","url":"https://www.iges.or.jp/sites/default/files/2025-02/03_E-Waste%20Management%20in%20Thailand_Ms.%20Sirinart%20Pongyart_PCD.pdf"}]},{"id":"cPLC","code":"PLC","name":"ชุมชนการเรียนรู้ทางวิชาชีพ (PLC)","t":null,"p":null,"n":null,"h":2,"slots":[{"d":3,"s":"16:00","e":"18:00","room":"","group":""}],"sections":[{"id":"gs1","type":"lessons","title":"เนื้อหา","note":"","items":[{"id":"cl1","title":"ชุมชนการเรียนรู้ทางวิชาชีพ (PLC) คืออะไร","desc":"ความหมาย เป้าหมาย และองค์ประกอบสำคัญของ PLC ตามแนวคิดของนักวิชาการ","body":"### ความหมาย\nชุมชนการเรียนรู้ทางวิชาชีพ (Professional Learning Community: PLC) คือการรวมกลุ่มของครูและบุคลากรทางการศึกษาเพื่อเรียนรู้และพัฒนาวิชาชีพร่วมกันอย่างต่อเนื่อง โดยมีเป้าหมายสุดท้ายที่ **คุณภาพการเรียนรู้ของผู้เรียน** ไม่ใช่การประชุมเพื่อรายงานผลเท่านั้น\n\n### 5 มิติของ PLC ตามแนวคิดของ Shirley Hord\n1. **ภาวะผู้นำร่วมและสนับสนุน** ผู้บริหารและครูร่วมกันตัดสินใจ ผู้บริหารจัดโครงสร้างให้เกิดการร่วมมือ\n2. **ค่านิยมและวิสัยทัศน์ร่วม** ทุกคนมุ่งไปที่การเรียนรู้ของผู้เรียนเป็นหลัก\n3. **การเรียนรู้ร่วมกันและนำไปใช้** ร่วมกันแสวงหาความรู้ใหม่แล้วนำไปปรับการสอนและการวัดผล\n4. **สภาพที่เอื้ออำนวย** มีเวลา ช่องทางสื่อสาร และความไว้วางใจระหว่างเพื่อนครู\n5. **การแบ่งปันการปฏิบัติ** เปิดชั้นเรียนให้เพื่อนครูสังเกต ให้ข้อมูลป้อนกลับอย่างเป็นกัลยาณมิตร\n\n### องค์ประกอบในบริบทไทย\nPannathat Champakul (2565) สรุปองค์ประกอบของ PLC ไว้ 6 ด้าน ได้แก่ คุณค่าและวิสัยทัศน์ร่วม การร่วมมือรวมพลัง การเรียนรู้และพัฒนาวิชาชีพ ความรับผิดชอบร่วมต่อการเรียนรู้ของผู้เรียน การสนทนาแบบสะท้อนผล และภาวะผู้นำร่วม และเสนอว่าครูยุคดิจิทัลควรนำเทคโนโลยีดิจิทัลมาใช้ให้เหมาะกับเนื้อหาและผู้เรียน","code":[],"images":[],"url":""},{"id":"cl2","title":"กระบวนการ PLC แบบ Plan–Do–See","desc":"ขั้นตอนการทำงานของกลุ่ม PLC ตั้งแต่ระบุปัญหาจนถึงการสะท้อนผลและขยายผล","body":"### วงจรการทำงาน\n1. **ระบุปัญหา** เลือกปัญหาการเรียนรู้จากหลักฐานจริง เช่น ผลการทำใบงาน คะแนนสอบ หรือพฤติกรรมในชั้นเรียน\n2. **ร่วมออกแบบ (Plan)** ครูในกลุ่มร่วมกันออกแบบแผนการสอน สื่อ และเครื่องมือวัดผล\n3. **สอนและสังเกต (Do)** ครูผู้สอนนำแผนไปใช้ เพื่อนครูเข้าสังเกตโดยเน้นที่การเรียนรู้ของผู้เรียน\n4. **สะท้อนผล (See)** พูดคุยจากสิ่งที่สังเกตเห็นจริง ไม่ตัดสินตัวครู แล้วสรุปสิ่งที่ได้เรียนรู้\n5. **ปรับปรุงและขยายผล** ปรับแผนแล้วทดลองซ้ำ บันทึกทุกครั้งใน Logbook\n\n### บทบาทในกลุ่ม\n| บทบาท | หน้าที่ |\n|---|---|\n| ผู้อำนวยความสะดวก (Facilitator) | ดำเนินการประชุม ควบคุมเวลา ให้ทุกคนได้พูด |\n| ครูผู้สอน (Model Teacher) | นำแผนการสอนที่ออกแบบร่วมกันไปใช้จริง |\n| ผู้สังเกต (Buddy) | สังเกตการเรียนรู้ของผู้เรียนและเก็บหลักฐาน |\n| ผู้บันทึก (Recorder) | บันทึกการประชุมลง Logbook |\n| ผู้เชี่ยวชาญ (Expert) | ให้ความรู้หรือข้อเสนอแนะทางวิชาการ |\n\n> งานวิจัยของ สิราวรรณ จรัสรวีวัฒน์ (2563) พบว่าหลักสูตรฝึกอบรมกระบวนการ PLC สำหรับนิสิตฝึกสอนได้รับการประเมินความเหมาะสมระดับมาก และผู้เข้าอบรมมีเจตคติต่อประโยชน์ของกระบวนการในระดับดีมาก (ค่าเฉลี่ย 4.82)","code":[],"images":[{"url":"svg/plc-cycle.svg","cap":"ภาพที่ 1 วงจรการทำงานของ PLC (วาดใหม่)"}],"url":""},{"id":"cl3","title":"PLC ของครูผู้ช่วย แผนกวิชาช่างอิเล็กทรอนิกส์","desc":"การมีส่วนร่วมในชุมชนการเรียนรู้ทางวิชาชีพ และหลักการทำงานเป็นทีม","body":"### เวลาดำเนินกิจกรรม\nกลุ่ม PLC จัดกิจกรรมทุกวันพุธ เวลา 16:00–18:00 น. ตามตารางสอนภาคเรียนที่ 2/2569\n\n### การมีส่วนร่วม\nเข้าร่วมกิจกรรมที่เกี่ยวข้องกับการศึกษา และแลกเปลี่ยนเรียนรู้กิจกรรมต่าง ๆ ร่วมกับเพื่อนครูและชุมชน นำปัญหาที่พบในรายวิชาที่สอน เช่น ทักษะการเขียนโปรแกรมควบคุมของผู้เรียน มาออกแบบแนวทางแก้ไขร่วมกัน\n\n### หลักการทำงานเป็นทีม\n1. มีวัตถุประสงค์ที่ชัดเจน\n2. จัดลำดับความสำคัญของงาน\n3. ติดตามผลการทำงาน\n4. พัฒนาความรู้และทำงานเป็นทีมอย่างต่อเนื่อง เพื่อให้เกิดประสิทธิภาพสูงสุด\n\n### ตัวอย่างประเด็นที่นำเข้ากลุ่ม PLC\n- นักเรียนต่อวงจรถูกต้องแต่เขียนโปรแกรมควบคุมไม่ได้ ควรปรับลำดับการสอนอย่างไร\n- ใช้ใบงานแบบมีตารางบันทึกผลช่วยให้นักเรียนสรุปความรู้ได้ดีขึ้นหรือไม่\n- การใช้สื่อจำลองวงจร (Proteus) ก่อนต่อวงจรจริงช่วยลดความเสียหายของอุปกรณ์ได้หรือไม่","code":[],"images":[],"url":""}]},{"id":"gs2","type":"worksheets","title":"แบบบันทึก","note":"","items":[{"id":"cw1","title":"แบบบันทึกกิจกรรม PLC (Logbook)","desc":"ใช้บันทึกการประชุมกลุ่มทุกครั้ง","body":"**ข้อมูลการประชุม**\n- ครั้งที่ ........ วันที่ ........ เวลา ........ สถานที่ ........\n- สมาชิกที่เข้าร่วม และบทบาท (Facilitator / Model Teacher / Buddy / Recorder / Expert)\n\n**ประเด็นปัญหาที่นำเข้าสู่กลุ่ม**\n- ปัญหาการเรียนรู้ที่พบ และหลักฐานที่ใช้ยืนยัน\n\n**สาระสำคัญจากการแลกเปลี่ยน**\n1. สาเหตุของปัญหาที่กลุ่มวิเคราะห์ได้\n2. แนวทางแก้ไขที่กลุ่มเสนอ\n3. สิ่งที่จะทดลองในชั้นเรียนก่อนการประชุมครั้งต่อไป\n\n**ลงชื่อ**\n| บทบาท | ชื่อ-สกุล | ลายมือชื่อ |\n|---|---|---|\n| ผู้บันทึก | | |\n| ผู้อำนวยความสะดวก | | |","code":[],"images":[],"url":""},{"id":"cw2","title":"แบบสังเกตชั้นเรียน (สำหรับ Buddy)","desc":"เน้นสังเกตการเรียนรู้ของผู้เรียน ไม่ประเมินตัวครู","body":"**ข้อมูลชั้นเรียน**\n- รายวิชา ........ กลุ่มเรียน ........ หัวข้อ ........ ครูผู้สอน ........\n\n**สิ่งที่สังเกต**\n| ช่วงเวลา | กิจกรรมของครู | พฤติกรรมของผู้เรียน | หลักฐานการเรียนรู้ |\n|---|---|---|---|\n| นำเข้าสู่บทเรียน | | | |\n| ฝึกปฏิบัติ | | | |\n| สรุป | | | |\n\n**คำถามสำหรับการสะท้อนผล**\n1. ผู้เรียนคนใด/กลุ่มใดเรียนรู้ได้ดี เห็นได้จากอะไร\n2. จุดใดที่ผู้เรียนติดขัด เพราะอะไร\n3. ถ้าสอนครั้งต่อไป ควรปรับอะไร","code":[],"images":[],"url":""},{"id":"cw3","title":"แบบสรุปผลและสะท้อนคิดรายภาคเรียน","desc":"สรุปผลการดำเนินงาน PLC เมื่อสิ้นภาคเรียน","body":"**สรุปผล**\n- ประเด็นที่ดำเนินการ ........\n- จำนวนครั้งที่ประชุม ........ ครั้ง รวม ........ ชั่วโมง\n\n**ผลที่เกิดกับผู้เรียน**\n- เปรียบเทียบผลการเรียนหรือผลงานก่อนและหลังการปรับการสอน\n\n**สิ่งที่ครูได้เรียนรู้**\n1. ด้านการออกแบบการสอน\n2. ด้านการวัดและประเมินผล\n3. ด้านการทำงานร่วมกับเพื่อนครู\n\n**แนวทางในภาคเรียนถัดไป**\n- ........","code":[],"images":[],"url":""}]},{"id":"gs3","type":"gallery","title":"รูปเพิ่มเติม","note":"","items":[{"id":"cg1","title":"การมีส่วนร่วมในชุมชนการเรียนรู้ทางวิชาชีพ","desc":"","url":"img/plc-meeting.jpg"},{"id":"cg2","title":"การพัฒนาทีมงานและแลกเปลี่ยนเรียนรู้ร่วมกับเพื่อนครู","desc":"","url":"img/team-2.jpg"}]}],"refs":[{"title":"Pannathat Champakul (2565). ชุมชนการเรียนรู้ทางวิชาชีพ: วิถีแห่งการพัฒนาครูยุคดิจิทัล. Journal of Local Management and Development, Pibulsongkram Rajabhat University, 2(2), 57–73","url":"https://so06.tci-thaijo.org/index.php/jclmd_psru/article/view/259255"},{"title":"สิราวรรณ จรัสรวีวัฒน์ (2563). ผลการใช้หลักสูตรฝึกอบรม เรื่อง กระบวนการชุมชนการเรียนรู้วิชาชีพ (PLC) สำหรับนิสิตฝึกปฏิบัติการสอน. วารสารศึกษาศาสตร์ ม.บูรพา","url":"https://so02.tci-thaijo.org/index.php/edubuu/article/view/244178"},{"title":"SEDL. Professional Learning Communities: A Review of the Five Dimensions (Hord)","url":"https://sedl.org/pubs/change45/2.html"}]}]}</script>
+<script id="app-script">
+(function(){
+'use strict';
+var D=document;
+var data;
+try{data=JSON.parse(D.getElementById('site-data').textContent)}catch(e){data={site:{},pages:[],subjects:[]}}
+data.site=data.site||{};data.pages=data.pages||[];data.subjects=data.subjects||[];
+var savedJSON=JSON.stringify(data);
+var RESET='';try{var hs=D.head&&D.head.querySelector('style');if(hs)RESET=hs.textContent||''}catch(e){}
+var APP_STYLE=D.getElementById('app-style').textContent;
+var APP_SCRIPT=D.getElementById('app-script').textContent;
+var HEAD_EXTRA='\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">\n';
+var STASH='mk-teacher-site';
+var STATIC=true;
+var DAYS=['อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'];
+var RESERVED=['home','work','edu','personal','settings','sidebar','customize','upgrade','downloads'];
+var SEC_TYPES=[['lessons','เนื้อหาแบบหัวข้อพับเก็บ (ข้อความ รูป โค้ด)'],['worksheets','ใบงานแบบหัวข้อพับเก็บ'],['gallery','รูปภาพ'],['info','หัวข้อ–รายละเอียด'],['list','รายการ'],['numbered','รายการเรียงลำดับ'],['links','การ์ดลิงก์เอกสาร 2 คอลัมน์'],['text','ข้อความย่อหน้า'],['cta','แผงเด่นสีเข้ม']];
+var LANGS=[['cpp','Arduino C++'],['c','ภาษาซี'],['python','Python'],['bat','Windows CMD'],['bash','Shell'],['text','ข้อความ']];
+var ARROW='<svg class="ic" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+var RARROW='<svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+var CHEV='<svg class="ic" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+var BURGER='<svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2 5h12M2 11h12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+var UP='<svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function icon(path,color){return '<svg class="ic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="'+color+'" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+path+'</svg>'}
+var IC={
+  book:'<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/>',
+  sheet:'<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/>',
+  code:'<path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/>',
+  photo:'<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/>',
+  cap:'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>',
+  star:'<path d="M12 3l2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-3-5.4 3 1.1-6L3.2 9.4l6.1-.8z"/>',
+  users:'<circle cx="9" cy="8" r="3.2"/><path d="M3 20c.7-3.5 3.2-5.2 6-5.2s5.3 1.7 6 5.2"/><path d="M16 4.8a3 3 0 0 1 0 6M18 14.9c1.6.7 2.6 2.2 3 5.1"/>'
+};
+
+var state={route:'home',editing:false,canEdit:false,menu:null,dirty:0,saving:false,tab:{},open:null,codeTab:{},q:'',qScope:'all'};
+var artifactNS=null,assetsNS=null,conflictPending=null,retried=false;
+
+var stash=null;
+try{stash=JSON.parse(sessionStorage.getItem(STASH)||'null')}catch(e){stash=null}
+if(stash){
+  if(stash.pending&&stash.pending.sv!==data.sv) conflictPending=stash.pending;
+  if(stash.tab) state.tab=stash.tab;
+  try{sessionStorage.removeItem(STASH)}catch(e){}
+}
+
+/* ---------- helpers ---------- */
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function nl(s){return esc(s).replace(/\n/g,'<br>')}
+function uid(p){return (p||'i')+Math.random().toString(36).slice(2,9)}
+function clone(o){return JSON.parse(JSON.stringify(o))}
+function pad(n){return String(n).padStart(2,'0')}
+function safeUrl(u){
+  u=String(u||'').trim(); if(!u) return '';
+  if(/^https?:\/\/[^\s"'<>]+$/i.test(u)) return u;
+  if(/^\/_blob\/[A-Za-z0-9]+$/.test(u)) return u;
+  if(/^(img|svg|files)\/[A-Za-z0-9._\-\/]+$/.test(u)&&u.indexOf('..')<0) return u;
+  if(/^data:image\/(png|jpeg|webp|gif|svg\+xml);base64,[A-Za-z0-9+\/=]+$/.test(u)) return u;
+  if(/^(www\.|drive\.google\.|docs\.google\.)[^\s"'<>]+$/i.test(u)) return 'https://'+u;
+  return '';
+}
+function toMin(t){var m=/^(\d{1,2}):(\d{2})$/.exec(t||'');return m?(+m[1])*60+(+m[2]):null}
+function ext(n){var m=/\.([A-Za-z0-9]{1,5})$/.exec(n||'');return m?m[1].toLowerCase():''}
+function linkKind(it){
+  var u=safeUrl(it.url); if(!u) return '';
+  if(u.indexOf('/_blob/')===0) return it.fileName?(ext(it.fileName).toUpperCase()||'ไฟล์'):'ไฟล์แนบ';
+  try{var h=new URL(u).hostname.replace(/^www\./,'');
+    if(/(^|\.)drive\.google\.com$|(^|\.)docs\.google\.com$/.test(h)) return 'Google Drive';
+    if(/youtu\.?be/.test(h)) return 'YouTube';
+    if(/canva\.com$/.test(h)) return 'Canva';
+    if(/forms\.gle$/.test(h)) return 'Google Forms';
+    return h;
+  }catch(e){return 'เปิดลิงก์'}
+}
+function exChip(it){return it&&it.ex?'<span class="ex">ตัวอย่าง</span>':''}
+function itemAction(it,label){
+  var u=safeUrl(it.url);
+  if(!u) return '<span class="nofile">ยังไม่แนบไฟล์</span>';
+  return '<a class="open" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer"><span>'+esc(label||linkKind(it))+'</span>'+ARROW+'</a>';
+}
+function routeExists(r){return r==='home'||data.pages.some(function(p){return p.id===r})||data.subjects.some(function(s){return s.id===r})}
+function owner(scope){return data.pages.filter(function(p){return p.id===scope})[0]||data.subjects.filter(function(s){return s.id===scope})[0]||null}
+function isSubject(o){return data.subjects.indexOf(o)>=0}
+function totals(){
+  var t=0,p=0,n=0,h=0,g={};
+  data.subjects.forEach(function(s){t+=+s.t||0;p+=+s.p||0;n+=+s.n||0;h+=+s.h||0;(s.slots||[]).forEach(function(x){if(x.group)g[x.group]=1})});
+  return {t:t,p:p,n:n,h:h,groups:Object.keys(g).length};
+}
+function counts(list){
+  var c={lessons:0,ws:0,code:0,photo:0};
+  (list||data.subjects).forEach(function(s){(s.sections||[]).forEach(function(sec){
+    var it=sec.items||[];
+    if(sec.type==='lessons'){c.lessons+=it.length;it.forEach(function(i){c.code+=(i.code||[]).length;c.photo+=(i.images||[]).length})}
+    else if(sec.type==='worksheets'){c.ws+=it.length;it.forEach(function(i){c.code+=(i.code||[]).length;c.photo+=(i.images||[]).length})}
+    else if(sec.type==='gallery'){c.photo+=it.length}
+  })});
+  return c;
+}
+function groupsOf(s){var g=[];(s.slots||[]).forEach(function(x){if(x.group&&g.indexOf(x.group)<0)g.push(x.group)});return g}
+function tpnText(s){return s.t==null&&s.p==null&&s.n==null?'':[s.t||0,s.p||0,s.n||0].join('-')}
+function year(){var m=/(\d{4})/.exec(data.site.term||'');return m?m[1]:''}
+
+/* ---------- light markdown ---------- */
+function inl(s){
+  var parts=String(s).split('`'),out='';
+  for(var i=0;i<parts.length;i++){
+    if(i%2){out+='<code>'+esc(parts[i])+'</code>';continue}
+    var t=esc(parts[i]);
+    t=t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+    t=t.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,function(m,a,u){return '<a href="'+u+'" target="_blank" rel="noopener noreferrer">'+a+'</a>'});
+    out+=t;
+  }
+  return out;
+}
+function cells(line){
+  var c=[],cur='',inC=false;line=line.trim().replace(/^\|/,'').replace(/\|$/,'');
+  for(var i=0;i<line.length;i++){var ch=line[i];if(ch==='`')inC=!inC;if(ch==='|'&&!inC){c.push(cur);cur=''}else cur+=ch}
+  c.push(cur);return c.map(function(x){return x.trim()});
+}
+function md(src){
+  var L=String(src||'').replace(/\r/g,'').split('\n'),out='',i=0;
+  var isBlock=function(l){l=l.trim();return /^###\s/.test(l)||/^>/.test(l)||/^\|/.test(l)||/^-\s/.test(l)||/^\d+\.\s/.test(l)};
+  while(i<L.length){
+    var l=L[i];
+    if(!l.trim()){i++;continue}
+    if(/^###\s/.test(l)){out+='<h4>'+inl(l.replace(/^###\s*/,''))+'</h4>';i++;continue}
+    if(/^>/.test(l)){var q=[];while(i<L.length&&/^>/.test(L[i])){q.push(L[i].replace(/^>\s?/,''));i++}out+='<div class="note">'+inl(q.join(' '))+'</div>';continue}
+    if(/^\|/.test(l.trim())){
+      var rows=[];while(i<L.length&&/^\|/.test(L[i].trim())){rows.push(L[i]);i++}
+      rows=rows.filter(function(r){return !/^:?-{2,}/.test(r.trim().replace(/^\|\s*/,''))});
+      if(!rows.length)continue;
+      var head=cells(rows[0]);
+      out+='<div class="tbl"><table><thead><tr>'+head.map(function(c){return '<th>'+inl(c)+'</th>'}).join('')+'</tr></thead><tbody>'+
+        rows.slice(1).map(function(r){return '<tr>'+cells(r).map(function(c){return '<td>'+inl(c)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>';
+      continue;
+    }
+    if(/^-\s/.test(l)){var li=[];while(i<L.length&&/^-\s/.test(L[i])){li.push(L[i].replace(/^-\s/,''));i++}out+='<ul>'+li.map(function(x){return '<li>'+inl(x)+'</li>'}).join('')+'</ul>';continue}
+    if(/^\d+\.\s/.test(l)){var ol=[];while(i<L.length&&/^\d+\.\s/.test(L[i])){ol.push(L[i].replace(/^\d+\.\s/,''));i++}out+='<ol>'+ol.map(function(x){return '<li>'+inl(x)+'</li>'}).join('')+'</ol>';continue}
+    var p=[];while(i<L.length&&L[i].trim()&&(!p.length||!isBlock(L[i]))){p.push(L[i]);i++}
+    out+='<p>'+inl(p.join(' '))+'</p>';
+  }
+  return out;
+}
+function plain(s){return String(s||'').replace(/\|?\s*:?-{2,}[-|: ]*/g,' ').replace(/[`*#>|]/g,' ').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1').replace(/\s+/g,' ').trim()}
+
+/* ---------- syntax highlight ---------- */
+var KW={
+  c:'auto break case char const continue default do double else enum extern float for goto if int long return short signed sizeof static struct switch typedef union unsigned void volatile while bool true false String byte boolean HIGH LOW INPUT OUTPUT INPUT_PULLUP include define setup loop',
+  python:'and as assert break class continue def del elif else except False finally for from global if import in is lambda None nonlocal not or pass raise return True try while with yield print',
+  sh:'pip python cd mkdir set echo deactivate rem REM'
+};
+function hl(src,lang){
+  var kind=(lang==='python')?'python':(lang==='bat'||lang==='bash')?'sh':(lang==='text')?'':'c';
+  if(!kind) return esc(src);
+  var kw={};KW[kind].split(' ').forEach(function(w){kw[w]=1});
+  var re=kind==='python'?/(#[^\n]*)|("""[\s\S]*?"""|'''[\s\S]*?'''|f?"(?:\\.|[^"\\\n])*"|f?'(?:\\.|[^'\\\n])*')|(\b\d+(?:\.\d+)?\b)|([A-Za-z_]\w*)/g
+        :kind==='sh'?/((?:^|\s)(?:#|::)[^\n]*)|("[^"\n]*")|(\b\d+(?:\.\d+)?\b)|([A-Za-z_][\w.-]*)/g
+        :/(\/\/[^\n]*|\/\*[\s\S]*?\*\/)|("(?:\\.|[^"\\\n])*"|'(?:\\.|[^'\\\n])*')|(\b(?:0[xX][0-9A-Fa-f]+|\d+(?:\.\d+)?)[uUlLfF]*\b)|(#\s*[A-Za-z]+|[A-Za-z_]\w*)/g;
+  var out='',last=0,m;
+  while((m=re.exec(src))){
+    out+=esc(src.slice(last,m.index));
+    var t=m[0],cls=m[1]?'tc':m[2]?'ts':m[3]?'tn':(t.charAt(0)==='#'?'tp':(kw[t]?'tk':''));
+    out+=cls?'<span class="'+cls+'">'+esc(t)+'</span>':esc(t);
+    last=re.lastIndex;
+    if(m[0].length===0) re.lastIndex++;
+  }
+  return out+esc(src.slice(last));
+}
+
+/* ---------- initial route ---------- */
+var initial=(stash&&stash.route)||(location.hash||'').slice(1);
+try{initial=decodeURIComponent(initial)}catch(e){}
+state.route=routeExists(initial)?initial:'home';
+
+/* ---------- render ---------- */
+function render(){
+  var app=D.getElementById('app');
+  if(!routeExists(state.route)) state.route='home';
+  var main;
+  if(state.route==='home') main=renderHome();
+  else{var p=data.pages.filter(function(x){return x.id===state.route})[0];main=p?renderPage(p):renderSubject(owner(state.route))}
+  app.className=(state.editing?'is-editing':'')+(state.dirty?' has-savebar':'');
+  app.innerHTML=renderNav()+(state.editing?renderEditStrip():'')+'<main id="main">'+main+'</main>'+renderFooter()+renderSavebar();
+  try{if(data.site.name) D.title=data.site.name}catch(e){}
+  if(state.route==='home'){renderResults();initCarousel()}else clearInterval(carTimer);
+}
+
+function navLink(id,label){var on=state.route===id;return '<a href="#'+esc(id)+'" data-go="'+esc(id)+'" class="nl'+(on?' is-on':'')+'"'+(on?' aria-current="page"':'')+'>'+esc(label)+'</a>'}
+function renderNav(){
+  var s=data.site,r=state.route,isSub=data.subjects.some(function(x){return x.id===r});
+  var subLinks=data.subjects.map(function(x){return '<a href="#'+esc(x.id)+'" data-go="'+esc(x.id)+'" class="dd-i'+(r===x.id?' is-on':'')+'"><span class="code">'+esc(x.code)+'</span><span>'+esc(x.name)+'</span></a>'}).join('');
+  var editBtn=state.canEdit?'<button class="pill '+(state.editing?'pill-lime':'pill-white')+' pill-sm" data-act="toggle-edit" aria-pressed="'+state.editing+'">'+(state.editing?'เสร็จสิ้น':'แก้ไขเว็บ')+'</button>':'';
+  var pages=data.pages.map(function(p){return navLink(p.id,p.title)}).join('');
+  return '<header class="nav"><div class="wrap nav-in">'+
+    '<a class="brand" href="#home" data-go="home"><span class="mark" aria-hidden="true">'+esc(s.mark||'')+'</span><span class="brand-t">'+esc(s.name)+'</span></a>'+
+    '<nav class="nav-links" aria-label="เมนูหลัก">'+navLink('home','หน้าแรก')+pages+
+      '<div class="dd"><button class="nl dd-btn'+(isSub?' is-on':'')+'" data-act="toggle-menu" data-menu="subjects" aria-expanded="'+(state.menu==='subjects')+'">รายวิชา '+CHEV+'</button>'+
+      (state.menu==='subjects'?'<div class="dd-panel">'+subLinks+(state.editing?'<button class="dd-add" data-act="subj-add">+ เพิ่มรายวิชา</button>':'')+'</div>':'')+'</div>'+
+    '</nav>'+
+    '<div class="nav-r">'+editBtn+'<button class="burger" data-act="toggle-menu" data-menu="mobile" aria-expanded="'+(state.menu==='mobile')+'" aria-label="เปิดเมนู">'+BURGER+'</button></div>'+
+  '</div>'+
+  (state.menu==='mobile'?'<div class="mnav"><div class="wrap mnav-in">'+navLink('home','หน้าแรก')+pages+'<p class="eyebrow">รายวิชา</p>'+subLinks+(state.editing?'<button class="dd-add" data-act="subj-add">+ เพิ่มรายวิชา</button>':'')+'</div></div>':'')+
+  '</header>';
+}
+function renderEditStrip(){
+  var c='';
+  if(conflictPending){
+    c='<div class="conflict"><div class="wrap conflict-in"><p><b>การแก้ไขล่าสุดของคุณยังไม่ได้บันทึก</b> เพราะมีคนบันทึกฉบับใหม่ก่อนหน้านั้น เลือกว่าจะใช้ฉบับไหน</p>'+
+      '<button class="pill pill-ghost pill-sm" data-act="drop-mine">ใช้ฉบับที่บันทึกอยู่</button><button class="pill pill-dark pill-sm" data-act="restore-mine">นำการแก้ไขของฉันกลับมา</button></div></div>';
+  }
+  return '<div class="estrip"><div class="wrap estrip-in"><span class="dot" aria-hidden="true"></span><p><b>โหมดแก้ไข</b> · กด “แก้” ที่แต่ละบล็อกเพื่อแก้ข้อความ เพิ่มรูป วางโค้ด แนบลิงก์ หรืออัปโหลดไฟล์ แก้เสร็จกด “ดาวน์โหลดไฟล์เว็บ” แล้วนำ index.html ไปอัปโหลดทับไฟล์เดิม ผู้ชมจะเห็นการเปลี่ยนแปลงหลังอัปโหลด</p></div></div>'+c;
+}
+function renderSavebar(){
+  if(!state.dirty) return '';
+  return '<div class="savebar" role="region" aria-label="บันทึกการแก้ไข"><div class="savebar-in"><p>'+(state.saving?'กำลังสร้างไฟล์…':'มีการแก้ไข '+state.dirty+' ครั้งที่ยังไม่บันทึก')+'</p>'+
+    '<button class="pill pill-inv-ghost pill-sm" data-act="discard"'+(state.saving?' disabled':'')+'>ยกเลิกการแก้ไข</button>'+
+    '<button class="pill pill-inv pill-sm" data-act="save"'+(state.saving?' disabled':'')+'>ดาวน์โหลดไฟล์เว็บ</button></div></div>';
+}
+
+/* ---------- home ---------- */
+var SUBJ_COLORS=['#74d61b','#8ab8ec','#b9a8ff','#ffb35c','#5fdcb8','#ff9db0'];
+function subjColor(s){var i=data.subjects.indexOf(s);return SUBJ_COLORS[(i<0?0:i)%SUBJ_COLORS.length]}
+function abbr(s){var m=/(\d{4})$/.exec(s.code||'');return m?m[1]:String(s.code||'?').slice(0,4)}
+var CHECK='<svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7.2" fill="#0b1406"/><path d="M4.8 8.2l2.1 2.1 4.3-4.6" fill="none" stroke="#74d61b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function firstCode(s){
+  var r=null;(s.sections||[]).forEach(function(sec){if(r||sec.type!=='lessons')return;(sec.items||[]).forEach(function(it){if(!r&&(it.code||[]).length)r=it.code[0]})});return r;
+}
+function lessonTitles(s,n){
+  var out=[];(s.sections||[]).forEach(function(sec){if(sec.type==='lessons')(sec.items||[]).forEach(function(it){out.push(it.title)})});return out.slice(0,n);
+}
+function spansFor(n){var sp=[],i=0;while(i<n){var left=n-i;if(left===1){sp.push(6);i+=1}else if(left===2||left===4||left===5){sp.push(3,3);i+=2}else{sp.push(2,2,2);i+=3}}return sp}
+function todayPanel(){
+  var now=new Date(),d=now.getDay(),all=[];
+  data.subjects.forEach(function(s){(s.slots||[]).forEach(function(sl){all.push({d:+sl.d,s:sl.s,e:sl.e,room:sl.room,group:sl.group,sub:s})})});
+  var label='วันนี้ · วัน'+DAYS[d],list=all.filter(function(x){return x.d===d});
+  if(!list.length){for(var k=1;k<=7;k++){var dd=(d+k)%7,l2=all.filter(function(x){return x.d===dd});if(l2.length){list=l2;label='คาบถัดไป · วัน'+DAYS[dd];break}}}
+  list.sort(function(a,b){return toMin(a.s)-toMin(b.s)});
+  return '<p class="app-h">'+esc(label)+'</p><div class="today">'+(list.length?list.map(function(x){
+    return '<a class="tslot" href="#'+esc(x.sub.id)+'" data-go="'+esc(x.sub.id)+'"><span class="mono">'+esc(x.s)+'–'+esc(x.e)+'</span><b>'+esc(x.sub.name)+'</b><small>'+esc([x.group,x.room?'ห้อง '+x.room:''].filter(Boolean).join(' · ')||x.sub.code)+'</small></a>';
+  }).join(''):'<p class="shint">ยังไม่มีคาบสอน</p>')+'</div>';
+}
+function slides(){
+  var out=[],s=data.site;
+  if(safeUrl(s.cover)) out.push({url:safeUrl(s.cover),cap:s.college||''});
+  data.subjects.concat(data.pages).forEach(function(o){(o.sections||[]).forEach(function(sec){if(sec.type==='gallery')(sec.items||[]).forEach(function(it){if(safeUrl(it.url))out.push({url:safeUrl(it.url),cap:it.title})})})});
+  return out.slice(0,10);
+}
+function renderHome(){
+  var s=data.site,tot=totals(),ed=state.editing,c=counts();
+  var photo=safeUrl(s.photo),duties=(s.duties||[]).filter(Boolean);
+  var tags=(s.tags&&s.tags.length?s.tags:[]).map(function(t,i){return '<span class="tag-in"><i style="background:'+SUBJ_COLORS[i%SUBJ_COLORS.length]+'"></i>'+esc(t)+'</span>'}).join(' ');
+  var opts='<option value="all">ค้นทุกวิชา</option>'+data.subjects.map(function(x){return '<option value="'+esc(x.id)+'"'+(state.qScope===x.id?' selected':'')+'>'+esc(x.code+' '+x.name)+'</option>'}).join('');
+  var side=data.subjects.map(function(x){return '<a href="#'+esc(x.id)+'" data-go="'+esc(x.id)+'"><span class="av" style="background:'+subjColor(x)+'">'+esc(abbr(x))+'</span><span>'+esc(x.name)+'<small>'+esc(x.code)+'</small></span></a>'}).join('');
+  var sp=spansFor(data.subjects.length);
+  var cards=data.subjects.map(function(x,i){
+    var tpn=tpnText(x),cc=counts([x]),code=firstCode(x),g=groupsOf(x);
+    var mini=code?'<div class="mini"><div class="mini-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>'+esc(code.name)+'</div><pre>'+hl(code.src.split('\n').slice(0,9).join('\n'),code.lang)+'</pre></div>'
+      :'<div class="mini"><div class="mini-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>หัวข้อเนื้อหา</div><ol>'+lessonTitles(x,4).map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ol></div>';
+    var foot=[];if(cc.lessons)foot.push(cc.lessons+' เนื้อหา');if(cc.ws)foot.push(cc.ws+' ใบงาน');if(g.length)foot.push(g.join(', '));
+    return '<a class="bc b-blue s'+(sp[i]||2)+'" href="#'+esc(x.id)+'" data-go="'+esc(x.id)+'"><span class="arrow">'+RARROW+'</span>'+
+      '<div class="bc-top"><span class="bc-code">'+esc(x.code)+'</span>'+(tpn?'<span class="bc-meta mono">ท-ป-น '+esc(tpn)+'</span>':'')+'</div>'+
+      '<h3>'+esc(x.name)+'</h3><div class="big">'+esc(x.h||0)+'<small>ชม./สัปดาห์</small></div>'+mini+
+      '<div class="bc-foot">'+foot.map(function(f){return '<span>'+esc(f)+'</span>'}).join('')+'</div></a>';
+  }).join('');
+  if(ed) cards+='<button class="bc bc-add s6" data-act="subj-add">+ เพิ่มรายวิชา</button>';
+  var sl=slides();
+  var car=sl.length?'<div class="car"><div class="car-track" id="car-track">'+sl.map(function(im){return '<figure class="car-slide" style="margin:0"><button class="fig-btn" style="height:100%;border:0;border-radius:0;background:transparent" data-act="zoom" data-src="'+esc(im.url)+'" data-cap="'+esc(im.cap||'')+'" aria-label="ขยายรูป: '+esc(im.cap||'รูปภาพ')+'"><img src="'+esc(im.url)+'" alt="'+esc(im.cap||'')+'" loading="lazy" style="height:100%"></button>'+(im.cap?'<figcaption>'+esc(im.cap)+'</figcaption>':'')+'</figure>'}).join('')+'</div></div>'+
+    '<div class="car-dots">'+sl.map(function(im,i){return '<button data-act="car" data-k="'+i+'" aria-label="ภาพที่ '+(i+1)+'"'+(i===0?' class="is-on"':'')+'></button>'}).join('')+'</div>':'<p>ยังไม่มีรูปกิจกรรม</p>';
+  var first=data.subjects[0];
+  var notAdvisor=duties.filter(function(d){return d.indexOf('ที่ปรึกษา')<0}),advisor=duties.filter(function(d){return d.indexOf('ที่ปรึกษา')>=0});
+  return ''+
+  '<section class="sky"><div class="wrap hero-in">'+
+    (ed?'<div class="edit-row"><button class="tbtn" data-act="site-edit">แก้ข้อมูลหน้าแรก</button></div>':'')+
+    '<span class="badge"><b>ภาคเรียน '+esc(s.term)+'</b><span>'+esc(s.dept)+' · '+esc(s.college)+'</span></span>'+
+    '<h1 class="display">'+esc(s.name)+(tags?'<span class="l2">สอน '+tags+'</span>':'')+'</h1>'+
+    (s.intro?'<p class="lede">'+nl(s.intro)+'</p>':'')+
+    '<div class="cta-row"><button class="pill pill-white pill-lg" data-act="scroll" data-target="subjects">ดูรายวิชา</button><button class="pill pill-glass pill-lg" data-act="scroll" data-target="timetable">ตารางสอน</button></div>'+
+  '</div></section>'+
+  '<div class="wrap showcase"><div class="app" role="region" aria-label="ห้องเรียนออนไลน์">'+
+    '<div class="app-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="app-title">ห้องเรียน · '+esc(s.dept)+' · ภาคเรียน '+esc(s.term)+'</span><span class="st">ออนไลน์</span></div>'+
+    '<div class="app-body">'+
+      '<nav class="app-side" aria-label="รายวิชา"><p class="app-h">รายวิชา</p>'+side+'</nav>'+
+      '<div class="app-main" role="search"><div class="sbox">'+
+        '<label class="sr-only" for="q">ค้นหาบทเรียนและใบงาน</label>'+
+        '<input id="q" type="search" autocomplete="off" placeholder="ค้นหาบทเรียน เช่น L298N, YOLO, อนุสิทธิบัตร, คำสั่ง for" value="'+esc(state.q)+'">'+
+        '<div class="sbar"><label class="sr-only" for="qs">ขอบเขตการค้นหา</label><select id="qs">'+opts+'</select>'+
+        '<button class="sgo'+(state.q.trim()?' is-on':'')+'" id="qgo" data-act="search-go" aria-label="เปิดผลการค้นหาแรก"'+(state.q.trim()?'':' disabled')+'>'+UP+'</button></div></div>'+
+        '<p class="shint">พิมพ์คำค้นแล้วกด <kbd>Enter</kbd> เพื่อเปิดหัวข้อแรก</p>'+
+        '<p class="app-h" id="feed-h">หัวข้อแนะนำ</p><div class="feed" id="feed"></div>'+
+      '</div>'+
+      '<aside class="app-aside">'+todayPanel()+'</aside>'+
+      '<div class="term">$ สรุปภาคเรียน '+esc(s.term)+' <span class="ok">✓</span> <span class="hl">'+data.subjects.length+'</span> วิชา · <span class="hl">'+tot.h+'</span> ชม./สัปดาห์ · <span class="hl">'+c.lessons+'</span> เนื้อหา · <span class="hl">'+c.ws+'</span> ใบงาน · <span class="hl">'+c.code+'</span> ไฟล์โค้ด · <span class="hl">'+c.photo+'</span> รูปและแผนภาพ</div>'+
+    '</div>'+
+  '</div></div>'+
+  '<div class="wrap bento-wrap">'+
+    '<div class="bento-head"><div><p class="eyebrow">ภาพรวมสัปดาห์</p><h2>ตารางสอนและผู้สอน</h2></div><p>แตะที่คาบเพื่อเปิดหน้ารายวิชา ข้อมูลคาบ ห้อง และกลุ่มเรียนอ้างอิงจากตารางสอนภาคเรียนนี้</p></div>'+
+    '<div class="bento">'+
+      '<div class="bc b-dark s4" id="timetable" style="scroll-margin-top:80px">'+renderTimetable()+'</div>'+
+      '<div class="bc b-blue s2 teach">'+(photo?'<div class="teach-ph"><img src="'+esc(photo)+'" alt="'+esc(s.fullName)+'"></div>':'<div></div>')+
+        '<div><p class="eyebrow" style="color:#d9f7b8">ผู้สอน</p><h3>'+esc(s.fullName)+'</h3><p>'+esc(s.position||'')+' · '+esc(s.dept)+'</p></div>'+
+        '<ul>'+(s.degree?'<li>'+esc(s.degree)+(s.school?' · '+esc(s.school):'')+'</li>':'')+notAdvisor.map(function(d){return '<li>'+esc(d)+'</li>'}).join('')+advisor.map(function(d){return '<li>'+esc(d)+'</li>'}).join('')+'</ul>'+
+        '<div class="cta-row" style="justify-content:flex-start;grid-column:1/-1">'+data.pages.map(function(p){return '<a class="pill pill-glass pill-sm" href="#'+esc(p.id)+'" data-go="'+esc(p.id)+'">'+esc(p.title)+'</a>'}).join('')+'</div></div>'+
+    '</div>'+
+    '<div class="bento-head" id="subjects" style="scroll-margin-top:80px"><div><p class="eyebrow">ภาคเรียนที่ '+esc(s.term)+'</p><h2>รายวิชาที่สอน</h2></div><p>ทุกวิชามีแท็บเนื้อหา ใบงาน และรูปเพิ่มเติม พร้อมโค้ดตัวอย่างที่กดคัดลอกได้</p></div>'+
+    '<div class="bento">'+cards+
+      '<div class="bc b-blue s4"><div class="bc-top"><span class="bc-code">ภาพกิจกรรม</span><span class="bc-meta">'+sl.length+' ภาพ</span></div><h3>บรรยากาศการเรียนรู้</h3>'+car+'</div>'+
+      '<div class="bc b-lime s2"><h3>เริ่มเรียน</h3><ul class="checks">'+
+        '<li>'+CHECK+'<span>เลือกวิชาจากการ์ด หรือค้นหาหัวข้อ</span></li>'+
+        '<li>'+CHECK+'<span>เปิดหัวข้อ อ่านเนื้อหา ดูแผนภาพ</span></li>'+
+        '<li>'+CHECK+'<span>คัดลอกโค้ดไปทดลองบนบอร์ดจริง</span></li>'+
+        '<li>'+CHECK+'<span>ทำใบงาน บันทึกผล ตอบคำถามท้ายใบงาน</span></li></ul>'+
+        (first?'<a class="pill pill-black" style="justify-self:start" href="#'+esc(first.id)+'" data-go="'+esc(first.id)+'">เปิดวิชาแรก '+RARROW+'</a>':'')+'</div>'+
+    '</div>'+
+  '</div>';
+}
+/* search */
+function searchIndex(){
+  var out=[];
+  data.subjects.forEach(function(s){(s.sections||[]).forEach(function(sec,si){
+    if(sec.type!=='lessons'&&sec.type!=='worksheets')return;
+    (sec.items||[]).forEach(function(it){
+      out.push({sid:s.id,code:s.code,si:si,id:it.id,kind:sec.title,title:it.title||'',text:plain((it.desc||'')+' '+(it.body||'')+' '+(it.code||[]).map(function(c){return c.name}).join(' '))});
+    });
+  })});
+  return out;
+}
+function searchHits(){
+  var q=state.q.trim().toLowerCase();if(!q)return [];
+  var toks=q.split(/\s+/);
+  return searchIndex().filter(function(e){
+    if(state.qScope!=='all'&&e.sid!==state.qScope)return false;
+    var hay=(e.title+' '+e.text).toLowerCase();
+    return toks.every(function(t){return hay.indexOf(t)>=0});
+  }).map(function(e){e.score=toks.filter(function(t){return e.title.toLowerCase().indexOf(t)>=0}).length;return e})
+    .sort(function(a,b){return b.score-a.score}).slice(0,8);
+}
+function snippet(text,q){
+  var t=q.trim().split(/\s+/)[0]||'',i=text.toLowerCase().indexOf(t.toLowerCase());
+  if(i<0)return text.slice(0,120);var a=Math.max(0,i-40);return (a?'…':'')+text.slice(a,a+140)+'…';
+}
+function renderResults(){
+  var box=D.getElementById('feed');if(!box)return;
+  var go=D.getElementById('qgo');if(go){var on=!!state.q.trim();go.classList.toggle('is-on',on);go.disabled=!on}
+  var h=D.getElementById('feed-h');
+  if(!state.q.trim()){
+    if(h)h.textContent='หัวข้อแนะนำ';
+    var rec=[];
+    data.subjects.forEach(function(s){(s.sections||[]).forEach(function(sec,si){if(sec.type==='lessons'&&sec.items&&sec.items[0])rec.push({sid:s.id,code:s.code,si:si,id:sec.items[0].id,title:sec.items[0].title,text:sec.items[0].desc||''})})});
+    box.innerHTML=rec.map(function(r){return '<a href="#'+esc(r.sid)+'" data-hit="'+esc(r.sid)+'|'+r.si+'|'+esc(r.id)+'"><span class="code">'+esc(r.code)+'</span><b>'+esc(r.title)+'</b><small>'+esc(r.text)+'</small></a>'}).join('');
+    return;
+  }
+  if(h)h.textContent='ผลการค้นหา';
+  var hits=searchHits();
+  box.innerHTML=hits.length?hits.map(function(x){
+    return '<a href="#'+esc(x.sid)+'" data-hit="'+esc(x.sid)+'|'+x.si+'|'+esc(x.id)+'"><span class="code">'+esc(x.code)+'</span><b>'+esc(x.title)+'</b><small>'+esc(x.kind)+' · '+esc(snippet(x.text,state.q))+'</small></a>';
+  }).join(''):'<p class="none">ไม่พบหัวข้อที่ตรงกับ “'+esc(state.q)+'” ลองใช้คำที่สั้นลง</p>';
+}
+var carTimer=null,carIdx=0;
+function setCar(i){
+  var t=D.getElementById('car-track');if(!t)return;carIdx=i;t.style.transform='translateX(-'+(i*100)+'%)';
+  Array.prototype.forEach.call(D.querySelectorAll('.car-dots button'),function(b,j){b.classList.toggle('is-on',j===i);if(j===i)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current')});
+}
+function initCarousel(){
+  clearInterval(carTimer);var tr=D.getElementById('car-track');if(!tr)return;
+  var n=tr.children.length;if(n<2)return;if(carIdx>=n)carIdx=0;setCar(carIdx);
+  if(!smooth())return;
+  carTimer=setInterval(function(){var t=D.getElementById('car-track');if(!t){clearInterval(carTimer);return}if(t.parentNode.matches(':hover')||D.hidden)return;setCar((carIdx+1)%t.children.length)},5000);
+}
+function openHit(sid,si,id){
+  state.route=sid;state.tab[sid]=si;state.open=id;state.menu=null;render();
+  try{history.replaceState(null,'','#'+sid)}catch(e){}
+  setTimeout(function(){var el=D.getElementById('it-'+id);if(el)el.scrollIntoView({block:'start'});else window.scrollTo(0,0)},0);
+}
+
+/* timetable (lives inside the dark bento card) */
+function renderTimetable(){
+  var slots=[];
+  data.subjects.forEach(function(s){(s.slots||[]).forEach(function(sl){var a=toMin(sl.s),b=toMin(sl.e);if(a!=null&&b!=null&&b>a)slots.push({d:+sl.d,a:a,b:b,room:sl.room,group:sl.group,sub:s})})});
+  var start=8*60,end=17*60;
+  slots.forEach(function(x){start=Math.min(start,Math.floor(x.a/60)*60);end=Math.max(end,Math.ceil(x.b/60)*60)});
+  var units=(end-start)/30,hours=units/2;
+  var days=[1,2,3,4,5];if(slots.some(function(x){return x.d===6}))days.push(6);if(slots.some(function(x){return x.d===0}))days.push(0);
+  var h='';
+  for(var i=0;i<hours;i++){var hh=(start/60)+i;h+='<div class="tt-h" style="grid-column:'+(2+i*2)+' / span 2">'+pad(hh)+':00</div>'}
+  days.forEach(function(d,ri){h+='<div class="tt-d" style="grid-row:'+(ri+2)+'">'+DAYS[d]+'</div><div class="tt-row" style="grid-row:'+(ri+2)+'"></div>'});
+  if(12*60>=start&&13*60<=end){var lc=2+(12*60-start)/30;h+='<div class="tt-lunch" style="grid-row:2 / span '+days.length+';grid-column:'+lc+' / span 2">พักกลางวัน</div>'}
+  slots.forEach(function(x){
+    var ri=days.indexOf(x.d);if(ri<0)return;
+    var c1=2+(x.a-start)/30,c2=2+(x.b-start)/30;
+    var info=[x.sub.code,x.group,x.room?'ห้อง '+x.room:''].filter(Boolean);
+    h+='<a class="tt-b" href="#'+esc(x.sub.id)+'" data-go="'+esc(x.sub.id)+'" style="grid-row:'+(ri+2)+';grid-column:'+c1+' / '+c2+';background:'+subjColor(x.sub)+';color:#0b1406" title="'+esc(x.sub.name+' · '+info.join(' · '))+'">'+
+      '<b>'+esc(x.sub.code)+'</b>'+(x.group?'<span>'+esc(x.group)+'</span>':'')+(x.room?'<span>ห้อง '+esc(x.room)+'</span>':'')+'</a>';
+  });
+  var tot=totals();
+  return '<div class="tt-head"><div><p class="eyebrow" style="color:var(--lime)">ตารางสอน</p><h3>สัปดาห์ละ '+tot.h+' ชั่วโมง ใน '+data.subjects.length+' รายวิชา</h3></div>'+
+    '<p class="tt-note">07:30–08:00 กิจกรรมหน้าเสาธง · 12:00–13:00 พักกลางวัน</p></div>'+
+    '<div class="tt-scroll" tabindex="0" aria-label="ตารางสอนรายสัปดาห์ เลื่อนซ้ายขวาได้"><div class="tt-grid" style="--units:'+units+';--hours:'+hours+'">'+h+'</div></div>';
+}
+
+/* ---------- inner pages ---------- */
+function renderPage(p){
+  var photo=p.id==='personal'?safeUrl(data.site.photo):'';
+  var head='<div><div class="crumbs"><a href="#home" data-go="home">หน้าแรก</a><span>/</span><span>ประวัติ</span></div>'+
+    '<h1 class="h-page" style="margin-top:12px">'+esc(p.title)+(p.sub?'<em>'+esc(p.sub)+'</em>':'')+'</h1>'+
+    (state.editing?'<div class="tools" style="margin-top:12px"><button class="tbtn" data-act="page-edit" data-scope="'+esc(p.id)+'">แก้ชื่อหน้า</button></div>':'')+'</div>';
+  var out='<section class="sky ph"><div class="wrap ph-in">'+
+    (photo?'<div class="ph-split" style="width:100%">'+head+'<div class="ph-photo"><img src="'+esc(photo)+'" alt="'+esc(data.site.fullName)+'"></div></div>':head)+
+    '</div></section><div class="wrap page-body">';
+  (p.sections||[]).forEach(function(sec,si){out+=renderSection(p.id,sec,si,p.sections.length)});
+  if(state.editing) out+='<button class="add add-sec" data-act="sec-add" data-scope="'+esc(p.id)+'">+ เพิ่มหัวข้อใหม่ในหน้านี้</button>';
+  return out+'</div>';
+}
+function renderSubject(s){
+  if(!s) return '';
+  var i=data.subjects.indexOf(s),prev=data.subjects[i-1],next=data.subjects[i+1];
+  var sub=s.t==null&&s.p==null&&s.n==null?(s.h||0)+' ชั่วโมงต่อสัปดาห์':'ทฤษฎี '+(s.t||0)+' · ปฏิบัติ '+(s.p||0)+' · '+(s.n||0)+' หน่วยกิต · '+(s.h||0)+' ชั่วโมงต่อสัปดาห์';
+  var slots=(s.slots||[]).map(function(sl){return '<span class="slot"><b>'+esc(DAYS[+sl.d]||'')+'</b><span class="mono">'+esc(sl.s)+'–'+esc(sl.e)+'</span>'+(sl.room?'<i>ห้อง '+esc(sl.room)+'</i>':'')+(sl.group?'<i>'+esc(sl.group)+'</i>':'')+'</span>'}).join('');
+  var secs=s.sections||[];
+  var t=state.tab[s.id]||0;if(t>=secs.length)t=Math.max(0,secs.length-1);state.tab[s.id]=t;
+  var tabs=secs.map(function(sec,si){return '<button class="tab'+(si===t?' is-on':'')+'" role="tab" aria-selected="'+(si===t)+'" data-act="tab" data-scope="'+esc(s.id)+'" data-si="'+si+'">'+esc(sec.title)+'<span class="cnt">'+(sec.items||[]).length+'</span></button>'}).join('');
+  if(state.editing) tabs+='<button class="tab-add" data-act="sec-add" data-scope="'+esc(s.id)+'">+ เพิ่มแท็บ</button>';
+  var cur=secs[t];
+  var body='';
+  if(cur){
+    if(state.editing) body+='<div class="panel-tools"><span>แท็บ “'+esc(cur.title)+'”</span>'+secTools(s.id,t,secs.length,true)+'</div>';
+    body+=renderSectionBody(s.id,cur,t);
+    if(t===0&&(s.refs||[]).length) body+=renderRefs(s.refs);
+  }else body='<p class="empty">ยังไม่มีแท็บเนื้อหา</p>';
+  return '<section class="sky ph"><div class="wrap ph-in">'+
+    '<div class="crumbs"><a href="#home" data-go="home">หน้าแรก</a><span>/</span><a href="#home" data-act="scroll-home-subjects">รายวิชา</a></div>'+
+    '<span class="code-chip">'+(s.code==='PLC'?'':'รหัสวิชา ')+esc(s.code)+'</span>'+
+    '<h1 class="h-page">'+esc(s.name)+'<em>'+esc(sub)+'</em></h1>'+
+    (slots?'<div class="slots">'+slots+'</div>':'')+
+    (state.editing?'<div class="tools"><button class="tbtn" data-act="subj-edit" data-scope="'+esc(s.id)+'">แก้ข้อมูลวิชา คาบสอน และแหล่งอ้างอิง</button></div>':'')+
+  '</div></section>'+
+  '<div class="tabbar"><div class="wrap"><div class="tabs" role="tablist" aria-label="ส่วนของรายวิชา">'+tabs+'</div></div></div>'+
+  '<div class="wrap tabpanel" role="tabpanel">'+body+'</div>'+
+  '<nav class="pn wrap" aria-label="รายวิชาอื่น">'+
+    (prev?'<a class="pn-a" href="#'+esc(prev.id)+'" data-go="'+esc(prev.id)+'"><span class="eyebrow">← วิชาก่อนหน้า</span><b>'+esc(prev.name)+'</b></a>':'<span></span>')+
+    (next?'<a class="pn-a next" href="#'+esc(next.id)+'" data-go="'+esc(next.id)+'"><span class="eyebrow">วิชาถัดไป →</span><b>'+esc(next.name)+'</b></a>':'<span></span>')+
+  '</nav>';
+}
+function renderRefs(refs){
+  return '<div class="refs"><h3>แหล่งอ้างอิง</h3><ol>'+refs.map(function(r){var u=safeUrl(r.url);return '<li>'+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(r.title)+'</a>':esc(r.title))+'</li>'}).join('')+'</ol></div>';
+}
+function secTools(scope,si,n,horizontal){
+  var a=' data-scope="'+esc(scope)+'" data-si="'+si+'"';
+  return '<div class="tools"><button class="tbtn" data-act="sec-edit"'+a+'>แก้ชื่อ/รูปแบบ</button>'+
+    '<button class="tbtn" data-act="sec-up"'+a+(si===0?' disabled':'')+' aria-label="เลื่อนขึ้น">'+(horizontal?'←':'↑')+'</button>'+
+    '<button class="tbtn" data-act="sec-down"'+a+(si===n-1?' disabled':'')+' aria-label="เลื่อนลง">'+(horizontal?'→':'↓')+'</button>'+
+    '<button class="tbtn" data-act="sec-del"'+a+'>ลบ</button></div>';
+}
+function itemTools(scope,si,ii,n){
+  var a=' data-scope="'+esc(scope)+'" data-si="'+si+'" data-ii="'+ii+'"';
+  return '<div class="tools"><button class="tbtn" data-act="item-edit"'+a+'>แก้</button>'+
+    '<button class="tbtn" data-act="item-up"'+a+(ii===0?' disabled':'')+' aria-label="เลื่อนขึ้น">↑</button>'+
+    '<button class="tbtn" data-act="item-down"'+a+(ii===n-1?' disabled':'')+' aria-label="เลื่อนลง">↓</button>'+
+    '<button class="tbtn" data-act="item-del"'+a+'>ลบ</button></div>';
+}
+function renderSection(scope,sec,si,count){
+  var items=sec.items||[],ed=state.editing;
+  if(!ed&&!items.length&&!sec.note) return '';
+  if(sec.type==='cta'){
+    return '<section class="sec"><div class="panel cta"><div class="sec-head"><h2 class="cta-t">'+esc(sec.title)+'</h2>'+(ed?secTools(scope,si,count):'')+'</div>'+renderSectionBody(scope,sec,si)+'</div></section>';
+  }
+  return '<section class="sec"><div class="sec-head"><h2 class="sec-t">'+esc(sec.title)+'</h2>'+(ed?secTools(scope,si,count):'')+'</div>'+renderSectionBody(scope,sec,si)+'</section>';
+}
+function figure(im,inGal){
+  var u=safeUrl(im.url);if(!u)return '';
+  return '<figure class="fig"><button class="fig-btn" data-act="zoom" data-src="'+esc(u)+'" data-cap="'+esc(im.cap||'')+'" aria-label="ขยายรูป: '+esc(im.cap||'รูปภาพ')+'"><img src="'+esc(u)+'" alt="'+esc(im.cap||'')+'" loading="lazy"></button>'+(im.cap?'<figcaption>'+esc(im.cap)+'</figcaption>':'')+'</figure>';
+}
+function codeBox(it){
+  var codes=(it.code||[]).filter(function(c){return c&&c.src});if(!codes.length)return '';
+  var k=state.codeTab[it.id]||0;if(k>=codes.length)k=0;var c=codes[k];
+  var lang=(LANGS.filter(function(l){return l[0]===c.lang})[0]||['','โค้ด'])[1];
+  var tabs=codes.map(function(cc,j){return '<button class="cb-tab'+(j===k?' is-on':'')+'" data-act="code-tab" data-id="'+esc(it.id)+'" data-k="'+j+'">'+esc(cc.name||('ไฟล์ '+(j+1)))+'</button>'}).join('');
+  return '<div class="codebox"><div class="cb-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>'+tabs+'<span class="cb-sp"></span><span class="cb-lang">'+esc(lang)+'</span>'+
+    '<button class="cb-copy" data-act="copy-code" data-id="'+esc(it.id)+'" data-k="'+k+'">คัดลอก</button></div>'+
+    '<pre class="cb-pre"><code>'+hl(c.src,c.lang)+'</code></pre></div>';
+}
+function renderSectionBody(scope,sec,si){
+  var items=sec.items||[],ed=state.editing,n=items.length;
+  var add=ed?'<button class="add" style="margin-top:12px" data-act="item-add" data-scope="'+esc(scope)+'" data-si="'+si+'">+ เพิ่ม'+(sec.type==='gallery'?'รูป':'รายการ')+'ใน “'+esc(sec.title)+'”</button>':'';
+  var tools=function(ii){return ed?itemTools(scope,si,ii,n):''};
+  var note=sec.note?'<p class="sec-note'+(sec.type==='cta'?' cta-note':'')+'" style="margin-bottom:16px">'+nl(sec.note)+'</p>':'';
+  var empty=(!n&&ed)?'<p class="empty">ยังไม่มีรายการ</p>':'';
+  var body='';
+  if(sec.type==='lessons'||sec.type==='worksheets'){
+    var ws=sec.type==='worksheets';
+    var openId=state.open==='__none__'?null:state.open;
+    if(openId&&!items.some(function(it){return it.id===openId})) openId=null;
+    if(state.open==null) openId=items[0]?items[0].id:null;
+    body='<div class="acc-list">'+items.map(function(it,ii){
+      var o=it.id===openId,imgs=(it.images||[]).map(function(im){return figure(im)}).join('');
+      var u=safeUrl(it.url);
+      return '<article class="acc'+(ws?' ws':'')+(o?' is-open':'')+'" id="it-'+esc(it.id)+'">'+
+        '<h3><button class="acc-btn" data-act="toggle-item" data-id="'+esc(it.id)+'" aria-expanded="'+o+'" aria-controls="ib-'+esc(it.id)+'">'+
+          '<span class="acc-idx">'+pad(ii+1)+'</span><span class="acc-tt"><span class="acc-title">'+esc(it.title)+exChip(it)+'</span>'+(it.desc?'<span class="acc-desc">'+esc(it.desc)+'</span>':'')+'</span><span class="acc-chev">'+CHEV+'</span></button></h3>'+
+        '<div class="acc-body" id="ib-'+esc(it.id)+'"'+(o?'':' hidden')+'>'+tools(ii)+
+          (it.body?'<div class="md">'+md(it.body)+'</div>':'')+
+          (imgs?'<div class="figs">'+imgs+'</div>':'')+codeBox(it)+
+          (u?'<div class="attach">'+itemAction(it,ws?'เปิดไฟล์ใบงาน':'เปิดไฟล์แนบ')+'</div>':'')+
+        '</div></article>';
+    }).join('')+'</div>';
+  }else if(sec.type==='gallery'){
+    body='<div class="gal">'+items.map(function(it,ii){return '<div>'+figure({url:it.url,cap:it.title})+tools(ii)+'</div>'}).join('')+'</div>';
+  }else if(sec.type==='links'){
+    body='<div class="cards2">'+items.map(function(it,ii){return '<div class="lcard"><div class="lc-main"><div class="lc-t">'+esc(it.title)+exChip(it)+'</div>'+(it.desc?'<div class="lc-d">'+nl(it.desc)+'</div>':'')+tools(ii)+'</div><div>'+itemAction(it)+'</div></div>'}).join('')+'</div>';
+  }else if(sec.type==='numbered'){
+    body='<ul class="rows">'+items.map(function(it,ii){return '<li class="row"><span class="num">'+pad(ii+1)+'</span><div class="row-main"><div class="row-t">'+esc(it.title)+exChip(it)+'</div>'+(it.desc?'<div class="row-d">'+nl(it.desc)+'</div>':'')+tools(ii)+'</div>'+(safeUrl(it.url)?'<div class="row-act">'+itemAction(it)+'</div>':'')+'</li>'}).join('')+'</ul>';
+  }else if(sec.type==='info'){
+    body='<dl class="info">'+items.map(function(it,ii){return '<div class="info-r"><dt>'+esc(it.title)+'</dt><dd><span>'+nl(it.desc)+'</span>'+exChip(it)+(safeUrl(it.url)?itemAction(it):'')+tools(ii)+'</dd></div>'}).join('')+'</dl>';
+  }else if(sec.type==='text'){
+    body='<div class="prose">'+items.map(function(it,ii){return '<div>'+(it.title?'<h3>'+esc(it.title)+exChip(it)+'</h3>':'')+'<p>'+nl(it.desc)+(it.title?'':exChip(it))+'</p>'+tools(ii)+'</div>'}).join('')+'</div>';
+  }else if(sec.type==='cta'){
+    body='<div class="cta-items">'+items.map(function(it,ii){var u=safeUrl(it.url);
+      return '<div class="cta-item">'+(u?'<a class="pill pill-inv pill-lg" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(it.title)+' '+ARROW+'</a>':'<span class="pill pill-inv-ghost pill-lg">'+esc(it.title)+' · ยังไม่เปิด</span>')+exChip(it)+tools(ii)+(it.desc?'<p class="cta-d">'+nl(it.desc)+'</p>':'')+'</div>'}).join('')+'</div>';
+  }else{
+    body='<ul class="rows">'+items.map(function(it,ii){return '<li class="row"><div class="row-main"><div class="row-t">'+esc(it.title)+exChip(it)+'</div>'+(it.desc?'<div class="row-d">'+nl(it.desc)+'</div>':'')+tools(ii)+'</div>'+(safeUrl(it.url)?'<div class="row-act">'+itemAction(it)+'</div>':'')+'</li>'}).join('')+'</ul>';
+  }
+  return note+(n?body:empty)+add;
+}
+function renderFooter(){
+  var s=data.site;
+  var links='<a href="#home" data-go="home">หน้าแรก</a>'+data.pages.map(function(p){return '<a href="#'+esc(p.id)+'" data-go="'+esc(p.id)+'">'+esc(p.title)+'</a>'}).join('')+
+    data.subjects.map(function(x){return '<a href="#'+esc(x.id)+'" data-go="'+esc(x.id)+'" class="mono">'+esc(x.code)+'</a>'}).join('');
+  return '<footer class="foot"><div class="wrap"><div class="foot-top"><span>© '+esc(year())+' '+esc(s.fullName)+' · '+esc(s.dept)+' '+esc(s.college)+'</span><nav class="foot-links" aria-label="ลิงก์ท้ายเว็บ">'+links+'</nav></div>'+
+    '<div class="wordmark" aria-hidden="true">'+esc(s.wordmark||s.fullName||'')+'</div></div></footer>';
+}
+
+/* ---------- navigation ---------- */
+function goTo(r){
+  if(!routeExists(r)) r='home';
+  state.route=r;state.menu=null;state.open=null;render();
+  window.scrollTo(0,0);
+  try{history.replaceState(null,'','#'+r)}catch(e){}
+}
+function smooth(){try{return !window.matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){return true}}
+
+/* ---------- forms ---------- */
+var formCfg=null;
+function fieldHtml(f,values){
+  var id='f-'+f.k,v=values[f.k];v=v==null?'':v;var inner;
+  if(f.type==='textarea') inner='<textarea id="'+id+'" rows="'+(f.rows||3)+'" placeholder="'+esc(f.ph||'')+'">'+esc(v)+'</textarea>';
+  else if(f.type==='select') inner='<select id="'+id+'">'+f.options.map(function(o){return '<option value="'+esc(o[0])+'"'+(String(o[0])===String(v)?' selected':'')+'>'+esc(o[1])+'</option>'}).join('')+'</select>';
+  else if(f.type==='number') inner='<input id="'+id+'" type="number" min="0" max="99" step="1" inputmode="numeric" value="'+esc(v)+'">';
+  else if(f.type==='url'){
+    inner='<input id="'+id+'" type="url" inputmode="url" placeholder="'+esc(f.ph||'วางลิงก์ เช่น https://drive.google.com/...')+'" value="'+esc(v)+'">'+
+      (f.k==='url'?'<input type="hidden" id="f-fileName" value="'+esc(values.fileName||'')+'">':'')+
+      (assetsNS?'<div class="upl"><button type="button" class="pill pill-ghost pill-sm" data-pick="'+id+'" data-accept="'+esc(f.accept||'')+'">อัปโหลดไฟล์จากเครื่อง</button><span class="upl-msg" id="'+id+'-msg" role="status"></span></div>':'')+
+      '<p class="hint">'+esc(f.hint||'ไฟล์ Word, PowerPoint หรือไฟล์ขนาดใหญ่ ให้อัปขึ้น Google Drive ตั้งค่าแชร์เป็น “ทุกคนที่มีลิงก์” แล้ววางลิงก์ที่นี่')+(assetsNS?' · อัปโหลดจากเครื่องได้เฉพาะรูปภาพ (ระบบย่อขนาดให้อัตโนมัติ)':'')+'</p>';
+  }
+  else if(f.type==='slots') inner=slotsHtml(v||[]);
+  else if(f.type==='images') inner='<div class="rows-ed" id="f-images">'+(v||[]).map(imgRow).join('')+'</div><button type="button" class="add add-sm" data-row-add="images">+ เพิ่มรูป</button>';
+  else if(f.type==='codes') inner='<div class="rows-ed" id="f-codes">'+(v||[]).map(codeRow).join('')+'</div><button type="button" class="add add-sm" data-row-add="codes">+ เพิ่มไฟล์โค้ด</button>';
+  else inner='<input id="'+id+'" type="text" placeholder="'+esc(f.ph||'')+'" value="'+esc(v)+'">';
+  var multi=f.type==='slots'||f.type==='images'||f.type==='codes';
+  var lab=multi?'<span class="lbl">'+esc(f.label)+'</span>':'<label for="'+id+'">'+esc(f.label)+(f.req?' <b>*</b>':'')+'</label>';
+  return '<div class="field'+(f.w?' '+f.w:'')+'">'+lab+inner+(f.hint&&f.type!=='url'?'<p class="hint">'+esc(f.hint)+'</p>':'')+'</div>';
+}
+function imgRow(im,i){
+  return '<div class="rowed" data-row="'+i+'"><div class="rowed-top"><input id="f-iu-'+i+'" type="url" placeholder="ลิงก์รูป หรือกดอัปโหลด" value="'+esc(im.url||'')+'" aria-label="ลิงก์รูป">'+
+    '<input id="f-ic-'+i+'" type="text" placeholder="คำอธิบายใต้รูป" value="'+esc(im.cap||'')+'" aria-label="คำอธิบายใต้รูป">'+
+    '<button type="button" class="tbtn" data-row-del="images" data-i="'+i+'">ลบ</button></div>'+
+    (assetsNS?'<div class="upl"><button type="button" class="tbtn" data-pick="f-iu-'+i+'" data-accept="image/*">อัปโหลดรูป</button><span class="upl-msg" id="f-iu-'+i+'-msg"></span></div>':'')+'</div>';
+}
+function codeRow(c,i){
+  return '<div class="rowed" data-row="'+i+'"><div class="rowed-top"><input id="f-cn-'+i+'" type="text" placeholder="ชื่อไฟล์ เช่น main.py" value="'+esc(c.name||'')+'" aria-label="ชื่อไฟล์">'+
+    '<select id="f-cl-'+i+'" aria-label="ภาษา">'+LANGS.map(function(l){return '<option value="'+l[0]+'"'+(c.lang===l[0]?' selected':'')+'>'+l[1]+'</option>'}).join('')+'</select>'+
+    '<button type="button" class="tbtn" data-row-del="codes" data-i="'+i+'">ลบ</button></div>'+
+    '<textarea id="f-cs-'+i+'" rows="8" spellcheck="false" placeholder="วางโค้ดที่นี่" aria-label="โค้ด">'+esc(c.src||'')+'</textarea></div>';
+}
+function slotRow(sl,i){
+  return '<div class="slot-row" data-row="'+i+'">'+
+    '<select id="f-sd-'+i+'" aria-label="วัน">'+[1,2,3,4,5,6,0].map(function(d){return '<option value="'+d+'"'+(+sl.d===d?' selected':'')+'>'+DAYS[d]+'</option>'}).join('')+'</select>'+
+    '<input id="f-ss-'+i+'" type="time" value="'+esc(sl.s||'08:00')+'" aria-label="เวลาเริ่ม">'+
+    '<input id="f-se-'+i+'" type="time" value="'+esc(sl.e||'09:00')+'" aria-label="เวลาสิ้นสุด">'+
+    '<input id="f-sr-'+i+'" type="text" value="'+esc(sl.room||'')+'" placeholder="ห้อง" aria-label="ห้อง">'+
+    '<input id="f-sg-'+i+'" type="text" value="'+esc(sl.group||'')+'" placeholder="กลุ่มเรียน" aria-label="กลุ่มเรียน">'+
+    '<button type="button" class="tbtn" data-slot-del="'+i+'" aria-label="ลบคาบนี้">ลบ</button></div>';
+}
+function slotsHtml(arr){return '<div class="rows-ed" id="f-slots">'+arr.map(slotRow).join('')+'</div><button type="button" class="add add-sm" data-slot-add>+ เพิ่มคาบสอน</button>'}
+function val(id){var el=D.getElementById(id);return el?el.value:''}
+function readSlots(){return Array.prototype.map.call(D.querySelectorAll('#f-slots .slot-row'),function(r){var i=r.getAttribute('data-row');return {d:+val('f-sd-'+i),s:val('f-ss-'+i),e:val('f-se-'+i),room:val('f-sr-'+i).trim(),group:val('f-sg-'+i).trim()}})}
+function readImages(){return Array.prototype.map.call(D.querySelectorAll('#f-images .rowed'),function(r){var i=r.getAttribute('data-row');return {url:val('f-iu-'+i).trim(),cap:val('f-ic-'+i).trim()}})}
+function readCodes(){return Array.prototype.map.call(D.querySelectorAll('#f-codes .rowed'),function(r){var i=r.getAttribute('data-row');return {name:val('f-cn-'+i).trim(),lang:val('f-cl-'+i),src:val('f-cs-'+i)}})}
+function openForm(cfg){
+  formCfg=cfg;
+  var values=cfg.values||{};
+  D.getElementById('overlay-root').innerHTML='<div class="modal-bg" data-bg><form class="modal" id="mform" novalidate aria-labelledby="m-title">'+
+    '<div class="m-head"><h3 id="m-title">'+esc(cfg.title)+'</h3><button type="button" class="icon-btn" data-x aria-label="ปิด">×</button></div>'+
+    '<div class="m-body">'+cfg.fields.map(function(f){return fieldHtml(f,values)}).join('')+'</div>'+
+    '<div class="m-foot">'+(cfg.onDelete?'<button type="button" class="tbtn left" data-mdel>'+esc(cfg.deleteLabel||'ลบ')+'</button>':'')+
+    '<span class="m-msg" id="m-msg" role="alert"></span><button type="button" class="pill pill-ghost pill-sm" data-x>ยกเลิก</button><button type="submit" class="pill pill-blue pill-sm">'+esc(cfg.submit||'ใช้การแก้ไขนี้')+'</button></div>'+
+  '</form><input id="f-file" type="file" hidden></div>';
+  var first=D.querySelector('#mform input:not([type=hidden]),#mform textarea,#mform select');
+  if(first) try{first.focus()}catch(e){}
+}
+function closeForm(){formCfg=null;D.getElementById('overlay-root').innerHTML=''}
+function collect(){
+  var out={};
+  formCfg.fields.forEach(function(f){
+    if(f.type==='slots') out[f.k]=readSlots();
+    else if(f.type==='images') out[f.k]=readImages();
+    else if(f.type==='codes') out[f.k]=readCodes();
+    else if(f.type==='number'){var v=val('f-'+f.k).trim();out[f.k]=v===''?null:Math.max(0,parseInt(v,10)||0)}
+    else out[f.k]=val('f-'+f.k);
+    if(f.type==='url'&&f.k==='url') out.fileName=val('f-fileName');
+  });
+  return out;
+}
+function typeFor(name){
+  return {pdf:'application/pdf',png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',gif:'image/gif',webp:'image/webp',svg:'image/svg+xml',mp4:'video/mp4',webm:'video/webm',txt:'text/plain',csv:'text/csv',md:'text/markdown'}[ext(name)]||'';
+}
+function onFile(inp){
+  var f=inp.files&&inp.files[0],target=inp.getAttribute('data-target');if(!f||!assetsNS||!target)return;
+  var msg=D.getElementById(target+'-msg')||{textContent:''};var t=typeFor(f.name);
+  var imgOnly=inp.getAttribute('accept')==='image/*';
+  if(!t||(imgOnly&&t.indexOf('image/')!==0)){msg.textContent=imgOnly?'อัปโหลดได้เฉพาะไฟล์รูปภาพ':'ไฟล์ชนิดนี้อัปโหลดไม่ได้ ให้อัปขึ้น Google Drive แล้ววางลิงก์แทน';inp.value='';return}
+  if(f.size>20*1024*1024){msg.textContent='ไฟล์ใหญ่เกิน 20 MB ให้อัปขึ้น Google Drive แล้ววางลิงก์แทน';inp.value='';return}
+  msg.textContent='กำลังอัปโหลด '+f.name+' …';
+  assetsNS.upload(f,{type:t}).then(function(r){
+    var u=D.getElementById(target);if(u)u.value=r.url||('/_blob/'+r.id);
+    if(target==='f-url'){var fn=D.getElementById('f-fileName');if(fn)fn.value=f.name}
+    msg.textContent='แนบแล้ว: '+f.name;
+  }).catch(function(err){
+    var c=err&&err.code;
+    msg.textContent=c==='too_large'?'ไฟล์ใหญ่เกินกำหนด':c==='unsupported_type'?'ไฟล์ชนิดนี้อัปโหลดไม่ได้':c==='quota_or_state'?'พื้นที่เก็บไฟล์เต็ม ใช้ลิงก์ Google Drive แทน':c==='rate_limited'?'อัปโหลดถี่เกินไป รอสักครู่แล้วลองใหม่':c==='static_file'?'เว็บแบบนี้แนบได้เฉพาะรูปภาพ ไฟล์อื่นให้อัปขึ้น Google Drive แล้ววางลิงก์':c==='not_granted'||c==='capability_disabled'?'บัญชีนี้อัปโหลดไฟล์ไม่ได้ ใช้ลิงก์แทน':'อัปโหลดไม่สำเร็จ ลองใหม่อีกครั้ง';
+  });
+  inp.value='';
+}
+function commit(){state.dirty++;render()}
+function armed(btn,label){
+  if(btn.getAttribute('data-armed')==='1') return true;
+  var old=btn.textContent;btn.setAttribute('data-armed','1');btn.textContent=label||'กดอีกครั้งเพื่อยืนยัน';btn.classList.add('is-armed');
+  setTimeout(function(){if(btn.isConnected){btn.removeAttribute('data-armed');btn.textContent=old;btn.classList.remove('is-armed')}},3500);
+  return false;
+}
+var MD_HINT='เขียนข้อความได้เลย · ขึ้นหัวข้อย่อยด้วย ### · รายการใช้ - หรือ 1. · ตัวหนา **ข้อความ** · โค้ดสั้น `code` · กล่องหมายเหตุขึ้นต้นด้วย > · ตารางใช้ | ช่อง | ช่อง |';
+function itemFields(type){
+  if(type==='lessons'||type==='worksheets') return [
+    {k:'title',label:type==='worksheets'?'ชื่อใบงาน':'ชื่อหัวข้อ',req:1,ph:type==='worksheets'?'เช่น ใบงานที่ 4 ...':'เช่น หน่วยที่ 8 ...'},
+    {k:'desc',label:'คำอธิบายสั้น (แสดงใต้หัวข้อ)'},
+    {k:'body',label:'เนื้อหา',type:'textarea',rows:12,hint:MD_HINT},
+    {k:'images',label:'รูปประกอบ',type:'images'},
+    {k:'code',label:'โค้ดตัวอย่าง',type:'codes'},
+    {k:'url',label:type==='worksheets'?'ไฟล์ใบงาน (ถ้ามี)':'ไฟล์แนบ (ถ้ามี)',type:'url'}];
+  if(type==='gallery') return [{k:'title',label:'คำอธิบายใต้รูป',req:1},{k:'url',label:'รูปภาพ',type:'url',accept:'image/*',ph:'ลิงก์รูป หรือกดอัปโหลด',hint:'วางลิงก์รูปภาพ หรือกดอัปโหลดจากเครื่อง'}];
+  if(type==='info') return [{k:'title',label:'หัวข้อ',req:1,ph:'เช่น อีเมลติดต่อ'},{k:'desc',label:'รายละเอียด',type:'textarea',rows:2},{k:'url',label:'ลิงก์หรือไฟล์แนบ (ถ้ามี)',type:'url'}];
+  if(type==='text') return [{k:'title',label:'หัวข้อย่อย (ถ้ามี)'},{k:'desc',label:'ข้อความ',type:'textarea',rows:6,req:1}];
+  if(type==='cta') return [{k:'title',label:'ข้อความบนปุ่ม',req:1},{k:'desc',label:'คำอธิบายใต้ปุ่ม',type:'textarea',rows:2},{k:'url',label:'ลิงก์หรือไฟล์',type:'url'}];
+  return [{k:'title',label:'ชื่อรายการ',req:1},{k:'desc',label:'คำอธิบายสั้น ๆ',type:'textarea',rows:2},{k:'url',label:'ลิงก์หรือไฟล์แนบ',type:'url'}];
+}
+function secFields(){return [{k:'title',label:'ชื่อหัวข้อ/แท็บ',req:1,ph:'เช่น ใบงาน'},{k:'type',label:'รูปแบบการแสดงผล',type:'select',options:SEC_TYPES},{k:'note',label:'คำอธิบายใต้หัวข้อ (ถ้ามี)',type:'textarea',rows:2}]}
+function subjFields(){return [
+  {k:'code',label:'รหัสวิชา',req:1,w:'half',ph:'เช่น 20105-2010'},{k:'h',label:'ชั่วโมงต่อสัปดาห์',type:'number',w:'half'},
+  {k:'name',label:'ชื่อรายวิชา',req:1},
+  {k:'t',label:'ทฤษฎี (ท.)',type:'number',w:'third'},{k:'p',label:'ปฏิบัติ (ป.)',type:'number',w:'third'},{k:'n',label:'หน่วยกิต (น.)',type:'number',w:'third'},
+  {k:'slots',label:'คาบสอน (วัน · เริ่ม · สิ้นสุด · ห้อง · กลุ่มเรียน)',type:'slots'},
+  {k:'refs',label:'แหล่งอ้างอิง (บรรทัดละ 1 รายการ: ชื่อ | ลิงก์)',type:'textarea',rows:4}]}
+function checkSlots(sl){
+  for(var i=0;i<sl.length;i++){var a=toMin(sl[i].s),b=toMin(sl[i].e);if(a==null||b==null||b<=a)return 'คาบที่ '+(i+1)+': เวลาสิ้นสุดต้องหลังเวลาเริ่ม'}
+  return '';
+}
+function refsToText(r){return (r||[]).map(function(x){return x.title+(x.url?' | '+x.url:'')}).join('\n')}
+function textToRefs(t){return String(t||'').split('\n').map(function(l){var p=l.split('|');var title=p[0].trim(),url=(p.slice(1).join('|')||'').trim();return title?{title:title,url:safeUrl(url)}:null}).filter(Boolean)}
+function newSubjectId(code){
+  var base='c'+(String(code).replace(/[^A-Za-z0-9-]/g,'')||'x'),id=base;
+  while(routeExists(id)||RESERVED.indexOf(id)>=0) id=base+'-'+Math.random().toString(36).slice(2,5);
+  return id;
+}
+function defaultSections(){
+  return [{id:uid('s'),type:'lessons',title:'เนื้อหา',note:'',items:[]},{id:uid('s'),type:'worksheets',title:'ใบงาน',note:'',items:[]},{id:uid('s'),type:'gallery',title:'รูปเพิ่มเติม',note:'',items:[]}];
+}
+
+/* ---------- actions ---------- */
+function act(btn){
+  var a=btn.getAttribute('data-act'),scope=btn.getAttribute('data-scope'),si=+btn.getAttribute('data-si'),ii=+btn.getAttribute('data-ii');
+  var o=scope?owner(scope):null,sec=o&&o.sections?o.sections[si]:null;
+  switch(a){
+  case 'toggle-menu':var m=btn.getAttribute('data-menu');state.menu=state.menu===m?null:m;render();break;
+  case 'toggle-edit':state.editing=!state.editing;state.menu=null;render();break;
+  case 'scroll':var el=D.getElementById(btn.getAttribute('data-target'));if(el)el.scrollIntoView({behavior:smooth()?'smooth':'auto',block:'start'});break;
+  case 'scroll-home-subjects':goTo('home');setTimeout(function(){var e=D.getElementById('subjects');if(e)e.scrollIntoView({block:'start'})},0);break;
+  case 'tab':state.tab[scope]=si;state.open=null;render();break;
+  case 'toggle-item':var id=btn.getAttribute('data-id');var wasOpen=btn.getAttribute('aria-expanded')==='true';state.open=wasOpen?'__none__':id;render();
+    if(!wasOpen)setTimeout(function(){var e=D.getElementById('it-'+id);if(e){var r=e.getBoundingClientRect();if(r.top<120||r.top>window.innerHeight*.6)e.scrollIntoView({block:'start',behavior:smooth()?'smooth':'auto'})}},0);break;
+  case 'code-tab':state.codeTab[btn.getAttribute('data-id')]=+btn.getAttribute('data-k');render();break;
+  case 'copy-code':copyCode(btn);break;
+  case 'zoom':openLightbox(btn.getAttribute('data-src'),btn.getAttribute('data-cap'));break;
+  case 'car':setCar(+btn.getAttribute('data-k'));break;
+  case 'search-go':var hs=searchHits();if(hs[0])openHit(hs[0].sid,hs[0].si,hs[0].id);break;
+  case 'site-edit':
+    var s=data.site;
+    openForm({title:'แก้ข้อมูลหน้าแรก',values:{tags:(s.tags||[]).join(', '),wordmark:s.wordmark,name:s.name,fullName:s.fullName,position:s.position,mark:s.mark,dept:s.dept,college:s.college,term:s.term,degree:s.degree,school:s.school,intro:s.intro,duties:(s.duties||[]).join('\n'),photo:s.photo,cover:s.cover},
+      fields:[{k:'name',label:'ชื่อเว็บไซต์ (หัวข้อใหญ่)',req:1},{k:'fullName',label:'ชื่อ-สกุลผู้สอน',w:'half'},{k:'position',label:'ตำแหน่ง',w:'half'},
+        {k:'dept',label:'แผนกวิชา',w:'half'},{k:'mark',label:'อักษรย่อในโลโก้',w:'half',ph:'1–3 ตัวอักษร'},{k:'college',label:'สถานศึกษา',w:'half'},{k:'term',label:'ภาคเรียน',w:'half',ph:'เช่น 2/2569'},
+        {k:'degree',label:'วุฒิการศึกษา',w:'half'},{k:'school',label:'สถาบันที่สำเร็จการศึกษา',w:'half'},
+        {k:'tags',label:'ป้ายในหัวข้อใหญ่ (คั่นด้วยจุลภาค)',w:'half',ph:'เช่น หุ่นยนต์, AI, ภาษาซี'},{k:'wordmark',label:'ตัวอักษรใหญ่ท้ายเว็บ',w:'half'},{k:'intro',label:'ข้อความแนะนำใต้หัวข้อ',type:'textarea',rows:3},{k:'duties',label:'หน้าที่พิเศษ (บรรทัดละ 1 หน้าที่ ใส่คำว่า “ครูที่ปรึกษา” นำหน้าเพื่อแยกแสดง)',type:'textarea',rows:3},
+        {k:'photo',label:'รูปผู้สอน',type:'url',accept:'image/*',ph:'ลิงก์รูป หรือกดอัปโหลด',hint:'แนะนำรูปแนวตั้ง 3:4'},{k:'cover',label:'รูปปกหน้าแรก',type:'url',accept:'image/*',ph:'ลิงก์รูป หรือกดอัปโหลด',hint:'แนะนำรูปแนวนอนกว้าง'}],
+      onSave:function(v){if(!v.name.trim())return 'กรุณาใส่ชื่อเว็บไซต์';
+        ['name','fullName','position','dept','college','term','degree','school','intro'].forEach(function(k){s[k]=(v[k]||'').trim()});s.mark=v.mark.trim().slice(0,3);
+        s.tags=v.tags.split(',').map(function(x){return x.trim()}).filter(Boolean).slice(0,5);s.wordmark=(v.wordmark||'').trim();s.duties=v.duties.split('\n').map(function(x){return x.trim()}).filter(Boolean);s.photo=safeUrl(v.photo);s.cover=safeUrl(v.cover)}});
+    break;
+  case 'page-edit':
+    openForm({title:'แก้ชื่อหน้า',values:{title:o.title,sub:o.sub},fields:[{k:'title',label:'ชื่อหน้า (แสดงในเมนู)',req:1},{k:'sub',label:'บรรทัดรอง (ตัวเอียงสีเทา)'}],
+      onSave:function(v){if(!v.title.trim())return 'กรุณาใส่ชื่อหน้า';o.title=v.title.trim();o.sub=v.sub.trim()}});
+    break;
+  case 'subj-add':
+    state.menu=null;
+    openForm({title:'เพิ่มรายวิชา',values:{slots:[]},fields:subjFields(),submit:'เพิ่มรายวิชา',
+      onSave:function(v){if(!v.code.trim()||!v.name.trim())return 'กรุณาใส่รหัสวิชาและชื่อรายวิชา';var e=checkSlots(v.slots);if(e)return e;
+        var ns={id:newSubjectId(v.code.trim()),code:v.code.trim(),name:v.name.trim(),t:v.t,p:v.p,n:v.n,h:v.h||0,slots:v.slots,sections:defaultSections(),refs:textToRefs(v.refs)};
+        data.subjects.push(ns);state.route=ns.id;setTimeout(function(){window.scrollTo(0,0)},0)}});
+    break;
+  case 'subj-edit':
+    openForm({title:'แก้ข้อมูลรายวิชา',values:{code:o.code,name:o.name,t:o.t,p:o.p,n:o.n,h:o.h,slots:clone(o.slots||[]),refs:refsToText(o.refs)},fields:subjFields(),
+      deleteLabel:'ลบรายวิชานี้',onDelete:function(){var i=data.subjects.indexOf(o);if(i>=0)data.subjects.splice(i,1);state.route='home'},
+      onSave:function(v){if(!v.code.trim()||!v.name.trim())return 'กรุณาใส่รหัสวิชาและชื่อรายวิชา';var e=checkSlots(v.slots);if(e)return e;
+        o.code=v.code.trim();o.name=v.name.trim();o.t=v.t;o.p=v.p;o.n=v.n;o.h=v.h||0;o.slots=v.slots;o.refs=textToRefs(v.refs)}});
+    break;
+  case 'sec-add':
+    openForm({title:isSubject(o)?'เพิ่มแท็บใหม่':'เพิ่มหัวข้อใหม่',values:{type:isSubject(o)?'lessons':'list'},fields:secFields(),submit:'เพิ่ม',
+      onSave:function(v){if(!v.title.trim())return 'กรุณาใส่ชื่อ';o.sections=o.sections||[];o.sections.push({id:uid('s'),type:v.type,title:v.title.trim(),note:v.note.trim(),items:[]});if(isSubject(o))state.tab[o.id]=o.sections.length-1}});
+    break;
+  case 'sec-edit':
+    openForm({title:'แก้ชื่อและรูปแบบ',values:{title:sec.title,type:sec.type,note:sec.note},fields:secFields(),
+      onSave:function(v){if(!v.title.trim())return 'กรุณาใส่ชื่อ';sec.title=v.title.trim();sec.type=v.type;sec.note=v.note.trim()}});
+    break;
+  case 'sec-up':case 'sec-down':
+    var j=a==='sec-up'?si-1:si+1;if(j<0||j>=o.sections.length)return;var t=o.sections[si];o.sections[si]=o.sections[j];o.sections[j]=t;if(isSubject(o))state.tab[o.id]=j;commit();break;
+  case 'sec-del':if(!armed(btn,'ยืนยันลบ'))return;o.sections.splice(si,1);if(isSubject(o))state.tab[o.id]=0;commit();break;
+  case 'item-add':
+    openForm({title:'เพิ่มใน “'+sec.title+'”',values:{images:[],code:[]},fields:itemFields(sec.type),submit:'เพิ่ม',
+      onSave:function(v){var e=validItem(sec.type,v);if(e)return e;sec.items=sec.items||[];var it=makeItem({id:uid()},v,sec.type);sec.items.push(it);state.open=it.id}});
+    break;
+  case 'item-edit':
+    var it=sec.items[ii];
+    openForm({title:'แก้รายการ',values:{title:it.title,desc:it.desc,body:it.body,images:clone(it.images||[]),code:clone(it.code||[]),url:it.url,fileName:it.fileName},fields:itemFields(sec.type),
+      onSave:function(v){var e=validItem(sec.type,v);if(e)return e;sec.items[ii]=makeItem({id:it.id},v,sec.type);state.open=it.id}});
+    break;
+  case 'item-up':case 'item-down':
+    var k=a==='item-up'?ii-1:ii+1;if(k<0||k>=sec.items.length)return;var x=sec.items[ii];sec.items[ii]=sec.items[k];sec.items[k]=x;commit();break;
+  case 'item-del':if(!armed(btn,'ยืนยันลบ'))return;sec.items.splice(ii,1);commit();break;
+  case 'discard':if(!armed(btn,'ยืนยันยกเลิกทั้งหมด'))return;data=JSON.parse(savedJSON);state.dirty=0;render();toast('ยกเลิกการแก้ไขแล้ว');break;
+  case 'save':save();break;
+  case 'restore-mine':var keep=data.sv;data=conflictPending;data.sv=keep;conflictPending=null;state.dirty=Math.max(1,state.dirty);render();toast('นำการแก้ไขของคุณกลับมาแล้ว กด “ดาวน์โหลดไฟล์เว็บ” เพื่อบันทึก');break;
+  case 'drop-mine':conflictPending=null;render();break;
+  }
+}
+function validItem(type,v){
+  if(type==='text'?!(v.desc||'').trim():!(v.title||'').trim())return type==='text'?'กรุณาใส่ข้อความ':'กรุณาใส่ชื่อรายการ';
+  var u=(v.url||'').trim();if(u&&!safeUrl(u))return 'ลิงก์ต้องขึ้นต้นด้วย https:// เช่น https://drive.google.com/...';
+  if(type==='gallery'&&!safeUrl(u))return 'กรุณาใส่ลิงก์รูป หรืออัปโหลดรูป';
+  var bad=(v.images||[]).filter(function(im){return im.url&&!safeUrl(im.url)});if(bad.length)return 'ลิงก์รูปต้องขึ้นต้นด้วย https://';
+  return '';
+}
+function makeItem(base,v,type){
+  base.title=(v.title||'').trim();base.desc=(v.desc||'').trim();
+  var u=safeUrl(v.url);base.url=u;
+  if(u&&u.indexOf('/_blob/')===0&&v.fileName)base.fileName=v.fileName;
+  if(type==='lessons'||type==='worksheets'){
+    base.body=v.body||'';
+    base.images=(v.images||[]).filter(function(im){return safeUrl(im.url)}).map(function(im){return {url:safeUrl(im.url),cap:im.cap}});
+    base.code=(v.code||[]).filter(function(c){return c.src&&c.src.trim()}).map(function(c){return {name:c.name||'code',lang:c.lang||'text',src:c.src.replace(/\s+$/,'')}});
+  }
+  return base;
+}
+function findItem(id){
+  var r=null;data.subjects.concat(data.pages).forEach(function(o){(o.sections||[]).forEach(function(sec){(sec.items||[]).forEach(function(it){if(it.id===id)r=it})})});return r;
+}
+function copyCode(btn){
+  var it=findItem(btn.getAttribute('data-id'));if(!it)return;var c=(it.code||[])[+btn.getAttribute('data-k')];if(!c)return;
+  var done=function(){btn.textContent='คัดลอกแล้ว';setTimeout(function(){if(btn.isConnected)btn.textContent='คัดลอก'},1600)};
+  try{navigator.clipboard.writeText(c.src).then(done).catch(function(){selectCode(btn)})}catch(e){selectCode(btn)}
+}
+function selectCode(btn){
+  var pre=btn.closest('.codebox').querySelector('pre');var r=D.createRange();r.selectNodeContents(pre);var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+  toast('เลือกโค้ดแล้ว กด Ctrl+C เพื่อคัดลอก');
+}
+function openLightbox(src,cap){
+  D.getElementById('overlay-root').innerHTML='<div class="lb" data-lb role="dialog" aria-label="ดูรูปขนาดใหญ่"><button class="icon-btn" data-lb-x aria-label="ปิด">×</button><figure><img src="'+esc(src)+'" alt="'+esc(cap||'')+'">'+(cap?'<figcaption>'+esc(cap)+'</figcaption>':'')+'</figure></div>';
+  var b=D.querySelector('[data-lb-x]');if(b)try{b.focus()}catch(e){}
+}
+
+/* ---------- save (publishes a new version of this page) ---------- */
+function buildDoc(d){
+  if(STATIC){
+    var S0='scr'+'ipt',js=JSON.stringify(d).replace(/</g,'\\u003c'),nm=esc(d.site.name||'เว็บไซต์ครู');
+    var desc=esc([d.site.dept,d.site.college,d.site.term?'ภาคเรียน '+d.site.term:''].filter(Boolean).join(' · '));
+    return '<!doctype html>\n<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'+
+      '<title>'+nm+'</title><meta name="description" content="'+desc+'"><meta property="og:title" content="'+nm+'"><meta property="og:description" content="'+desc+'"><meta property="og:type" content="website">'+
+      '<link rel="icon" href="'+FAVICON+'"><style id="reset">'+RESET+'</style>'+HEAD_EXTRA+
+      '<style id="app-style">'+APP_STYLE+'</style></head>\n<body><div id="app"></div><div id="overlay-root"></div>\n'+
+      '<'+S0+' type="application/json" id="site-data">'+js+'</'+S0+'>\n'+
+      '<'+S0+' id="app-script">'+APP_SCRIPT+'</'+S0+'>\n</body></html>\n';
+  }
+  var S='scr'+'ipt';
+  var json=JSON.stringify(d).replace(/</g,'\\u003c');
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>'+RESET+'</style></head><body>'+
+    '<title>'+esc(d.site.name||'เว็บไซต์ครู')+'</title>'+HEAD_EXTRA+
+    '<style id="app-style">'+APP_STYLE+'</style>\n<div id="app"></div><div id="overlay-root"></div>\n'+
+    '<'+S+' type="application/json" id="site-data">'+json+'</'+S+'>\n'+
+    '<'+S+' id="app-script">'+APP_SCRIPT+'</'+S+'>\n</body></html>';
+}
+var FAVICON='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#3d72b6"/><circle cx="48" cy="16" r="7" fill="#74d61b"/><path d="M16 46V20l16 16 16-16v26" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+function staticSave(){
+  var out=clone(data);out.sv=uid('v');
+  var html=buildDoc(out),a=D.createElement('a');
+  try{a.href=URL.createObjectURL(new Blob([html],{type:'text/html;charset=utf-8'}))}catch(e){toast('เบราว์เซอร์นี้ดาวน์โหลดไฟล์ไม่ได้');return}
+  a.download='index.html';a.style.display='none';D.body.appendChild(a);a.click();
+  setTimeout(function(){try{URL.revokeObjectURL(a.href);a.remove()}catch(e){}},2000);
+  data=out;savedJSON=JSON.stringify(data);state.dirty=0;
+  try{localStorage.removeItem(DRAFT)}catch(e){}
+  render();
+  toast('ดาวน์โหลด index.html แล้ว นำไปอัปโหลดทับไฟล์เดิมบน GitHub หรือ Netlify เว็บจริงจะอัปเดต');
+}
+var DRAFT='mk-teacher-site-draft';
+var STATIC_ASSETS={upload:function(f,o){
+  return new Promise(function(res,rej){
+    var t=(o&&o.type)||'';
+    if(t.indexOf('image/')!==0){rej({code:'static_file'});return}
+    var rd=new FileReader();
+    rd.onerror=function(){rej({code:'x'})};
+    rd.onload=function(){
+      var src=rd.result;
+      if(t==='image/svg+xml'||t==='image/gif'){if(f.size>1500000){rej({code:'too_large'});return}res({url:src});return}
+      var im=new Image();
+      im.onload=function(){
+        var m=1600,w=im.naturalWidth,h=im.naturalHeight,s=Math.min(1,m/Math.max(w,h));
+        var c=D.createElement('canvas');c.width=Math.round(w*s);c.height=Math.round(h*s);
+        var g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,c.width,c.height);g.drawImage(im,0,0,c.width,c.height);
+        res({url:c.toDataURL('image/jpeg',0.8)});
+      };
+      im.onerror=function(){rej({code:'unsupported_type'})};
+      im.src=src;
+    };
+    rd.readAsDataURL(f);
+  });
+}};
+function save(){
+  if(state.saving)return;
+  if(STATIC){staticSave();return}
+  if(!artifactNS||!RESET){toast('บันทึกได้เฉพาะเมื่อเปิดเว็บนี้ผ่าน Claude ด้วยบัญชีที่มีสิทธิ์แก้ไข');return}
+  state.saving=true;render();
+  var out=clone(data);out.sv=uid('v');
+  try{sessionStorage.setItem(STASH,JSON.stringify({route:state.route,edit:true,tab:state.tab,pending:out}))}catch(e){}
+  artifactNS.publish(buildDoc(out)).then(function(){toast('บันทึกแล้ว กำลังโหลดฉบับใหม่…')}).catch(function(err){
+    var c=err&&err.code;
+    if(c==='conflict'){toast('มีคนบันทึกฉบับใหม่ก่อนหน้านี้ หน้าเว็บกำลังโหลดฉบับล่าสุด');return}
+    if(c==='upstream_error'&&!retried){retried=true;state.saving=false;setTimeout(save,800+Math.random()*900);return}
+    try{sessionStorage.removeItem(STASH)}catch(e){}
+    state.saving=false;
+    if(c==='not_writer'||c==='not_granted'||c==='consent_required'||c==='capability_disabled'||c==='capability_removed'||c==='not_declared'){
+      state.canEdit=false;state.editing=false;toast('บัญชีนี้ดูได้อย่างเดียว จึงบันทึกการแก้ไขไม่ได้');
+    }else if(c==='rate_limited') toast('บันทึกถี่เกินไป รอสักครู่แล้วกดบันทึกอีกครั้ง');
+    else if(c==='too_large') toast('ข้อมูลใหญ่เกินกำหนด ให้ย้ายไฟล์ใหญ่ไปไว้ใน Google Drive แล้วใช้ลิงก์แทน');
+    else toast('บันทึกไม่สำเร็จ ลองกดบันทึกอีกครั้ง');
+    render();
+  });
+}
+var toastTimer;
+function toast(msg){
+  var t=D.getElementById('toast');
+  if(!t){t=D.createElement('div');t.id='toast';t.className='toast';t.setAttribute('role','status');D.body.appendChild(t)}
+  t.textContent=msg;t.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.hidden=true},4500);
+}
+
+/* ---------- events ---------- */
+D.addEventListener('click',function(e){
+  var t=e.target;
+  if(t.closest('[data-lb]')){D.getElementById('overlay-root').innerHTML='';return}
+  if(t.closest('#overlay-root')){
+    if(t.hasAttribute('data-bg')||t.closest('[data-x]')){closeForm();return}
+    var pk=t.closest('[data-pick]');if(pk){var fi=D.getElementById('f-file');if(fi){fi.setAttribute('data-target',pk.getAttribute('data-pick'));var ac=pk.getAttribute('data-accept');if(ac)fi.setAttribute('accept',ac);else fi.removeAttribute('accept');fi.click()}return}
+    if(t.closest('[data-slot-add]')){var cur=readSlots();var last=cur[cur.length-1];cur.push({d:last?last.d:1,s:last?last.e:'08:00',e:'',room:last?last.room:'',group:last?last.group:''});D.getElementById('f-slots').innerHTML=cur.map(slotRow).join('');return}
+    var sd=t.closest('[data-slot-del]');if(sd){var arr=readSlots();arr.splice(+sd.getAttribute('data-slot-del'),1);D.getElementById('f-slots').innerHTML=arr.map(slotRow).join('');return}
+    var ra=t.closest('[data-row-add]');if(ra){var kind=ra.getAttribute('data-row-add');if(kind==='images'){var im=readImages();im.push({url:'',cap:''});D.getElementById('f-images').innerHTML=im.map(imgRow).join('')}else{var cs=readCodes();cs.push({name:'',lang:'cpp',src:''});D.getElementById('f-codes').innerHTML=cs.map(codeRow).join('')}return}
+    var rd=t.closest('[data-row-del]');if(rd){var kd=rd.getAttribute('data-row-del'),ix=+rd.getAttribute('data-i');if(kd==='images'){var im2=readImages();im2.splice(ix,1);D.getElementById('f-images').innerHTML=im2.map(imgRow).join('')}else{var cs2=readCodes();cs2.splice(ix,1);D.getElementById('f-codes').innerHTML=cs2.map(codeRow).join('')}return}
+    var md2=t.closest('[data-mdel]');if(md2&&formCfg&&formCfg.onDelete){if(!armed(md2,'กดอีกครั้งเพื่อยืนยันลบ'))return;formCfg.onDelete();closeForm();commit();window.scrollTo(0,0);return}
+    return;
+  }
+  var hit=t.closest('[data-hit]');
+  if(hit){e.preventDefault();var p=hit.getAttribute('data-hit').split('|');openHit(p[0],+p[1],p[2]);return}
+  var go=t.closest('[data-go]');
+  if(go){e.preventDefault();goTo(go.getAttribute('data-go'));return}
+  var b=t.closest('[data-act]');
+  if(b){if(b.tagName==='A')e.preventDefault();act(b);return}
+  if(state.menu&&!t.closest('.dd-panel,.mnav')){state.menu=null;render()}
+});
+D.addEventListener('input',function(e){
+  var t=e.target;if(!t)return;
+  if(t.id==='q'){state.q=t.value;renderResults();return}
+  if(t.id==='f-url'&&t.value.indexOf('/_blob/')!==0){var fn=D.getElementById('f-fileName');if(fn)fn.value=''}
+});
+D.addEventListener('change',function(e){
+  var t=e.target;if(!t)return;
+  if(t.id==='f-file'){onFile(t);return}
+  if(t.id==='qs'){state.qScope=t.value;renderResults()}
+});
+D.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){if(D.querySelector('[data-lb]')){D.getElementById('overlay-root').innerHTML='';return}if(formCfg)closeForm();else if(state.menu){state.menu=null;render()}return}
+  if(e.key==='Enter'&&e.target&&e.target.id==='q'){e.preventDefault();var hs=searchHits();if(hs[0])openHit(hs[0].sid,hs[0].si,hs[0].id)}
+});
+D.addEventListener('submit',function(e){
+  if(e.target.id!=='mform')return;e.preventDefault();if(!formCfg)return;
+  var v=collect(),err=formCfg.onSave(v);
+  if(err){D.getElementById('m-msg').textContent=err;return}
+  closeForm();commit();
+});
+
+render();
+
+/* ---------- capabilities: editing only for people who can edit this artifact ---------- */
+if(STATIC){
+  if(/[?&]edit(=|&|$)/.test(location.search)){
+    state.canEdit=true;state.editing=true;assetsNS=STATIC_ASSETS;
+    try{var dr=JSON.parse(localStorage.getItem(DRAFT)||'null');if(dr&&dr.base===data.sv&&dr.data){data=dr.data;state.dirty=dr.dirty||1}}catch(e){}
+    render();
+    setInterval(function(){if(!state.dirty)return;try{localStorage.setItem(DRAFT,JSON.stringify({base:JSON.parse(savedJSON).sv,data:data,dirty:state.dirty}))}catch(e){}},3000);
+    window.addEventListener('beforeunload',function(e){if(state.dirty){e.preventDefault();e.returnValue=''}});
+  }
+}else if(window.claude&&typeof window.claude.use==='function'){
+  Promise.all([window.claude.use('artifact'),window.claude.use('user')]).then(function(r){
+    artifactNS=r[0];var user=r[1];
+    if(!artifactNS||!user)return null;
+    return user.canEdit();
+  }).then(function(ok){
+    if(!ok)return;
+    state.canEdit=true;
+    if(stash&&stash.edit)state.editing=true;
+    render();
+    window.claude.use('assets').then(function(a){assetsNS=a}).catch(function(){});
+  }).catch(function(){});
+}
+})();
+</script>
+</body></html>

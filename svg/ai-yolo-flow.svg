@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" font-family="Leelawadee UI, Tahoma, Noto Sans Thai, Loma, sans-serif">
+  <rect width="880" height="300" fill="#ffffff"/>
+  <text x="32" y="38" font-size="20" font-weight="700" fill="#1f2328">ขั้นตอนเตรียมเครื่องมือ YOLO บน Windows</text>
+  <g>
+    <rect x="32" y="80" width="190" height="150" rx="14" fill="#eef4ff" stroke="#3b82e6" stroke-width="2"/>
+    <circle cx="62" cy="110" r="16" fill="#3b82e6"/><text x="62" y="116" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="88" y="116" font-size="15" font-weight="700" fill="#1f2328">ติดตั้ง Python</text>
+    <text x="48" y="150" font-size="12" fill="#1f2328">เวอร์ชัน 3.10</text>
+    <text x="48" y="172" font-size="12" fill="#6f6f6f">ติ๊ก Add python.exe</text>
+    <text x="48" y="190" font-size="12" fill="#6f6f6f">to PATH ตอนติดตั้ง</text>
+  </g>
+  <g>
+    <rect x="246" y="80" width="190" height="150" rx="14" fill="#ffffff" stroke="#d0d4da" stroke-width="2"/>
+    <circle cx="276" cy="110" r="16" fill="#1f2328"/><text x="276" y="116" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="302" y="116" font-size="15" font-weight="700" fill="#1f2328">สร้าง venv</text>
+    <text x="262" y="150" font-size="12" fill="#1f2328" font-family="Consolas, monospace">python -m venv venv</text>
+    <text x="262" y="172" font-size="12" fill="#1f2328" font-family="Consolas, monospace">venv\scripts\activate</text>
+    <text x="262" y="196" font-size="12" fill="#6f6f6f">แยกไลบรารีของแต่ละงาน</text>
+  </g>
+  <g>
+    <rect x="460" y="80" width="190" height="150" rx="14" fill="#ffffff" stroke="#d0d4da" stroke-width="2"/>
+    <circle cx="490" cy="110" r="16" fill="#1f2328"/><text x="490" y="116" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="516" y="116" font-size="15" font-weight="700" fill="#1f2328">ติดตั้งไลบรารี</text>
+    <text x="476" y="150" font-size="12" fill="#1f2328" font-family="Consolas, monospace">pip install ultralytics</text>
+    <text x="476" y="172" font-size="12" fill="#1f2328" font-family="Consolas, monospace">pip install pyserial</text>
+    <text x="476" y="196" font-size="12" fill="#6f6f6f">OpenCV ติดตั้งมาพร้อมกัน</text>
+  </g>
+  <g>
+    <rect x="674" y="80" width="174" height="150" rx="14" fill="#ffffff" stroke="#d0d4da" stroke-width="2"/>
+    <circle cx="704" cy="110" r="16" fill="#1f2328"/><text x="704" y="116" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="730" y="116" font-size="15" font-weight="700" fill="#1f2328">ทดสอบ</text>
+    <text x="690" y="150" font-size="12" fill="#1f2328" font-family="Consolas, monospace">python detect.py</text>
+    <text x="690" y="172" font-size="12" fill="#6f6f6f">โหลด yolo11n.pt</text>
+    <text x="690" y="190" font-size="12" fill="#6f6f6f">อัตโนมัติครั้งแรก</text>
+  </g>
+  <path d="M222 155H246M436 155H460M650 155H674" stroke="#9aa4ad" stroke-width="2"/>
+  <text x="32" y="270" font-size="12" fill="#6f6f6f">ใช้ Command Prompt หรือ Terminal ใน VS Code · เมื่อเข้า venv สำเร็จจะเห็น (venv) หน้าบรรทัดคำสั่ง</text>
+</svg>

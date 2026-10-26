@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" width="880" height="520" font-family="Leelawadee UI, Tahoma, Noto Sans Thai, Loma, sans-serif">
+  <rect width="880" height="520" fill="#ffffff"/>
+  <text x="32" y="38" font-size="20" font-weight="700" fill="#1f2328">สัญลักษณ์ผังงาน และตัวอย่าง “คำนวณกระแสไฟฟ้า”</text>
+
+  <g font-size="13" fill="#1f2328">
+    <rect x="40" y="78" width="110" height="40" rx="20" fill="#e8f0fe" stroke="#3b82e6" stroke-width="2"/>
+    <text x="95" y="103" text-anchor="middle">เริ่ม / จบ</text>
+    <text x="168" y="103" fill="#6f6f6f">Terminal</text>
+
+    <path d="M60 140H160L140 180H40Z" fill="#fff4e5" stroke="#e08a1e" stroke-width="2"/>
+    <text x="100" y="165" text-anchor="middle">รับ / แสดงผล</text>
+    <text x="168" y="165" fill="#6f6f6f">Input / Output</text>
+
+    <rect x="40" y="202" width="110" height="40" fill="#eafaf2" stroke="#10a66f" stroke-width="2"/>
+    <text x="95" y="227" text-anchor="middle">ประมวลผล</text>
+    <text x="168" y="227" fill="#6f6f6f">Process</text>
+
+    <path d="M95 262L150 292L95 322L40 292Z" fill="#f3efff" stroke="#6040ee" stroke-width="2"/>
+    <text x="95" y="297" text-anchor="middle">ตัดสินใจ</text>
+    <text x="168" y="297" fill="#6f6f6f">Decision (ใช่ / ไม่ใช่)</text>
+
+    <circle cx="95" cy="358" r="18" fill="#ffffff" stroke="#1f2328" stroke-width="2"/>
+    <text x="95" y="363" text-anchor="middle">A</text>
+    <text x="168" y="363" fill="#6f6f6f">จุดเชื่อมต่อ</text>
+
+    <path d="M48 410H140" stroke="#1f2328" stroke-width="2"/><path d="M132 404L142 410L132 416" stroke="#1f2328" stroke-width="2" fill="none"/>
+    <text x="168" y="415" fill="#6f6f6f">ทิศทางการทำงาน</text>
+  </g>
+
+  <path d="M360 60V490" stroke="#e5e5e5" stroke-width="2"/>
+
+  <g font-size="13" fill="#1f2328" text-anchor="middle">
+    <rect x="560" y="64" width="120" height="36" rx="18" fill="#e8f0fe" stroke="#3b82e6" stroke-width="2"/>
+    <text x="620" y="87">เริ่ม</text>
+    <path d="M555 124H705L685 164H535Z" fill="#fff4e5" stroke="#e08a1e" stroke-width="2"/>
+    <text x="620" y="149">รับค่า V และ R</text>
+    <path d="M620 216L690 248L620 280L550 248Z" fill="#f3efff" stroke="#6040ee" stroke-width="2"/>
+    <text x="620" y="253">R = 0 ?</text>
+    <rect x="540" y="306" width="160" height="40" fill="#eafaf2" stroke="#10a66f" stroke-width="2"/>
+    <text x="620" y="331">I = V / R</text>
+    <path d="M555 370H705L685 410H535Z" fill="#fff4e5" stroke="#e08a1e" stroke-width="2"/>
+    <text x="620" y="395">แสดงค่า I</text>
+    <rect x="560" y="440" width="120" height="36" rx="18" fill="#e8f0fe" stroke="#3b82e6" stroke-width="2"/>
+    <text x="620" y="463">จบ</text>
+    <path d="M730 228H850L830 268H710Z" fill="#fff4e5" stroke="#e08a1e" stroke-width="2"/>
+    <text x="780" y="253">แจ้งเตือน R = 0</text>
+  </g>
+  <g stroke="#1f2328" stroke-width="2" fill="none">
+    <path d="M620 100V122M620 164V214M620 280V304M620 346V368M620 410V438"/>
+    <path d="M690 248H724"/>
+    <path d="M780 268V458H682"/>
+  </g>
+  <g font-size="12" fill="#6f6f6f"><text x="696" y="240">ใช่</text><text x="628" y="296">ไม่ใช่</text></g>
+  <text x="400" y="500" font-size="12" fill="#6f6f6f">ดัดแปลงลำดับหัวข้อจากรายวิชา Computer Programming มทร.ธัญบุรี (ใช้ Flowgorithm ฝึกเขียนผังงาน)</text>
+</svg>

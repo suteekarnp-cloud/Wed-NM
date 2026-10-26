@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" font-family="Leelawadee UI, Tahoma, Noto Sans Thai, Loma, sans-serif">
+  <rect width="880" height="440" fill="#ffffff"/>
+  <text x="32" y="38" font-size="20" font-weight="700" fill="#1f2328">วงจรการทำงานของชุมชนการเรียนรู้ทางวิชาชีพ (PLC)</text>
+  <circle cx="440" cy="245" r="140" fill="none" stroke="#dbe7fb" stroke-width="22"/>
+  <circle cx="440" cy="245" r="66" fill="#3b82e6"/>
+  <text x="440" y="240" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">คุณภาพ</text>
+  <text x="440" y="262" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">ผู้เรียน</text>
+  <g font-size="13" text-anchor="middle">
+    <rect x="365" y="70" width="150" height="56" rx="12" fill="#ffffff" stroke="#3b82e6" stroke-width="2"/>
+    <text x="440" y="94" font-weight="700" fill="#1f2328">1 ระบุปัญหา</text>
+    <text x="440" y="114" fill="#6f6f6f">จากผลการเรียนจริง</text>
+    <rect x="590" y="160" width="160" height="56" rx="12" fill="#ffffff" stroke="#10a66f" stroke-width="2"/>
+    <text x="670" y="184" font-weight="700" fill="#1f2328">2 ร่วมออกแบบ (Plan)</text>
+    <text x="670" y="204" fill="#6f6f6f">แผนและสื่อการสอน</text>
+    <rect x="560" y="320" width="170" height="56" rx="12" fill="#ffffff" stroke="#e08a1e" stroke-width="2"/>
+    <text x="645" y="344" font-weight="700" fill="#1f2328">3 สอนและสังเกต (Do)</text>
+    <text x="645" y="364" fill="#6f6f6f">เพื่อนครูร่วมสังเกตชั้นเรียน</text>
+    <rect x="150" y="320" width="170" height="56" rx="12" fill="#ffffff" stroke="#6040ee" stroke-width="2"/>
+    <text x="235" y="344" font-weight="700" fill="#1f2328">4 สะท้อนผล (See)</text>
+    <text x="235" y="364" fill="#6f6f6f">พูดคุยจากหลักฐาน</text>
+    <rect x="130" y="160" width="160" height="56" rx="12" fill="#ffffff" stroke="#d32f2f" stroke-width="2"/>
+    <text x="210" y="184" font-weight="700" fill="#1f2328">5 ปรับปรุงและขยายผล</text>
+    <text x="210" y="204" fill="#6f6f6f">บันทึกใน Logbook</text>
+  </g>
+  <g fill="none" stroke="#9aa4ad" stroke-width="2">
+    <path d="M520 110L596 160"/><path d="M690 216L660 318"/><path d="M558 350H322"/><path d="M220 318L210 218"/><path d="M290 170L362 116"/>
+  </g>
+  <text x="32" y="420" font-size="12" fill="#6f6f6f">อ้างอิงแนวคิด Plan–Do–See (บทเรียนร่วมกัน) และองค์ประกอบ PLC ของ Hord (1997)</text>
+</svg>

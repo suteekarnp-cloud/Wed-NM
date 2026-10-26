@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="880" height="380" font-family="Leelawadee UI, Tahoma, Noto Sans Thai, Loma, sans-serif">
+  <rect width="880" height="380" fill="#ffffff"/>
+  <text x="32" y="38" font-size="20" font-weight="700" fill="#1f2328">นำผลการตรวจจับของ AI ไปสั่งงานบอร์ด ESP32</text>
+  <text x="32" y="62" font-size="13" fill="#6f6f6f">คอมพิวเตอร์ประมวลผลภาพ · ส่งคำสั่งเป็นข้อความผ่านพอร์ต USB Serial · ESP32 เปิด-ปิดอุปกรณ์ที่ขา GPIO</text>
+
+  <g>
+    <rect x="32" y="120" width="140" height="110" rx="14" fill="#f3f4f6" stroke="#d0d4da" stroke-width="2"/>
+    <circle cx="102" cy="168" r="30" fill="#1f2328"/><circle cx="102" cy="168" r="14" fill="#2f80ed"/><circle cx="96" cy="162" r="4" fill="#ffffff"/>
+    <text x="102" y="218" font-size="13" fill="#1f2328" text-anchor="middle">เว็บแคม</text>
+  </g>
+  <path d="M172 175H222" stroke="#1f2328" stroke-width="3"/><path d="M214 169L224 175L214 181" stroke="#1f2328" stroke-width="3" fill="none"/>
+  <text x="197" y="165" font-size="10" fill="#6f6f6f" text-anchor="middle">ภาพ</text>
+
+  <rect x="228" y="100" width="250" height="150" rx="14" fill="#eef4ff" stroke="#3b82e6" stroke-width="2"/>
+  <text x="353" y="128" font-size="15" font-weight="700" fill="#1f2328" text-anchor="middle">Python + YOLO11n</text>
+  <rect x="250" y="142" width="206" height="90" rx="6" fill="#ffffff" stroke="#d0d4da"/>
+  <rect x="268" y="156" width="70" height="66" fill="none" stroke="#10a66f" stroke-width="3"/>
+  <rect x="268" y="146" width="70" height="12" fill="#10a66f"/>
+  <text x="272" y="156" font-size="9" fill="#ffffff">person 0.91</text>
+  <rect x="368" y="176" width="40" height="46" fill="none" stroke="#e08a1e" stroke-width="3"/>
+  <rect x="368" y="166" width="58" height="12" fill="#e08a1e"/>
+  <text x="371" y="176" font-size="9" fill="#ffffff">bottle 0.78</text>
+
+  <path d="M478 175H548" stroke="#1f2328" stroke-width="3"/><path d="M540 169L550 175L540 181" stroke="#1f2328" stroke-width="3" fill="none"/>
+  <text x="513" y="160" font-size="11" fill="#6040ee" text-anchor="middle" font-family="Consolas, monospace">"ON\n"</text>
+  <text x="513" y="198" font-size="10" fill="#6f6f6f" text-anchor="middle">COM · 115200</text>
+
+  <rect x="554" y="110" width="160" height="130" rx="12" fill="#1f2328"/>
+  <rect x="578" y="126" width="112" height="56" rx="4" fill="#3a3f45"/>
+  <text x="634" y="160" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">ESP32</text>
+  <text x="634" y="210" font-size="11" fill="#c9d1d9" text-anchor="middle">Serial.readStringUntil</text>
+  <text x="634" y="226" font-size="11" fill="#c9d1d9" text-anchor="middle">GPIO 4</text>
+
+  <path d="M714 175H770" stroke="#1f2328" stroke-width="3"/><path d="M762 169L772 175L762 181" stroke="#1f2328" stroke-width="3" fill="none"/>
+  <circle cx="810" cy="168" r="26" fill="#ffd34d" stroke="#e0a800" stroke-width="3"/>
+  <path d="M800 194H820V206H800Z" fill="#9aa4ad"/>
+  <text x="810" y="232" font-size="12" fill="#1f2328" text-anchor="middle">LED / รีเลย์</text>
+
+  <rect x="32" y="282" width="816" height="72" rx="10" fill="#f7f9fc" stroke="#e5e5e5"/>
+  <g font-size="13" fill="#1f2328">
+    <text x="52" y="310"><tspan font-weight="700">เงื่อนไข:</tspan> พบวัตถุเป้าหมาย (เช่น person) → ส่ง ON · ไม่พบ → ส่ง OFF</text>
+    <text x="52" y="334" fill="#6f6f6f" font-size="12">ส่งคำสั่งเฉพาะตอนสถานะเปลี่ยน (last_state) เพื่อไม่ให้พอร์ตทำงานหนักเกินไป</text>
+  </g>
+</svg>
